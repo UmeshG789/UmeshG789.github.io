@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umesh Gohil - Static Equipment Design Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f9;
+            color: #1e2b37;
+            line-height: 1.5;
+            padding: 30px 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        header {
+            background: #1e2b37;
+            color: white;
+            padding: 30px 40px;
+        }
+        header h1 {
+            font-size: 2.8rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+        header .title {
+            font-size: 1.3rem;
+            color: #a0c0d0;
+            margin-bottom: 15px;
+        }
+        .contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            font-size: 0.95rem;
+        }
+        .contact span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .contact a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px dotted #a0c0d0;
+        }
+        .contact a:hover {
+            border-bottom: 1px solid white;
+        }
+        .main-content {
+            padding: 40px;
+        }
+        h2 {
+            font-size: 1.8rem;
+            color: #1e2b37;
+            border-bottom: 3px solid #1e2b37;
+            padding-bottom: 8px;
+            margin: 30px 0 20px;
+        }
+        h2:first-of-type {
+            margin-top: 0;
+        }
+        h3 {
+            font-size: 1.3rem;
+            color: #1e2b37;
+            margin: 20px 0 5px;
+        }
+        .job {
+            margin-bottom: 30px;
+        }
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 5px;
+        }
+        .job-title {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #1e2b37;
+        }
+        .company {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        .date {
+            font-style: italic;
+            color: #5f6a7a;
+        }
+        .job + .job {
+            margin-top: 25px;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        ul li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+        ul li::before {
+            content: "▪";
+            position: absolute;
+            left: 0;
+            color: #1e2b37;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 15px;
+        }
+        .skill-category h4 {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #1e2b37;
+            border-left: 4px solid #1e2b37;
+            padding-left: 10px;
+        }
+        .skill-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .skill-tag {
+            background: #e7edf3;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        .education-item, .project-item, .cert-item {
+            margin-bottom: 20px;
+        }
+        .education-item h4, .project-item h4 {
+            font-weight: 700;
+            color: #1e2b37;
+        }
+        .institution {
+            font-weight: 500;
+            color: #2c3e50;
+        }
+        .date-place {
+            font-style: italic;
+            color: #5f6a7a;
+            margin-bottom: 5px;
+        }
+        .project-meta {
+            display: flex;
+            gap: 20px;
+            font-size: 0.9rem;
+            color: #5f6a7a;
+            margin: 5px 0;
+        }
+        .badge {
+            background: #1e2b37;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+        .lang-list {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .lang-item {
+            background: #e7edf3;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+        .portfolio-button {
+            display: inline-block;
+            background: #1e2b37;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 40px;
+            font-weight: 600;
+            margin: 30px 0 10px;
+            border: 2px solid #1e2b37;
+            transition: all 0.2s;
+        }
+        .portfolio-button:hover {
+            background: white;
+            color: #1e2b37;
+        }
+        hr {
+            border: 0;
+            border-top: 2px dashed #d0dde7;
+            margin: 40px 0 20px;
+        }
+        @media (max-width: 600px) {
+            header { padding: 20px; }
+            header h1 { font-size: 2rem; }
+            .contact { flex-direction: column; gap: 10px; }
+            .main-content { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>UMESH GOHIL</h1>
+            <div class="title">Static Equipment Design Engineer</div>
+            <div class="contact">
+                <span>📍 Ahmedabad, Gujarat, India</span>
+                <span>📞 +91-9725543954</span>
+                <span>✉️ <a href="mailto:gohilumesh78@gmail.com">gohilumesh78@gmail.com</a></span>
+                <span>🔗 <a href="https://linkedin.com/in/umeshg78/" target="_blank">linkedin.com/in/umeshg78/</a></span>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <!-- Professional Summary (inferred from experience) -->
+            <h2>Professional Summary</h2>
+            <p>Experienced Static Equipment Design Engineer with a strong background in pressure vessel design per ASME Section VIII Div 1 & 2, using PV Elite. Skilled in GD&T, PLM/PDM systems, and cross-functional collaboration. Proven track record of optimizing designs for manufacturability and cost reduction across oil & gas, water treatment, and filtration industries.</p>
+
+            <!-- Skills -->
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Software</h4>
+                    <div class="skill-items">
+                        <span class="skill-tag">Autodesk Inventor</span>
+                        <span class="skill-tag">PV Elite</span>
+                        <span class="skill-tag">SolidWorks</span>
+                        <span class="skill-tag">Autodesk Vault</span>
+                        <span class="skill-tag">Mechanical AutoCAD</span>
+                        <span class="skill-tag">Oracle Agile</span>
+                        <span class="skill-tag">SAP</span>
+                        <span class="skill-tag">MS Office</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Technical & Professional</h4>
+                    <div class="skill-items">
+                        <span class="skill-tag">Team Collaboration</span>
+                        <span class="skill-tag">Time Management</span>
+                        <span class="skill-tag">Problem-Solving</span>
+                        <span class="skill-tag">Effective Communication</span>
+                        <span class="skill-tag">Manufacturing Industry</span>
+                        <span class="skill-tag">Project Management</span>
+                        <span class="skill-tag">Design Calculations</span>
+                        <span class="skill-tag">GD&T</span>
+                        <span class="skill-tag">PLM/PDM Systems</span>
+                        <span class="skill-tag">ASME Sec VIII Div-1 & Div-2</span>
+                        <span class="skill-tag">TEMA</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Work Experience -->
+            <h2>Work Experience</h2>
+
+            <!-- GMM Fraudler -->
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">Officer A/Senior Engineer</span>
+                    <span class="date">Feb'25 – Present</span>
+                </div>
+                <div class="company">GMM Fraudler, Karamsad, Anand</div>
+                <ul>
+                    <li>Design static equipment (pressure vessels, filtration and drying system) per ASME Sec VIII, ensuring compliance with client specifications, safety standards, and international codes.</li>
+                    <li>Review AutoCAD/Inventor-based GA drawings to verify input data, including overall dimensions, material, nozzle orientation/elevation, temperature, and pressure.</li>
+                    <li>Utilize PV Elite reports for design validation of critical parameters such as thickness, MDMT, PWHT, MAWP, MAP, and applied loads.</li>
+                    <li>Prepare & issue Material Requisition (MR) and Technical Delivery Specification (TDS) documents; for advanced action by procurement.</li>
+                    <li>Conducted design reviews & model walkthroughs with licensor and resolved vendor clarifications to maintain project schedule.</li>
+                    <li>Manage technical discussions with vendors, clients, and internal teams (purchase, production, QC) to ensure smooth operations and project alignment.</li>
+                    <li>Mentor drafters and junior engineers in GD&T, welding symbols, and PLM workflow, enhancing design accuracy and productivity.</li>
+                    <li>Prepare company-standard evaluation reports documenting design considerations and methodology. Additionally, used PV Elite to generate the report for static pressure products per ASME Section VIII.</li>
+                    <li>Prepared PV Elite models and verified outputs with external FEA results to validate nozzle reinforcement, shell/heads and support design.</li>
+                    <li>Prepare Manufacturer's Data Report (MDR) per ASME format, documenting material certifications, inspection records, and compliance reports.</li>
+                </ul>
+            </div>
+
+            <!-- L&T Technology Service Limited -->
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">Engineer</span>
+                    <span class="date">Jan'22 – Feb'25</span>
+                </div>
+                <div class="company">L&T Technology Service Limited, Vadodara</div>
+                <ul>
+                    <li>Assisted in the design and development of pressure vessel, Heat-exchanger and Cloomin while learning to apply ASME standards under the guidance of senior engineers.</li>
+                    <li>Participated in reviewing fabrication drawings and plate cutting layouts for static equipment as part of hands-on training in compliance with design standards.</li>
+                    <li>Supported vendor coordination for static equipment material requisition and document review, gaining experience in quality control processes.</li>
+                    <li>Learning and practicing PV Elite for static equipment design and stress analysis.</li>
+                    <li>Collaborated with a team of drafters and assisted in static equipment design processes while building knowledge in project coordination and design.</li>
+                    <li>Assisted in subcontractor coordination and observed project delivery processes for high-pressure equipment under senior supervision.</li>
+                    <li>Contributed to maintaining compliance with ISO 9001 procedures while learning about quality and technical audit processes.</li>
+                    <li>Used P&IDs (Piping and Instrumentation Diagram) and PFDs (Process Flow Diagram) as needed.</li>
+                    <li>Utilize Oracle Agile PLM for maintaining product lifecycle and related data.</li>
+                    <li>Managed design changes including ECR, ECN, and MCOs, along with product design documentation.</li>
+                </ul>
+            </div>
+
+            <!-- Aqseptence Group (Johnson Screen) - first role -->
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">Design Engineer</span>
+                    <span class="date">Jul'18 – Oct'18</span>
+                </div>
+                <div class="company">Aqseptence Group (India) Pvt Ltd (Johnson Screen), Sanand</div>
+                <ul>
+                    <li>Contributed to the design and development of mechanical projects in the oil and gas industry, water treatment, mining, filtration, special purpose machines (SPM), and new product development.</li>
+                    <li>Create 3D parts, 2D detailed drawings, and BOMs for structures, sheet metal, machining, casting, and forging components using Autodesk Inventor and Mechanical AutoCAD.</li>
+                    <li>Work on vessels, water processing products, and filtering & separation products for various industries including coal, pulp & paper, food & beverages.</li>
+                    <li>Gain expertise in V-wire screens for filtration and separation applications.</li>
+                    <li>Use Autodesk Vault and SAP PLM for data and material management.</li>
+                    <li>Led a team of draughtsmen in the development of detailed fabrication drawings for static equipment and collaborate with overseas clients from Germany, the US, Italy, France, and Australia.</li>
+                    <li>Visit customer sites to understand requirements and resolve issues.</li>
+                    <li>Prepare laser cutting layouts and bending detail drawings.</li>
+                    <li>Select and detail pipes according to ASME 31.3 & ASME 16.5.</li>
+                    <li>Apply GD&T and welding symbols as per ISO/AWS standards.</li>
+                    <li>Perform calculations for product components like gears, bearings, shafts, brackets, hanging beams, and ropes; select gear motors, hydraulic cylinders, and pneumatic cylinders from catalogues.</li>
+                    <li>Collaborate with production, purchase, quality, and finance departments to ensure project completion.</li>
+                    <li>Study the client data sheet and prepare a 3D model and manufacturing drawings using Autodesk Inventor.</li>
+                </ul>
+                <div style="margin-top: 10px;"><strong>Achievements:</strong></div>
+                <ul>
+                    <li>Calculate and develop a detailed new storage rack design using computer-aided design (CAD) for raw materials for easy identification, which led to an improvement in productivity.</li>
+                    <li>Design the base structure with a hydraulic cylinder as a fixture from images for holding and welding a special product to improve production and quality.</li>
+                    <li>Modified the older single-side screen-cutting machine (SPM) to a two-side screen-cutting machine to reduce the lead time for cutting of screen.</li>
+                    <li>Measure the existing screen machine base structure and redesign the new one to replace the older one with it to reduce the cost of the capex item.</li>
+                    <li>Implemented or optimized GD&T in the new or existing drawing to reduce the manufacturing cost and lead time.</li>
+                </ul>
+            </div>
+
+            <!-- Plantech Medical System -->
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">Project & Design Engineer</span>
+                    <span class="date">Nov'18 – Feb'19</span>
+                </div>
+                <div class="company">Plantech Medical System Pvt Ltd, Ahmedabad</div>
+                <ul>
+                    <li>Conducted reverse engineering of imported medical equipment to develop localized designs.</li>
+                    <li>Prepared production drawings using SolidWorks and AutoCAD to support manufacturing processes.</li>
+                    <li>Managed inventory of raw materials and finished parts to ensure a seamless supply chain, utilizing Microsoft Excel for tracking.</li>
+                    <li>Identified and collaborated with vendors for part production, performing quality checks with precision measuring instruments.</li>
+                </ul>
+                <div style="margin-top: 10px;"><strong>Achievements:</strong></div>
+                <ul>
+                    <li>Find an alternate vendor for custom and commercial items with a lower price for the existing product to reduce the cost.</li>
+                    <li>Redesign the existing product with the help of the design for manufacturing (DFM) and design for assembly (DFA) concepts for ease of manufacturing, assembly, and serviceability.</li>
+                </ul>
+            </div>
+
+            <!-- Education -->
+            <h2>Education</h2>
+            <div class="education-item">
+                <h4>B.E (Mechanical Engineering)</h4>
+                <div class="institution">L.J Institute of Engineering & Technology</div>
+                <div class="date-place">Jul'13 – Jun'17 | 8.1/10 CGPA</div>
+            </div>
+            <div class="education-item">
+                <h4>Class XII</h4>
+                <div class="institution">Shri R. J. Patel Shriji Vidhyalaya</div>
+                <div class="date-place">Apr'11 – Mar'13 | 72%</div>
+            </div>
+            <div class="education-item">
+                <h4>Class X</h4>
+                <div class="institution">Shri R. J. Patel Shriji Vidhyalaya</div>
+                <div class="date-place">Apr'10 – Mar'11 | 78%</div>
+            </div>
+
+            <!-- Academic Projects -->
+            <h2>Academic Projects</h2>
+            <div class="project-item">
+                <h4>Off-Road Terrain Vehicle</h4>
+                <div class="project-meta">
+                    <span><span class="badge">20 Members</span></span>
+                    <span>3rd Year</span>
+                    <span>Transmission department</span>
+                </div>
+                <p>Design and analysis of off-road terrain vehicle. Made vehicle & got 34th rank in India from 400 participants. Worked as a design engineer in the transmission department.</p>
+            </div>
+            <div class="project-item">
+                <h4>Design and Analysis of 2-stage Reduction Gearbox</h4>
+                <div class="project-meta">
+                    <span><span class="badge">4 Members</span></span>
+                    <span>4th Sem</span>
+                </div>
+                <p>Developed the detailed 2-stage reduction gearbox design using Computer-aided design (CAD) and Computer-aided engineering (CAE) software.</p>
+            </div>
+
+            <!-- Certificates -->
+            <h2>Certificates</h2>
+            <ul>
+                <li>BAJA SAEINDIA - Virtual BAJA SAEINDIA (Jun'16)</li>
+                <li>BAJA SAEINDIA - The BAJA SAEINDIA 2017 (Feb'17)</li>
+                <li>S.E.A - Certificate of CAD Expert (Oct'17)</li>
+                <li>DASSAULT SYSTEMES - Certified Associate – Mechanical Design (CSWA) (Oct'17)</li>
+                <li>S.E.A - CAE Professional in SolidWorks (Feb'18)</li>
+                <li>GE Aerospace - Explore supply chain Job Simulation (Oct'23)</li>
+                <li>OpenSAP - The Business Opportunities of a Digitally Transformed Economy (Apr'24)</li>
+            </ul>
+
+            <!-- Languages -->
+            <h2>Languages</h2>
+            <div class="lang-list">
+                <span class="lang-item">Gujarati</span>
+                <span class="lang-item">Hindi</span>
+                <span class="lang-item">English</span>
+            </div>
+
+            <!-- Portfolio Button (placeholder) -->
+            <hr>
+            <a href="portfolio.html" class="portfolio-button">📂 VIEW MY PORTFOLIO (Coming Soon)</a>
+            <p style="color: #5f6a7a; margin-top: 10px;">Click above to see sample pressure vessel designs and PV Elite work.</p>
+        </div>
+    </div>
+</body>
+</html>
