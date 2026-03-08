@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umesh Gohil - Pressure Vessel Learning Hub</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f9;
+            color: #1e2b37;
+            line-height: 1.6;
+            padding: 30px 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        header {
+            background: #1e2b37;
+            color: white;
+            padding: 30px 40px;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+        }
+        header .subtitle {
+            font-size: 1.1rem;
+            color: #a0c0d0;
+        }
+        .back-link {
+            margin-top: 15px;
+        }
+        .back-link a {
+            color: #a0c0d0;
+            text-decoration: none;
+            border-bottom: 1px dotted #a0c0d0;
+        }
+        .back-link a:hover {
+            color: white;
+            border-bottom: 1px solid white;
+        }
+        .main-content {
+            padding: 40px;
+        }
+        .intro {
+            background: #e7edf3;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        .post {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px dashed #d0dde7;
+        }
+        .post:last-child {
+            border-bottom: none;
+        }
+        .post-date {
+            color: #5f6a7a;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        .post-title {
+            font-size: 1.8rem;
+            color: #1e2b37;
+            margin-bottom: 15px;
+        }
+        .post-content {
+            font-size: 1rem;
+        }
+        .post-content h3 {
+            margin: 20px 0 10px;
+            color: #1e2b37;
+        }
+        .post-content ul, .post-content ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        .post-content li {
+            margin-bottom: 5px;
+        }
+        .post-content img {
+            max-width: 100%;
+            border: 1px solid #d0dde7;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .share-note {
+            background: #f9f9f9;
+            padding: 15px;
+            border-left: 4px solid #1e2b37;
+            margin: 20px 0 10px;
+            font-style: italic;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            color: #5f6a7a;
+            font-size: 0.9rem;
+        }
+        .footer a {
+            color: #1e2b37;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        hr {
+            border: 0;
+            border-top: 2px dashed #d0dde7;
+            margin: 30px 0;
+        }
+        @media (max-width: 600px) {
+            header { padding: 20px; }
+            header h1 { font-size: 2rem; }
+            .main-content { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📘 Pressure Vessel Learning Hub</h1>
+            <div class="subtitle">by Umesh Gohil – Static Equipment Design Engineer</div>
+            <div class="back-link">
+                <a href="https://umeshg789.github.io/UmeshG789/">← Back to Resume</a>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="intro">
+                <p>Welcome to my learning series. Here I share practical knowledge about pressure vessel design, ASME codes, and engineering fundamentals – exactly as I use them in my daily work. New posts added regularly. Feel free to connect on <a href="https://linkedin.com/in/umeshg78/" target="_blank">LinkedIn</a> for discussions.</p>
+            </div>
+
+            <!-- NEW POSTS GO HERE – always add at the top -->
+            <!-- ========== START LATEST POST ========== -->
+
+            <div class="post">
+                <div class="post-date">March 8, 2026</div>
+                <div class="post-title">🔧 Types of Supports in Pressure Vessels: When and Why We Use Them</div>
+                <div class="post-content">
+                    <p>One of the first things we decide in vessel design is how to support it. The choice affects stresses, stability, and even cost. Here's a quick guide:</p>
+
+                    <h3>1. Saddle Supports (Horizontal Vessels)</h3>
+                    <p><strong>When used:</strong> Almost always for horizontal vessels like storage tanks, heat exchangers.</p>
+                    <p><strong>Why:</strong> They distribute the weight evenly along the shell. Two saddles are standard – one fixed, one sliding to accommodate thermal expansion. Design considerations: saddle angle (typically 120°–150°) affects stress concentration; wear plates may be needed for thin shells.</p>
+
+                    <h3>2. Skirt Supports (Vertical Vessels)</h3>
+                    <p><strong>When used:</strong> Tall vertical columns, reactors, towers.</p>
+                    <p><strong>Why:</strong> Provides stable base, allows access for bottom nozzles, and can accommodate thermal expansion if designed with a flared or straight skirt. Must be checked for wind/seismic loads, and often includes openings for piping and manways.</p>
+
+                    <h3>3. Leg Supports (Small Vertical Vessels)</h3>
+                    <p><strong>When used:</strong> Small to medium vertical vessels, often shop-fabricated.</p>
+                    <p><strong>Why:</strong> Simple, low-cost, easy to install. But legs create local stresses – need reinforcing pads. Height must allow clearance for bottom outlets.</p>
+
+                    <h3>4. Lug Supports (Elevated Vessels)</h3>
+                    <p><strong>When used:</strong> Vessels mounted on steel structures (like platforms).</p>
+                    <p><strong>Why:</strong> Compact, allows welding directly to shell. Lugs can be continuous or intermittent. Must check for local stresses and provide gussets if needed.</p>
+
+                    <p><strong>💡 Pro tip:</strong> In PV Elite, when modeling supports, pay attention to load combinations – especially wind + seismic + operating weight. Always verify local stresses (Zick analysis for saddles, local stress checks for lugs/legs).</p>
+
+                    <div class="share-note">
+                        📢 I share more such insights regularly. Follow me on <a href="https://linkedin.com/in/umeshg78/" target="_blank">LinkedIn</a> for updates. Your resume link: <a href="https://umeshg789.github.io/UmeshG789/">umeshg789.github.io/UmeshG789/</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== END LATEST POST ========== -->
+
+            <!-- Placeholder for next post – you'll add above this line next time -->
+            <hr>
+            <p style="text-align: center; color: #5f6a7a;">More posts coming soon – check back or follow on LinkedIn</p>
+
+            <div class="footer">
+                <p>© 2026 Umesh Gohil | <a href="https://umeshg789.github.io/UmeshG789/">Resume</a> | <a href="https://linkedin.com/in/umeshg78/">LinkedIn</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
