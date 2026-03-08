@@ -56,10 +56,41 @@
             margin-bottom: 30px;
             font-size: 1.1rem;
         }
-        .post {
+        /* Table of Contents */
+        .toc {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
             margin-bottom: 40px;
+            border-left: 4px solid #1e2b37;
+        }
+        .toc h2 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            color: #1e2b37;
+        }
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .toc li {
+            margin-bottom: 8px;
+        }
+        .toc a {
+            color: #1e2b37;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dotted #1e2b37;
+        }
+        .toc a:hover {
+            border-bottom: 1px solid #1e2b37;
+        }
+        /* Post styles */
+        .post {
+            margin-bottom: 50px;
             padding-bottom: 30px;
-            border-bottom: 2px dashed #d0dde7;
+            border-bottom: 2px solid #d0dde7;
+            scroll-margin-top: 20px; /* so anchor links don't hide under header */
         }
         .post:last-child {
             border-bottom: none;
@@ -77,15 +108,23 @@
             color: #1e2b37;
             margin-bottom: 15px;
         }
-        .post-content {
-            font-size: 1rem;
+        .post-title a {
+            color: #1e2b37;
+            text-decoration: none;
+        }
+        .post-title a:hover {
+            text-decoration: underline;
         }
         .post-content h3 {
-            margin: 20px 0 10px;
+            margin: 25px 0 10px;
             color: #1e2b37;
         }
+        .post-content h4 {
+            margin: 20px 0 8px;
+            color: #2c3e50;
+        }
         .post-content ul, .post-content ol {
-            margin-left: 20px;
+            margin-left: 25px;
             margin-bottom: 15px;
         }
         .post-content li {
@@ -101,7 +140,7 @@
             background: #f9f9f9;
             padding: 15px;
             border-left: 4px solid #1e2b37;
-            margin: 20px 0 10px;
+            margin: 25px 0 10px;
             font-style: italic;
         }
         .footer {
@@ -110,6 +149,7 @@
             padding-top: 20px;
             color: #5f6a7a;
             font-size: 0.9rem;
+            border-top: 2px dashed #d0dde7;
         }
         .footer a {
             color: #1e2b37;
@@ -143,10 +183,21 @@
                 <p>Welcome to my learning series. Here I share practical knowledge about pressure vessel design, ASME codes, and engineering fundamentals – exactly as I use them in my daily work. New posts added regularly. Feel free to connect on <a href="https://linkedin.com/in/umeshg78/" target="_blank">LinkedIn</a> for discussions.</p>
             </div>
 
-            <!-- NEW POSTS GO HERE – always add at the top -->
-            <!-- ========== START LATEST POST ========== -->
+            <!-- TABLE OF CONTENTS (auto-updated manually) -->
+            <div class="toc">
+                <h2>📋 All Topics</h2>
+                <ul>
+                    <li><a href="#post-supports">🔧 Types of Supports in Pressure Vessels (Mar 8, 2026)</a></li>
+                    <!-- Add new topics here with anchor links -->
+                </ul>
+                <p style="margin-top: 10px; font-style: italic;">Click any topic to jump directly.</p>
+            </div>
 
-            <div class="post">
+            <!-- ========== POSTS START HERE ========== -->
+            <!-- Each post has a unique ID (e.g., post-supports). Newest first. -->
+
+            <!-- POST 1: Supports -->
+            <div id="post-supports" class="post">
                 <div class="post-date">March 8, 2026</div>
                 <div class="post-title">🔧 Types of Supports in Pressure Vessels: When and Why We Use Them</div>
                 <div class="post-content">
@@ -171,16 +222,17 @@
                     <p><strong>💡 Pro tip:</strong> In PV Elite, when modeling supports, pay attention to load combinations – especially wind + seismic + operating weight. Always verify local stresses (Zick analysis for saddles, local stress checks for lugs/legs).</p>
 
                     <div class="share-note">
-                        📢 I share more such insights regularly. Follow me on <a href="https://linkedin.com/in/umeshg78/" target="_blank">LinkedIn</a> for updates. Your resume link: <a href="https://umeshg789.github.io/UmeshG789/">umeshg789.github.io/UmeshG789/</a>
+                        📢 I share more such insights regularly. Follow me on <a href="https://linkedin.com/in/umeshg78/" target="_blank">LinkedIn</a> for updates. <br>
+                        🔗 My resume: <a href="https://umeshg789.github.io/UmeshG789/">umeshg789.github.io/UmeshG789/</a>
                     </div>
                 </div>
             </div>
 
-            <!-- ========== END LATEST POST ========== -->
+            <!-- Next post will go HERE (above this comment) to keep newest first -->
+            <!-- ========== END POSTS ========== -->
 
-            <!-- Placeholder for next post – you'll add above this line next time -->
             <hr>
-            <p style="text-align: center; color: #5f6a7a;">More posts coming soon – check back or follow on LinkedIn</p>
+            <p style="text-align: center; color: #5f6a7a;">More topics coming soon – check back or follow on LinkedIn</p>
 
             <div class="footer">
                 <p>© 2026 Umesh Gohil | <a href="https://umeshg789.github.io/UmeshG789/">Resume</a> | <a href="https://linkedin.com/in/umeshg78/">LinkedIn</a></p>
