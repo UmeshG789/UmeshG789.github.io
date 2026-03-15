@@ -14,7 +14,7 @@
             padding: 30px 20px;
         }
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
             background: white;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
@@ -45,6 +45,12 @@
         .main-content {
             padding: 40px;
         }
+        .intro {
+            background: #e7edf3;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
         .project {
             margin-bottom: 50px;
             padding-bottom: 30px;
@@ -56,18 +62,44 @@
         .project-title {
             font-size: 1.8rem;
             color: #1e2b37;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            background: #f0f4f8;
+            padding: 10px 15px;
+            border-left: 5px solid #1e2b37;
         }
-        .project-meta {
-            background: #e7edf3;
-            padding: 15px;
+        .project-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .project-specs {
+            flex: 1 1 300px;
+        }
+        .project-sketch {
+            flex: 1 1 300px;
+            text-align: center;
+        }
+        .project-sketch img {
+            max-width: 100%;
+            border: 1px solid #d0dde7;
             border-radius: 8px;
-            margin-bottom: 20px;
+            padding: 10px;
+            background: #f9f9f9;
+        }
+        .sketch-placeholder {
+            background: #f0f4f8;
+            border: 2px dashed #a0c0d0;
+            border-radius: 8px;
+            padding: 40px 20px;
+            color: #5f6a7a;
+            font-style: italic;
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
+            margin: 15px 0;
+            background: white;
         }
         th {
             background: #1e2b37;
@@ -76,18 +108,27 @@
             text-align: left;
         }
         td {
-            padding: 10px;
+            padding: 8px 10px;
             border-bottom: 1px solid #d0dde7;
         }
-        tr:hover {
-            background: #f9f9f9;
+        tr:last-child td {
+            border-bottom: none;
         }
-        .note {
-            background: #f9f9f9;
-            padding: 15px;
-            border-left: 4px solid #1e2b37;
-            margin: 20px 0;
-            font-style: italic;
+        .btn {
+            display: inline-block;
+            background: #1e2b37;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            margin-top: 15px;
+            border: 2px solid #1e2b37;
+            transition: all 0.2s;
+        }
+        .btn:hover {
+            background: white;
+            color: #1e2b37;
         }
         .footer {
             text-align: center;
@@ -102,22 +143,11 @@
             text-decoration: none;
             font-weight: 600;
         }
-        .btn {
-            display: inline-block;
-            background: #1e2b37;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 15px;
-        }
-        .btn:hover {
-            background: #2c3e50;
-        }
-        @media (max-width: 600px) {
+        @media (max-width: 700px) {
             header { padding: 20px; }
             header h1 { font-size: 2rem; }
             .main-content { padding: 20px; }
+            .project-grid { flex-direction: column; }
         }
     </style>
 </head>
@@ -131,57 +161,143 @@
         </header>
 
         <div class="main-content">
-            <p style="margin-bottom: 30px;">Below are sample pressure vessel design projects demonstrating my expertise in ASME Section VIII Division 1. All designs are hypothetical and for illustrative purposes only.</p>
-
-            <!-- PROJECT 1: Jacketed Vessel (the data you already have) -->
-            <div class="project">
-                <div class="project-title">🔹 Pressure Vessel with Full Jacket</div>
-                <div class="project-meta">
-                    <strong>Design Code:</strong> ASME Section VIII Division 1<br>
-                    <strong>Materials:</strong> Shell SA‑516 Gr.70, Jacket SA‑240 Type 304<br>
-                    <strong>Key Features:</strong> Horizontal vessel, 2:1 elliptical heads, 11 nozzles, full jacket
-                </div>
-
-                <h3>Design Basis</h3>
-                <table>
-                    <tr><th>Parameter</th><th>Value</th></tr>
-                    <tr><td>Design Pressure (internal)</td><td>150 psi</td></tr>
-                    <tr><td>Design Pressure (external)</td><td>15 psi (full vacuum)</td></tr>
-                    <tr><td>Design Temperature</td><td>150°F</td></tr>
-                    <tr><td>MDMT</td><td>-20°F</td></tr>
-                    <tr><td>Corrosion Allowance</td><td>0.125 in</td></tr>
-                    <tr><td>Shell Inside Diameter</td><td>90.0 in</td></tr>
-                    <tr><td>Shell Length (tan‑to‑tan)</td><td>120.0 in</td></tr>
-                    <tr><td>Nominal Shell Thickness</td><td>0.625 in</td></tr>
-                </table>
-
-                <h3>Component Summary</h3>
-                <table>
-                    <tr><th>Component</th><th>Material</th><th>Required Thk</th><th>Actual Thk</th><th>Status</th></tr>
-                    <tr><td>Main Shell</td><td>SA‑516 Gr.70</td><td>0.400 in</td><td>0.625 in</td><td>✅ PASS</td></tr>
-                    <tr><td>Top Head (2:1 Elliptical)</td><td>SA‑516 Gr.70</td><td>0.339 in</td><td>0.625 in</td><td>✅ PASS</td></tr>
-                    <tr><td>Bottom Head (2:1 Elliptical)</td><td>SA‑516 Gr.70</td><td>0.339 in</td><td>0.625 in</td><td>✅ PASS</td></tr>
-                    <tr><td>Jacket Shell</td><td>SA‑240 Type 304</td><td>3.90 mm</td><td>6.00 mm</td><td>✅ PASS</td></tr>
-                </table>
-
-                <h3>Nozzle Reinforcement Highlights</h3>
-                <table>
-                    <tr><th>Nozzle</th><th>Size</th><th>Required Area (mm²)</th><th>Available Area (mm²)</th><th>Status</th></tr>
-                    <tr><td>M1 (Manhole)</td><td>508 mm</td><td>926</td><td>6320</td><td>✅ PASS</td></tr>
-                    <tr><td>N1 (Process Inlet)</td><td>114.3 mm</td><td>196</td><td>826</td><td>✅ PASS</td></tr>
-                    <tr><td>N2 (Process Outlet)</td><td>114.3 mm</td><td>196</td><td>826</td><td>✅ PASS</td></tr>
-                    <tr><td>PSV1 (Safety Valve)</td><td>60.3 mm</td><td colspan="2">Exempt per UG‑36</td><td>✅ PASS</td></tr>
-                    <tr><td>J1 (Jacket Inlet)</td><td>60.3 mm</td><td>191</td><td>254</td><td>✅ PASS</td></tr>
-                </table>
-
-                <div class="note">
-                    <strong>Engineering Note:</strong> During jacket hydrotest (0.780 MPa), the inner shell sees external pressure. Simultaneous pressurization of the main vessel is recommended to prevent buckling.
-                </div>
-
-                <a href="#" class="btn" onclick="alert('PDF download will be added soon.')">📄 Download Full Report (PDF)</a>
+            <div class="intro">
+                <p>Below are sample pressure vessel design projects demonstrating my expertise in ASME Section VIII Division 1. All designs are hypothetical and for illustrative purposes only. Click the buttons to download detailed calculation reports.</p>
             </div>
 
-            <!-- More projects can be added here later -->
+            <!-- PROJECT 1: Simple Storage Tank -->
+            <div class="project">
+                <div class="project-title">🔹 Project 1: Simple Storage Tank (Carbon Steel)</div>
+                <div class="project-grid">
+                    <div class="project-specs">
+                        <h3>Design Basis</h3>
+                        <table>
+                            <tr><th>Parameter</th><th>Value</th></tr>
+                            <tr><td>Code</td><td>ASME VIII Div. 1</td></tr>
+                            <tr><td>Design Pressure</td><td>1.2 MPa</td></tr>
+                            <tr><td>Design Temperature</td><td>150°C</td></tr>
+                            <tr><td>MDMT</td><td>-10°C</td></tr>
+                            <tr><td>Corrosion Allowance</td><td>3 mm</td></tr>
+                            <tr><td>Material</td><td>SA‑516 Gr.70</td></tr>
+                            <tr><td>Inside Diameter</td><td>1500 mm</td></tr>
+                            <tr><td>Shell Length</td><td>3000 mm</td></tr>
+                            <tr><td>Head Type</td><td>2:1 Elliptical</td></tr>
+                            <tr><td>Nozzles</td><td>6", 3", 2", 1½"</td></tr>
+                        </table>
+                        <p><strong>Features:</strong> Full UG‑37 nozzle reinforcement checks, external pressure evaluation, MDMT analysis.</p>
+                    </div>
+                    <div class="project-sketch">
+                        <h3>Sketch</h3>
+                        <div class="sketch-placeholder">
+                            [ Sketch of Simple Storage Tank ]<br>
+                            <em>Replace this with your drawing (PNG/JPG)</em>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn" onclick="alert('PDF coming soon – check back in a day')">📄 Download Full Report (PDF)</a>
+                <p style="margin-top: 10px; font-style: italic; color: #5f6a7a;">PDF will be available shortly.</p>
+            </div>
+
+            <!-- PROJECT 2: Jacketed Reactor -->
+            <div class="project">
+                <div class="project-title">🔹 Project 2: Jacketed Reactor (Stainless Steel)</div>
+                <div class="project-grid">
+                    <div class="project-specs">
+                        <h3>Design Basis</h3>
+                        <table>
+                            <tr><th>Parameter</th><th>Value</th></tr>
+                            <tr><td>Code</td><td>ASME VIII Div. 1</td></tr>
+                            <tr><td>Design Pressure (internal)</td><td>150 psi</td></tr>
+                            <tr><td>Design Pressure (jacket)</td><td>0.6 MPa</td></tr>
+                            <tr><td>Design Temperature</td><td>150°F</td></tr>
+                            <tr><td>MDMT</td><td>-20°F</td></tr>
+                            <tr><td>Corrosion Allowance</td><td>0.125 in</td></tr>
+                            <tr><td>Shell Material</td><td>SA‑516 Gr.70</td></tr>
+                            <tr><td>Jacket Material</td><td>SA‑240 Type 304</td></tr>
+                            <tr><td>Inside Diameter</td><td>90 in</td></tr>
+                            <tr><td>Shell Length</td><td>120 in</td></tr>
+                            <tr><td>Head Type</td><td>2:1 Elliptical</td></tr>
+                            <tr><td>Nozzles</td><td>11 total (incl. manhole, process, PSV, jacket)</td></tr>
+                        </table>
+                        <p><strong>Features:</strong> Full‑length conventional jacket, 11 nozzle reinforcement checks, external pressure on inner shell during jacket test.</p>
+                    </div>
+                    <div class="project-sketch">
+                        <h3>Sketch</h3>
+                        <div class="sketch-placeholder">
+                            [ Sketch of Jacketed Reactor ]<br>
+                            <em>Replace this with your drawing (PNG/JPG)</em>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn" onclick="alert('PDF coming soon – check back in a day')">📄 Download Full Report (PDF)</a>
+                <p style="margin-top: 10px; font-style: italic; color: #5f6a7a;">PDF will be available shortly.</p>
+            </div>
+
+            <!-- PROJECT 3: High‑Pressure Vessel -->
+            <div class="project">
+                <div class="project-title">🔹 Project 3: High‑Pressure Vessel (Alloy Steel)</div>
+                <div class="project-grid">
+                    <div class="project-specs">
+                        <h3>Design Basis</h3>
+                        <table>
+                            <tr><th>Parameter</th><th>Value</th></tr>
+                            <tr><td>Code</td><td>ASME VIII Div. 2</td></tr>
+                            <tr><td>Design Pressure</td><td>20 MPa</td></tr>
+                            <tr><td>Design Temperature</td><td>200°C</td></tr>
+                            <tr><td>MDMT</td><td>-20°C</td></tr>
+                            <tr><td>Corrosion Allowance</td><td>1.5 mm</td></tr>
+                            <tr><td>Material</td><td>SA‑387 Gr.22 (2.25Cr‑1Mo)</td></tr>
+                            <tr><td>Inside Diameter</td><td>800 mm</td></tr>
+                            <tr><td>Shell Length</td><td>2000 mm</td></tr>
+                            <tr><td>Head Type</td><td>Hemispherical</td></tr>
+                            <tr><td>Wall Thickness</td><td>45 mm</td></tr>
+                        </table>
+                        <p><strong>Features:</strong> Thick‑wall analysis, elastic stress evaluation, fatigue assessment (if applicable).</p>
+                    </div>
+                    <div class="project-sketch">
+                        <h3>Sketch</h3>
+                        <div class="sketch-placeholder">
+                            [ Sketch of High‑Pressure Vessel ]<br>
+                            <em>Replace this with your drawing (PNG/JPG)</em>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn" onclick="alert('PDF coming soon – check back in a day')">📄 Download Full Report (PDF)</a>
+                <p style="margin-top: 10px; font-style: italic; color: #5f6a7a;">PDF will be available shortly.</p>
+            </div>
+
+            <!-- PROJECT 4: Heat Exchanger Shell -->
+            <div class="project">
+                <div class="project-title">🔹 Project 4: Heat Exchanger Shell (U‑tube)</div>
+                <div class="project-grid">
+                    <div class="project-specs">
+                        <h3>Design Basis</h3>
+                        <table>
+                            <tr><th>Parameter</th><th>Value</th></tr>
+                            <tr><td>Code</td><td>ASME VIII Div. 1 + TEMA</td></tr>
+                            <tr><td>Design Pressure (shell side)</td><td>1.0 MPa</td></tr>
+                            <tr><td>Design Pressure (tube side)</td><td>1.5 MPa</td></tr>
+                            <tr><td>Design Temperature</td><td>180°C</td></tr>
+                            <tr><td>MDMT</td><td>-5°C</td></tr>
+                            <tr><td>Corrosion Allowance</td><td>2 mm</td></tr>
+                            <tr><td>Shell Material</td><td>SA‑516 Gr.70</td></tr>
+                            <tr><td>Tubesheet Material</td><td>SA‑266 Gr.2</td></tr>
+                            <tr><td>Shell ID</td><td>600 mm</td></tr>
+                            <tr><td>Tube Count</td><td>150 (19 mm OD)</td></tr>
+                        </table>
+                        <p><strong>Features:</strong> Tubesheet design (UG‑47 / Appendix A), expansion joint evaluation, baffle spacing.</p>
+                    </div>
+                    <div class="project-sketch">
+                        <h3>Sketch</h3>
+                        <div class="sketch-placeholder">
+                            [ Sketch of Heat Exchanger Shell ]<br>
+                            <em>Replace this with your drawing (PNG/JPG)</em>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn" onclick="alert('PDF coming soon – check back in a day')">📄 Download Full Report (PDF)</a>
+                <p style="margin-top: 10px; font-style: italic; color: #5f6a7a;">PDF will be available shortly.</p>
+            </div>
 
             <div class="footer">
                 <p>© 2026 Umesh Gohil | <a href="https://umeshg789.github.io/UmeshG789/">Resume</a> | <a href="https://linkedin.com/in/umeshg78/">LinkedIn</a></p>
