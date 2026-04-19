@@ -1,99 +1,270 @@
-<div class="intro">
-    <p>Below are sample pressure vessel design projects demonstrating my expertise in <strong>ASME Section VIII Division 1</strong>. All designs are hypothetical and for illustrative purposes only. Click the buttons to download detailed calculation reports.</p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umesh Gohil - Design Portfolio</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f9;
+            color: #1e2b37;
+            line-height: 1.6;
+            padding: 30px 20px;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        header {
+            background: #1e2b37;
+            color: white;
+            padding: 30px 40px;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+        }
+        .back-link {
+            margin-top: 15px;
+        }
+        .back-link a {
+            color: #a0c0d0;
+            text-decoration: none;
+            border-bottom: 1px dotted #a0c0d0;
+        }
+        .back-link a:hover {
+            color: white;
+            border-bottom: 1px solid white;
+        }
+        .main-content {
+            padding: 40px;
+        }
+        .intro {
+            background: #e7edf3;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .project {
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #d0dde7;
+        }
+        .project:last-child {
+            border-bottom: none;
+        }
+        .project-title {
+            font-size: 1.8rem;
+            color: #1e2b37;
+            margin-bottom: 15px;
+            background: #f0f4f8;
+            padding: 10px 15px;
+            border-left: 5px solid #1e2b37;
+        }
+        .project-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .project-specs {
+            flex: 1 1 300px;
+        }
+        .project-sketch {
+            flex: 1 1 300px;
+            text-align: center;
+        }
+        .project-sketch img {
+            max-width: 100%;
+            border: 1px solid #d0dde7;
+            border-radius: 8px;
+            padding: 10px;
+            background: #f9f9f9;
+        }
+        .sketch-placeholder {
+            background: #f0f4f8;
+            border: 2px dashed #a0c0d0;
+            border-radius: 8px;
+            padding: 40px 20px;
+            color: #5f6a7a;
+            font-style: italic;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: white;
+        }
+        th {
+            background: #1e2b37;
+            color: white;
+            padding: 10px;
+            text-align: left;
+        }
+        td {
+            padding: 8px 10px;
+            border-bottom: 1px solid #d0dde7;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        .btn {
+            display: inline-block;
+            background: #1e2b37;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            margin-top: 15px;
+            border: 2px solid #1e2b37;
+            transition: all 0.2s;
+        }
+        .btn:hover {
+            background: white;
+            color: #1e2b37;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            color: #5f6a7a;
+            font-size: 0.9rem;
+            border-top: 2px dashed #d0dde7;
+        }
+        .footer a {
+            color: #1e2b37;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        @media (max-width: 700px) {
+            header { padding: 20px; }
+            header h1 { font-size: 2rem; }
+            .main-content { padding: 20px; }
+            .project-grid { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📁 Design Portfolio</h1>
+            <div class="back-link">
+                <a href="https://umeshg789.github.io/UmeshG789/">← Back to Resume</a>
+            </div>
+        </header>
 
-<!-- PROJECT 1: High‑Pressure Gas Suction Scrubber Nozzles -->
-<div class="project">
-    <div class="project-title">🔹 Project 1: High‑Pressure Gas Suction Scrubber – Nozzle Reinforcement</div>
-    <div class="project-grid">
-        <div class="project-specs">
-            <h3>Design Basis</h3>
-            <table>
-                <tr><th>Parameter</th><th>Value</th></tr>
-                <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Code</td><td style="border: 1px solid #bdc3c7; padding: 6px;">ASME Section VIII Division 1</td></tr>
-                <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Design Pressure</td><td style="border: 1px solid #bdc3c7; padding: 6px;">8.5 MPa</td></tr>
-                <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Design Temperature</td><td style="border: 1px solid #bdc3c7; padding: 6px;">160°C</td></tr>
-                <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Material</td><td style="border: 1px solid #bdc3c7; padding: 6px;">SA‑537 Class 1 (shell), SA‑106B (nozzles)</td></tr>
-                <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Shell ID / Thickness</td><td style="border: 1px solid #bdc3c7; padding: 6px;">1450 mm / 42 mm</td></tr>
-                <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Nozzles</td><td style="border: 1px solid #bdc3c7; padding: 6px;">13 total (NPS 20 manway, NPS 10, 6, 4, 3, 2)</td></tr>
-                <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Special Service</td><td style="border: 1px solid #bdc3c7; padding: 6px;">NACE H₂S (lethal), severe cyclic</td></tr>
-            </table>
-            <p><strong>Features:</strong> Area replacement (UG‑37), overlapping limits (UG‑42), external piping loads, PWHT, MDMT, impact testing. Every nozzle required reinforcing pads.</p>
-        </div>
-        <div class="project-sketch">
-            <h3>Sketch</h3>
-            <div class="sketch-placeholder">
-                [ Sketch of Nozzle Layout ]<br>
-                <em>Add a simple drawing showing nozzle positions</em>
+        <div class="main-content">
+            <div class="intro">
+                <p>Below are sample pressure vessel design projects demonstrating my expertise in <strong>ASME Section VIII Division 1</strong>. All designs are hypothetical and for illustrative purposes only. Click the buttons to download detailed calculation reports.</p>
+            </div>
+
+            <!-- PROJECT 1: High‑Pressure Gas Suction Scrubber Nozzles -->
+            <div class="project">
+                <div class="project-title">🔹 Project 1: High‑Pressure Gas Suction Scrubber – Nozzle Reinforcement</div>
+                <div class="project-grid">
+                    <div class="project-specs">
+                        <h3>Design Basis</h3>
+                        <table>
+                            <tr><th>Parameter</th><th>Value</th></tr>
+                            <tr><td>Code</td><td>ASME Section VIII Division 1</td></tr>
+                            <tr><td>Design Pressure</td><td>8.5 MPa</td></tr>
+                            <tr><td>Design Temperature</td><td>160°C</td></tr>
+                            <tr><td>Material</td><td>SA‑537 Class 1 (shell), SA‑106B (nozzles)</td></tr>
+                            <tr><td>Shell ID / Thickness</td><td>1450 mm / 42 mm</td></tr>
+                            <tr><td>Nozzles</td><td>13 total (NPS 20 manway, NPS 10, 6, 4, 3, 2)</td></tr>
+                            <tr><td>Special Service</td><td>NACE H₂S (lethal), severe cyclic</td></tr>
+                        </table>
+                        <p><strong>Features:</strong> Area replacement (UG‑37), overlapping limits (UG‑42), external piping loads, PWHT, MDMT, impact testing. Every nozzle required reinforcing pads.</p>
+                    </div>
+                    <div class="project-sketch">
+                        <h3>Sketch</h3>
+                        <div class="sketch-placeholder">
+                            [ Sketch of Nozzle Layout ]<br>
+                            <em>Add a simple drawing showing nozzle positions</em>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 15px;">
+                    <a href="pdfs/Design Calculation Report_ High-Pressure Gas Suction Scrubber Nozzles (Division 1).pdf" class="btn" target="_blank">📄 Download Full Report (PDF)</a>
+                </div>
+                <p style="margin-top: 10px; font-style: italic; color: #5f6a7a;">Comprehensive nozzle reinforcement study – demonstrates ability to handle complex opening schedules under extreme conditions.</p>
+            </div>
+
+            <!-- PROJECT 2: High‑Pressure Hydrogenation Reactor Shell -->
+            <div class="project">
+                <div class="project-title">🔹 Project 2: High‑Pressure Hydrogenation Reactor Shell</div>
+                <div class="project-grid">
+                    <div class="project-specs">
+                        <h3>Design Basis</h3>
+                        <table>
+                            <tr><th>Parameter</th><th>Value</th></tr>
+                            <tr><td>Code</td><td>ASME Section VIII Division 1</td></tr>
+                            <tr><td>Design Pressure</td><td>18.0 MPa</td></tr>
+                            <tr><td>Design Temperature</td><td>450°C</td></tr>
+                            <tr><td>Material</td><td>SA‑387 Gr.22 Class 2 (2.25Cr‑1Mo)</td></tr>
+                            <tr><td>Inside Diameter</td><td>800 mm</td></tr>
+                            <tr><td>Shell Length</td><td>3200 mm</td></tr>
+                            <tr><td>Nominal Thickness</td><td>75 mm</td></tr>
+                        </table>
+                        <p><strong>Features:</strong> Full vacuum external pressure, creep‑fatigue consideration, mandatory PWHT/PFHT, impact testing required.</p>
+                    </div>
+                    <div class="project-sketch">
+                        <h3>Sketch</h3>
+                        <div class="sketch-placeholder">
+                            [ Sketch of High‑Pressure Reactor Shell ]<br>
+                            <em>Add a simple drawing of the thick‑wall shell</em>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 15px;">
+                    <a href="pdfs/Design Calculation Report_ High-Pressure Hydrogenation Reactor Shell (Division 1).pdf" class="btn" target="_blank">📄 Download Full Report (PDF)</a>
+                </div>
+                <p style="margin-top: 10px; font-style: italic; color: #5f6a7a;">Division 1 design of a high‑pressure hydrogenation reactor shell – includes internal/external pressure, MDMT, PWHT, and PFHT evaluations.</p>
+            </div>
+
+            <!-- PROJECT 3: Horizontal Pressure Vessel – Saddle Supports -->
+            <div class="project">
+                <div class="project-title">🔹 Project 3: Horizontal Pressure Vessel – Saddle Support &amp; Wear Plate Optimization</div>
+                <div class="project-grid">
+                    <div class="project-specs">
+                        <h3>Design Basis</h3>
+                        <table>
+                            <tr><th>Parameter</th><th>Value</th></tr>
+                            <tr><td>Code</td><td>ASME Section VIII Division 1</td></tr>
+                            <tr><td>Outside Diameter</td><td>2,500 mm</td></tr>
+                            <tr><td>Shell Thickness (corroded)</td><td>19 mm</td></tr>
+                            <tr><td>Tangent‑to‑Tangent Length</td><td>12,000 mm</td></tr>
+                            <tr><td>Operating Weight per Saddle</td><td>421,011 N</td></tr>
+                            <tr><td>Saddle Angle</td><td>120°</td></tr>
+                            <tr><td>Wear Plate</td><td>13 mm thick, 140° sweep</td></tr>
+                        </table>
+                        <p><strong>Features:</strong> Zick's analysis, longitudinal bending, tangential shear, circumferential horn stress, wear plate optimization.</p>
+                    </div>
+                    <div class="project-sketch">
+                        <h3>Sketch</h3>
+                        <div class="sketch-placeholder">
+                            [ Sketch of Horizontal Vessel with Saddles ]<br>
+                            <em>Add a simple drawing</em>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 15px;">
+                    <a href="pdfs/Design Calculation Report_ Horizontal Pressure Vessel (Division 1).pdf" class="btn" target="_blank">📄 Download Full Report (PDF)</a>
+                </div>
+                <p style="margin-top: 10px; font-style: italic; color: #5f6a7a;">Division 1 saddle support design using Zick's analysis – includes base plate sizing, web splitting force check, and wear plate specification.</p>
+            </div>
+
+            <div class="footer">
+                <p>© 2026 Umesh Gohil | <a href="https://umeshg789.github.io/UmeshG789/">Resume</a> | <a href="https://linkedin.com/in/umeshg78/">LinkedIn</a></p>
             </div>
         </div>
     </div>
-    <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 15px;">
-        <a href="pdfs/Design Calculation Report_ High-Pressure Gas Suction Scrubber Nozzles (Division 1).pdf" class="btn" target="_blank">📄 Download Full Report (PDF)</a>
-    </div>
-    <p style="margin-top: 10px; font-style: italic; color: #5f6a7a;">Comprehensive nozzle reinforcement study – demonstrates ability to handle complex opening schedules under extreme conditions.</p>
-</div>
-
-<!-- PROJECT 2: High‑Pressure Hydrogenation Reactor Shell -->
-<div class="project">
-    <div class="project-title">🔹 Project 2: High‑Pressure Hydrogenation Reactor Shell</div>
-    <div class="project-grid">
-        <div class="project-specs">
-            <h3>Design Basis</h3>
-            <table>
-                <tr><th>Parameter</th><th>Value</th></tr>
-                <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Code</td><td style="border: 1px solid #bdc3c7; padding: 6px;">ASME Section VIII Division 1</td></tr>
-                <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Design Pressure</td><td style="border: 1px solid #bdc3c7; padding: 6px;">18.0 MPa</td></tr>
-                <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Design Temperature</td><td style="border: 1px solid #bdc3c7; padding: 6px;">450°C</td></tr>
-                <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Material</td><td style="border: 1px solid #bdc3c7; padding: 6px;">SA‑387 Gr.22 Class 2 (2.25Cr‑1Mo)</td></tr>
-                <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Inside Diameter</td><td style="border: 1px solid #bdc3c7; padding: 6px;">800 mm</td></tr>
-                <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Shell Length</td><td style="border: 1px solid #bdc3c7; padding: 6px;">3200 mm</td></tr>
-                <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Nominal Thickness</td><td style="border: 1px solid #bdc3c7; padding: 6px;">75 mm</td></tr>
-            </table>
-            <p><strong>Features:</strong> Full vacuum external pressure, creep‑fatigue consideration, mandatory PWHT/PFHT, impact testing required.</p>
-        </div>
-        <div class="project-sketch">
-            <h3>Sketch</h3>
-            <div class="sketch-placeholder">
-                [ Sketch of High‑Pressure Reactor Shell ]<br>
-                <em>Add a simple drawing of the thick‑wall shell</em>
-            </div>
-        </div>
-    </div>
-    <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 15px;">
-        <a href="pdfs/Design Calculation Report_ High-Pressure Hydrogenation Reactor Shell (Division 1).pdf" class="btn" target="_blank">📄 Download Full Report (PDF)</a>
-    </div>
-    <p style="margin-top: 10px; font-style: italic; color: #5f6a7a;">Division 1 design of a high‑pressure hydrogenation reactor shell – includes internal/external pressure, MDMT, PWHT, and PFHT evaluations.</p>
-</div>
-
-<!-- PROJECT 3: Horizontal Pressure Vessel – Saddle Supports -->
-<div class="project">
-    <div class="project-title">🔹 Project 3: Horizontal Pressure Vessel – Saddle Support &amp; Wear Plate Optimization</div>
-    <div class="project-grid">
-        <div class="project-specs">
-            <h3>Design Basis</h3>
-            <table>
-                <tr><th>Parameter</th><th>Value</th></tr>
-                <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Code</td><td style="border: 1px solid #bdc3c7; padding: 6px;">ASME Section VIII Division 1</td></tr>
-                <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Outside Diameter</td><td style="border: 1px solid #bdc3c7; padding: 6px;">2,500 mm</td></tr>
-                <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Shell Thickness (corroded)</td><td style="border: 1px solid #bdc3c7; padding: 6px;">19 mm</td></tr>
-                <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Tangent‑to‑Tangent Length</td><td style="border: 1px solid #bdc3c7; padding: 6px;">12,000 mm</td></tr>
-                <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Operating Weight per Saddle</td><td style="border: 1px solid #bdc3c7; padding: 6px;">421,011 N</td></tr>
-                <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Saddle Angle</td><td style="border: 1px solid #bdc3c7; padding: 6px;">120°</td></tr>
-                <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Wear Plate</td><td style="border: 1px solid #bdc3c7; padding: 6px;">13 mm thick, 140° sweep</td></tr>
-            </table>
-            <p><strong>Features:</strong> Zick's analysis, longitudinal bending, tangential shear, circumferential horn stress, wear plate optimization.</p>
-        </div>
-        <div class="project-sketch">
-            <h3>Sketch</h3>
-            <div class="sketch-placeholder">
-                [ Sketch of Horizontal Vessel with Saddles ]<br>
-                <em>Add a simple drawing</em>
-            </div>
-        </div>
-    </div>
-    <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 15px;">
-        <a href="pdfs/Design Calculation Report_ Horizontal Pressure Vessel (Division 1).pdf" class="btn" target="_blank">📄 Download Full Report (PDF)</a>
-    </div>
-    <p style="margin-top: 10px; font-style: italic; color: #5f6a7a;">Division 1 saddle support design using Zick's analysis – includes base plate sizing, web splitting force check, and wear plate specification.</p>
-</div>
+</body>
+</html>
