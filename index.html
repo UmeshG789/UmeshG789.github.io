@@ -74,6 +74,8 @@
             font-weight: 600;
             color: #1e6f5c;
             transition: all 0.2s;
+            cursor: pointer;
+            display: inline-block;
         }
 
         .btn-outline:hover {
@@ -92,7 +94,7 @@
             border-radius: 40px;
             font-weight: 600;
             text-decoration: none;
-            transition: background 0.2s, transform 0.1s;
+            transition: background 0.2s;
             border: none;
             cursor: pointer;
         }
@@ -158,53 +160,55 @@
             padding-left: 20px;
         }
 
-        /* Projects – detailed cards */
-        .project-card-full {
+        /* Grid card style */
+        .grid-card {
+            background: white;
+            border-radius: 20px;
+            border: 1px solid #e9edf2;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .grid-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 20px -10px rgba(0,0,0,0.08);
+            border-color: #cbdde6;
+        }
+
+        /* Full detail area (dynamic) */
+        .detail-area {
             background: white;
             border-radius: 28px;
+            border: 1px solid #e9edf2;
             margin-bottom: 48px;
             overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
-            border: 1px solid #e9edf2;
-            transition: box-shadow 0.2s;
         }
 
-        .project-card-full:hover {
-            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1);
-        }
-
+        /* Project detail internal styles (from your original) */
         .project-header {
             background: #f8fafc;
             padding: 20px 28px;
             border-bottom: 1px solid #eef2f6;
         }
-
         .project-title {
             font-size: 1.5rem;
             font-weight: 700;
             color: #0f2b3b;
             margin-bottom: 6px;
         }
-
         .project-sub {
             color: #4a6a7c;
             font-size: 0.85rem;
         }
-
         .project-body {
             padding: 28px;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 32px;
         }
-
         @media (max-width: 750px) {
-            .project-body {
-                grid-template-columns: 1fr;
-                gap: 24px;
-            }
+            .project-body { grid-template-columns: 1fr; }
         }
-
         .specs-table {
             width: 100%;
             border-collapse: collapse;
@@ -214,7 +218,6 @@
             overflow: hidden;
             border: 1px solid #eef2f6;
         }
-
         .specs-table th {
             background: #1e2a3a;
             color: white;
@@ -223,22 +226,16 @@
             font-weight: 600;
             font-size: 0.8rem;
         }
-
         .specs-table td {
             padding: 8px 12px;
             border-bottom: 1px solid #eef2f6;
         }
-
-        .specs-table tr:last-child td {
-            border-bottom: none;
-        }
-
+        .specs-table tr:last-child td { border-bottom: none; }
         .specs-table td:first-child {
             font-weight: 600;
             background: #fafcfd;
             width: 40%;
         }
-
         .feature-box {
             margin-top: 20px;
             background: #f4f9fc;
@@ -247,7 +244,6 @@
             font-size: 0.85rem;
             border-left: 3px solid #1e6f5c;
         }
-
         .feature-box strong {
             display: block;
             font-size: 0.75rem;
@@ -256,21 +252,18 @@
             color: #1e6f5c;
             margin-bottom: 8px;
         }
-
         .project-image {
             width: 100%;
             border-radius: 20px;
             border: 1px solid #e2edf2;
             background: #fefefe;
         }
-
         .img-caption {
             font-size: 0.75rem;
             color: #6c8d9e;
             text-align: center;
             margin-top: 12px;
         }
-
         .download-row {
             padding: 20px 28px 28px 28px;
             border-top: 1px solid #eef2f6;
@@ -280,7 +273,6 @@
             gap: 16px;
             background: #fefefe;
         }
-
         .dl-btn {
             background: #1e2a3a;
             color: white;
@@ -292,19 +284,10 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            transition: 0.2s;
         }
+        .dl-btn:hover { background: #0f3b5c; }
+        .dl-note { font-size: 0.8rem; color: #617e8f; }
 
-        .dl-btn:hover {
-            background: #0f3b5c;
-        }
-
-        .dl-note {
-            font-size: 0.8rem;
-            color: #617e8f;
-        }
-
-        /* Learning teaser */
         .learning-teaser {
             background: #eef3f0;
             border-radius: 32px;
@@ -313,20 +296,6 @@
             text-align: center;
             border: 1px solid #d3e3dc;
         }
-
-        .learning-teaser h3 {
-            font-size: 1.6rem;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-
-        .learning-teaser p {
-            max-width: 600px;
-            margin: 0 auto 24px;
-            color: #2a5a68;
-        }
-
-        /* Footer */
         .footer {
             border-top: 1px solid #e2e8f0;
             margin-top: 48px;
@@ -335,43 +304,21 @@
             color: #5b7f8e;
             font-size: 0.9rem;
         }
-
         .footer-links {
             display: flex;
             justify-content: center;
             gap: 32px;
             margin-bottom: 16px;
         }
-
         .footer-links a {
             text-decoration: none;
             color: #2c7a6b;
             font-weight: 500;
         }
-
-        .footer-links a:hover {
-            text-decoration: underline;
-        }
-
         @media (max-width: 640px) {
-            .container {
-                padding: 0 20px;
-            }
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            .section-title {
-                font-size: 1.5rem;
-            }
-            .project-header {
-                padding: 16px 20px;
-            }
-            .project-body {
-                padding: 20px;
-            }
-            .download-row {
-                padding: 16px 20px 24px;
-            }
+            .container { padding: 0 20px; }
+            .hero h1 { font-size: 2.2rem; }
+            .section-title { font-size: 1.5rem; }
         }
     </style>
 </head>
@@ -403,50 +350,30 @@
     </section>
 
     <section>
-    <h2 class="section-title">Featured Engineering Work</h2>
+        <h2 class="section-title">Featured Engineering Work</h2>
 
-    <!-- Project Grid (3 cards) -->
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; margin-bottom: 48px;">
-        <div class="project-card-full" style="background: white; border-radius: 20px; border: 1px solid #e9edf2; padding: 20px; cursor: pointer;" onclick="showProject(0)">
-            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 8px;">High‑Pressure Gas Suction Scrubber</h3>
-            <p style="color: #4a6a7c; font-size: 0.85rem;">Nozzle reinforcement | ASME VIII | NACE H₂S</p>
-            <div style="margin-top: 16px;"><span class="btn-outline" style="display: inline-block; font-size: 0.8rem;">View Project →</span></div>
+        <!-- Grid of 3 project cards -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; margin-bottom: 48px;">
+            <div class="grid-card" onclick="showProject(0)">
+                <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 8px;">High‑Pressure Gas Suction Scrubber</h3>
+                <p style="color: #4a6a7c; font-size: 0.85rem;">Nozzle reinforcement | ASME VIII | NACE H₂S</p>
+                <div style="margin-top: 16px;"><span class="btn-outline" style="font-size: 0.8rem;">View Project →</span></div>
+            </div>
+            <div class="grid-card" onclick="showProject(1)">
+                <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 8px;">High‑Pressure Hydrogenation Reactor</h3>
+                <p style="color: #4a6a7c; font-size: 0.85rem;">Cr‑Mo steel | 18 MPa | 450°C</p>
+                <div style="margin-top: 16px;"><span class="btn-outline" style="font-size: 0.8rem;">View Project →</span></div>
+            </div>
+            <div class="grid-card" onclick="showProject(2)">
+                <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 8px;">Horizontal Vessel – Saddle Support</h3>
+                <p style="color: #4a6a7c; font-size: 0.85rem;">Zick's analysis | 12 m vessel | Wear plate</p>
+                <div style="margin-top: 16px;"><span class="btn-outline" style="font-size: 0.8rem;">View Project →</span></div>
+            </div>
         </div>
-        <div class="project-card-full" style="background: white; border-radius: 20px; border: 1px solid #e9edf2; padding: 20px; cursor: pointer;" onclick="showProject(1)">
-            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 8px;">High‑Pressure Hydrogenation Reactor</h3>
-            <p style="color: #4a6a7c; font-size: 0.85rem;">Cr‑Mo steel | 18 MPa | 450°C</p>
-            <div style="margin-top: 16px;"><span class="btn-outline" style="display: inline-block; font-size: 0.8rem;">View Project →</span></div>
-        </div>
-        <div class="project-card-full" style="background: white; border-radius: 20px; border: 1px solid #e9edf2; padding: 20px; cursor: pointer;" onclick="showProject(2)">
-            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 8px;">Horizontal Vessel – Saddle Support</h3>
-            <p style="color: #4a6a7c; font-size: 0.85rem;">Zick's analysis | 12 m vessel | Wear plate</p>
-            <div style="margin-top: 16px;"><span class="btn-outline" style="display: inline-block; font-size: 0.8rem;">View Project →</span></div>
-        </div>
-    </div>
 
-    <!-- Dynamic Content Area (full details will appear here) -->
-    <div id="project-detail-area" style="background: white; border-radius: 28px; border: 1px solid #e9edf2; margin-bottom: 48px; padding: 0;">
-        <!-- Initially, show the first project's full details -->
-    </div>
-</section>
-
-<script>
-    // Store full HTML for each project (same as the original detailed cards)
-    const projectsDetails = [
-        `<!-- PROJECT 1 FULL DETAILS (copy from your original code) -->`,
-        `<!-- PROJECT 2 FULL DETAILS -->`,
-        `<!-- PROJECT 3 FULL DETAILS -->`
-    ];
-
-    function showProject(index) {
-        document.getElementById('project-detail-area').innerHTML = projectsDetails[index];
-        // Optional: scroll to the detail area smoothly
-        document.getElementById('project-detail-area').scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-
-    // Load first project by default
-    showProject(0);
-</script>
+        <!-- Dynamic content area -->
+        <div id="project-detail-area" class="detail-area"></div>
+    </section>
 
     <div class="learning-teaser">
         <h3>📘 Weekly Deep‑Dives into Pressure Vessel Design</h3>
@@ -466,13 +393,130 @@
 </div>
 
 <script>
-    // Update this path to match your actual resume PDF file
-    const resumePdfUrl = "/pdfs/Umesh Gohil_static equipment design engineer.pdf";  // <-- CHANGE IF FILENAME DIFFERS
+    // Full HTML for each project (exactly as before)
+    const project1HTML = `
+        <div>
+            <div class="project-header">
+                <div class="project-title">High‑Pressure Gas Suction Scrubber — Nozzle Reinforcement</div>
+                <div class="project-sub">ASME VIII Div.1 | PV Elite | NACE H₂S Service</div>
+            </div>
+            <div class="project-body">
+                <div>
+                    <table class="specs-table">
+                        <tr><th colspan="2">Design Basis</th></tr>
+                        <tr><td>Code</td><td>ASME Section VIII Div. 1</td></tr>
+                        <tr><td>Design Pressure</td><td>8.5 MPa</td></tr>
+                        <tr><td>Design Temperature</td><td>160 °C</td></tr>
+                        <tr><td>Material</td><td>SA‑537 Cl.1 (shell) / SA‑106B (nozzles)</td></tr>
+                        <tr><td>Shell ID / Thickness</td><td>1,450 mm / 42 mm</td></tr>
+                        <tr><td>Nozzles</td><td>13 total — NPS 20 manway, NPS 10, 6, 4, 3, 2</td></tr>
+                        <tr><td>Special Service</td><td>NACE H₂S (lethal) · Severe cyclic</td></tr>
+                    </table>
+                    <div class="feature-box">
+                        <strong>Key Features</strong>
+                        Area replacement per UG‑37, overlapping nozzle limits per UG‑42, external piping loads, PWHT, MDMT evaluation, Charpy impact testing. Every nozzle required reinforcing pad.
+                    </div>
+                </div>
+                <div>
+                    <img class="project-image" src="images/scrubber-nozzles.png" alt="PV Elite Model" onerror="this.src='https://placehold.co/400x300?text=PV+Elite+Model+Preview'">
+                    <div class="img-caption">PV Elite model — high-pressure scrubber with 13 nozzles</div>
+                </div>
+            </div>
+            <div class="download-row">
+                <a class="dl-btn" href="pdfs/Design%20Calculation%20Report_%20High-Pressure%20Gas%20Suction%20Scrubber%20Nozzles%20(Division%201).pdf" target="_blank">📄 Download Full Report (PDF)</a>
+                <span class="dl-note">Complete nozzle reinforcement study — complex opening schedules under extreme NACE service.</span>
+            </div>
+        </div>
+    `;
 
+    const project2HTML = `
+        <div>
+            <div class="project-header">
+                <div class="project-title">High‑Pressure Hydrogenation Reactor Shell</div>
+                <div class="project-sub">ASME VIII Div.1 | Cr‑Mo Steel | 18 MPa</div>
+            </div>
+            <div class="project-body">
+                <div>
+                    <table class="specs-table">
+                        <tr><th colspan="2">Design Basis</th></tr>
+                        <tr><td>Code</td><td>ASME Section VIII Div. 1</td></tr>
+                        <tr><td>Design Pressure</td><td>18.0 MPa</td></tr>
+                        <tr><td>Design Temperature</td><td>450 °C</td></tr>
+                        <tr><td>Material</td><td>SA‑387 Gr.22 Cl.2 (2.25Cr‑1Mo)</td></tr>
+                        <tr><td>Inside Diameter</td><td>800 mm</td></tr>
+                        <tr><td>Shell Length</td><td>3,200 mm</td></tr>
+                        <tr><td>Nominal Thickness</td><td>75 mm</td></tr>
+                    </table>
+                    <div class="feature-box">
+                        <strong>Key Features</strong>
+                        Full vacuum external pressure check, creep‑fatigue consideration at 450 °C, mandatory PWHT and PFHT, Charpy impact testing, high-alloy Cr‑Mo material qualification.
+                    </div>
+                </div>
+                <div>
+                    <img class="project-image" src="images/reactor-shell.png" alt="PV Elite Model" onerror="this.src='https://placehold.co/400x300?text=Reactor+Model+Preview'">
+                    <div class="img-caption">18 MPa reactor — 75 mm thick Cr‑Mo shell</div>
+                </div>
+            </div>
+            <div class="download-row">
+                <a class="dl-btn" href="pdfs/Design%20Calculation%20Report_%20High-Pressure%20Hydrogenation%20Reactor%20Shell%20(Division%201).pdf" target="_blank">📄 Download Full Report (PDF)</a>
+                <span class="dl-note">Internal/external pressure, MDMT, PWHT, and PFHT evaluations for severe hydrogen service.</span>
+            </div>
+        </div>
+    `;
+
+    const project3HTML = `
+        <div>
+            <div class="project-header">
+                <div class="project-title">Horizontal Pressure Vessel — Saddle Support & Wear Plate Optimisation</div>
+                <div class="project-sub">Zick's Analysis | ASME VIII Div.1 | 12 m vessel</div>
+            </div>
+            <div class="project-body">
+                <div>
+                    <table class="specs-table">
+                        <tr><th colspan="2">Design Basis</th></tr>
+                        <tr><td>Code</td><td>ASME Section VIII Div. 1</td></tr>
+                        <tr><td>Outside Diameter</td><td>2,500 mm</td></tr>
+                        <tr><td>Shell Thickness (corroded)</td><td>19 mm</td></tr>
+                        <tr><td>Tangent‑to‑Tangent Length</td><td>12,000 mm</td></tr>
+                        <tr><td>Operating Weight / Saddle</td><td>421,011 N</td></tr>
+                        <tr><td>Saddle Angle</td><td>120°</td></tr>
+                        <tr><td>Wear Plate</td><td>13 mm thick · 140° sweep</td></tr>
+                    </table>
+                    <div class="feature-box">
+                        <strong>Key Features</strong>
+                        Zick's analysis, longitudinal bending, tangential shear, circumferential horn stress, wear plate optimisation, base plate sizing, web splitting force check.
+                    </div>
+                </div>
+                <div>
+                    <img class="project-image" src="images/horizontal-vessel.png" alt="PV Elite Model" onerror="this.src='https://placehold.co/400x300?text=Saddle+Analysis+Preview'">
+                    <div class="img-caption">12 m horizontal vessel — Zick's saddle support analysis</div>
+                </div>
+            </div>
+            <div class="download-row">
+                <a class="dl-btn" href="pdfs/Design%20Calculation%20Report_%20Horizontal%20Pressure%20Vessel%20(Division%201).pdf" target="_blank">📄 Download Full Report (PDF)</a>
+                <span class="dl-note">Zick's saddle analysis — base plate sizing, wear plate specification, and horn stress check.</span>
+            </div>
+        </div>
+    `;
+
+    const allProjects = [project1HTML, project2HTML, project3HTML];
+
+    function showProject(index) {
+        document.getElementById('project-detail-area').innerHTML = allProjects[index];
+        // Smooth scroll into view
+        document.getElementById('project-detail-area').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // Load first project by default when page loads
+    window.addEventListener('DOMContentLoaded', () => {
+        showProject(0);
+    });
+
+    // Resume download
+    const resumePdfUrl = "/pdfs/Umesh_Gohil_Resume.pdf";  // <-- UPDATE with your actual resume PDF path
     function downloadResume() {
         window.open(resumePdfUrl, '_blank');
     }
-
     ['resumeTopBtn', 'resumeHeroBtn', 'resumeFooterBtn'].forEach(id => {
         const el = document.getElementById(id);
         if (el) el.addEventListener('click', (e) => { e.preventDefault(); downloadResume(); });
