@@ -526,10 +526,13 @@
 </div>
 
 <script>
-    const resumePdfUrl = "/pdfs/Umesh_Resume.pdf";  // <-- UPDATE this to your actual resume PDF path
+    // Update this path to match your actual resume PDF file
+    const resumePdfUrl = "/pdfs/Umesh Gohil_static equipment design engineer.pdf";  // <-- CHANGE IF FILENAME DIFFERS
+
     function downloadResume() {
         window.open(resumePdfUrl, '_blank');
     }
+
     ['resumeTopBtn', 'resumeHeroBtn', 'resumeFooterBtn'].forEach(id => {
         const el = document.getElementById(id);
         if (el) el.addEventListener('click', (e) => { e.preventDefault(); downloadResume(); });
