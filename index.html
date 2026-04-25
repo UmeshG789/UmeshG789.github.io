@@ -2,88 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Umesh Gohil | Static Equipment Design Portfolio</title>
-    <meta name="description" content="Portfolio of Umesh Gohil – ASME VIII pressure vessels, PV Elite designs, heat exchangers. Freelance & remote ready.">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Inter', system-ui, sans-serif;
             background: #eef2f5;
             color: #1a2c3c;
             line-height: 1.5;
-            scroll-behavior: smooth;
         }
-
-        /* Engineering grid background (subtle) */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                linear-gradient(rgba(30, 60, 80, 0.02) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(30, 60, 80, 0.02) 1px, transparent 1px);
-            background-size: 30px 30px;
-            pointer-events: none;
-            z-index: 0;
-        }
-
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 24px;
-            position: relative;
-            z-index: 1;
         }
-
-        /* Navigation */
         .nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 24px 0;
-            flex-wrap: wrap;
-            gap: 16px;
-            border-bottom: 1px solid rgba(30, 60, 80, 0.15);
+            border-bottom: 1px solid rgba(30,60,80,0.15);
         }
-
         .logo a {
             font-weight: 700;
             font-size: 1.6rem;
-            letter-spacing: -0.02em;
             background: linear-gradient(135deg, #1a4c6e, #2c7a6b);
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
             text-decoration: none;
         }
-
         .nav-links {
             display: flex;
             gap: 32px;
-            align-items: center;
-            flex-wrap: wrap;
         }
-
         .nav-links a {
             text-decoration: none;
             font-weight: 500;
             color: #2c5a6e;
-            transition: color 0.2s;
         }
-
-        .nav-links a:hover {
-            color: #1e6f5c;
-        }
-
         .btn-outline {
             border: 1.5px solid #2c7a6b;
             padding: 6px 16px;
@@ -91,274 +49,112 @@
             background: transparent;
             font-weight: 600;
             color: #2c7a6b;
-            transition: all 0.2s;
             cursor: pointer;
-            display: inline-block;
         }
-
-        .btn-outline:hover {
-            background: #2c7a6b;
-            color: white;
-            box-shadow: 0 4px 10px rgba(44,122,107,0.2);
-        }
-
         .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
             background: #1e5a6e;
             color: white;
             padding: 12px 28px;
             border-radius: 40px;
             font-weight: 600;
             text-decoration: none;
-            transition: all 0.2s;
             border: none;
             cursor: pointer;
+            display: inline-block;
         }
-
-        .btn-primary:hover {
-            background: #0f4a5c;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-        }
-
-        /* Hero */
         .hero {
             text-align: center;
             padding: 48px 0 24px;
-            border-bottom: 1px solid rgba(30,60,80,0.08);
-            margin-bottom: 32px;
         }
-
         .hero h1 {
             font-size: 3rem;
-            font-weight: 700;
-            letter-spacing: -0.02em;
             background: linear-gradient(135deg, #1a3a4a, #2c7a6b);
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
-            margin-bottom: 12px;
         }
-
-        .hero .tagline {
-            font-size: 1.2rem;
-            color: #2c5a6e;
-        }
-
-        .resume-btn {
-            margin: 28px 0 20px;
-        }
-
-        /* Short summary */
         .short-summary {
             max-width: 800px;
             margin: 0 auto 32px;
             text-align: center;
-            font-size: 1rem;
-            color: #2c4e6e;
             background: rgba(255,255,255,0.6);
             padding: 16px 24px;
             border-radius: 48px;
-            backdrop-filter: blur(2px);
         }
-
-        /* Skills badges (compact) */
         .skills-strip {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 10px;
-            margin: 0 auto 48px;
-            max-width: 900px;
+            margin-bottom: 48px;
         }
-
         .skill-badge {
             background: white;
             padding: 6px 18px;
             border-radius: 40px;
             font-size: 0.85rem;
-            font-weight: 500;
-            color: #1e5a6e;
             border: 1px solid rgba(44,122,107,0.2);
-            box-shadow: 0 1px 2px rgba(0,0,0,0.02);
-            transition: all 0.2s;
         }
-
-        .skill-badge:hover {
-            border-color: #2c7a6b;
-            transform: translateY(-1px);
-        }
-
         .section-title {
             font-size: 1.8rem;
-            font-weight: 700;
-            margin: 48px 0 28px;
             border-left: 5px solid #2c7a6b;
             padding-left: 20px;
-            color: #1a3a4a;
+            margin: 48px 0 28px;
         }
-
-        /* Project grid cards */
         .grid-card {
             background: white;
             border-radius: 24px;
             border: 1px solid #e2e8f0;
             padding: 24px;
             cursor: pointer;
-            transition: all 0.25s ease;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
-            position: relative;
-            overflow: hidden;
+            transition: 0.2s;
         }
-
-        .grid-card::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 5px;
-            height: 100%;
-            background: #2c7a6b;
-            opacity: 0;
-            transition: opacity 0.2s;
-        }
-
         .grid-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 24px 36px -12px rgba(0,0,0,0.15);
-            border-color: #cbdde6;
+            transform: translateY(-5px);
+            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.15);
         }
-
-        .grid-card:hover::before {
-            opacity: 1;
-        }
-
         .grid-card h3 {
             font-size: 1.3rem;
-            font-weight: 700;
             margin-bottom: 8px;
-            color: #1a3a4a;
         }
-
-        .grid-card p {
-            color: #4a6a7c;
-            font-size: 0.9rem;
-            margin-bottom: 20px;
-        }
-
-        /* Detail area (dynamic) */
         .detail-area {
             background: white;
             border-radius: 32px;
-            margin: 32px 0 48px;
+            margin: 32px 0;
             overflow: hidden;
             box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1);
-            border: 1px solid #e2e8f0;
         }
-
-        /* Project internal styles */
         .project-header {
-            background: linear-gradient(135deg, #f8fafc, #f0f4f8);
+            background: #f8fafc;
             padding: 20px 32px;
             border-bottom: 1px solid #e2edf2;
         }
-
-        .breadcrumb {
-            font-size: 0.75rem;
-            color: #2c7a6b;
-            margin-bottom: 8px;
-        }
-
-        .breadcrumb a {
-            color: #1e5a6e;
-            text-decoration: none;
-        }
-
         .project-title {
             font-size: 1.6rem;
             font-weight: 700;
-            color: #1a3a4a;
-            margin-bottom: 6px;
         }
-
-        .project-sub {
-            color: #2c7a6b;
-            font-size: 0.85rem;
-            font-weight: 500;
-            text-transform: uppercase;
-        }
-
-        .project-counter {
-            margin-top: 12px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .counter-nav button, .toggle-view {
-            background: white;
-            border: 1px solid #cbdde6;
-            padding: 6px 14px;
-            border-radius: 30px;
-            cursor: pointer;
-            font-weight: 500;
-            font-size: 0.75rem;
-            transition: 0.2s;
-        }
-
-        .counter-nav button:hover, .toggle-view:hover {
-            background: #2c7a6b;
-            color: white;
-            border-color: #2c7a6b;
-        }
-
         .project-body {
             padding: 32px;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 32px;
         }
-
-        @media (max-width: 750px) {
-            .project-body { grid-template-columns: 1fr; }
-        }
-
+        @media (max-width: 750px) { .project-body { grid-template-columns: 1fr; } }
         .specs-table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 0.85rem;
             border: 1px solid #eef2f6;
         }
-
         .specs-table th {
             background: #1a3a4a;
             color: white;
             padding: 10px;
             text-align: left;
         }
-
         .specs-table td {
             padding: 8px 10px;
             border-bottom: 1px solid #eef2f6;
-            font-family: monospace;
         }
-
-        .specs-table td:first-child {
-            font-weight: 700;
-            background: #fafcfd;
-        }
-
-        .compact-summary {
-            background: #f4f9fc;
-            padding: 16px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-        }
-
         .feature-box {
             margin-top: 24px;
             background: #f0f7f4;
@@ -366,34 +162,17 @@
             border-radius: 20px;
             border-left: 4px solid #2c7a6b;
         }
-
         .project-image {
             width: 100%;
             border-radius: 20px;
             border: 1px solid #dce5ec;
-            transition: box-shadow 0.2s;
         }
-
-        .project-image:hover {
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-        }
-
-        .img-caption {
-            font-size: 0.75rem;
-            color: #6c8d9e;
-            text-align: center;
-            margin-top: 8px;
-        }
-
         .download-row {
             padding: 20px 32px;
             border-top: 1px solid #eef2f6;
             display: flex;
-            flex-wrap: wrap;
             gap: 16px;
-            background: #fefefe;
         }
-
         .dl-btn {
             background: #1e5a6e;
             color: white;
@@ -401,45 +180,25 @@
             border-radius: 40px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.85rem;
-            transition: 0.2s;
         }
-
-        .dl-btn:hover {
-            background: #0f4a5c;
-            transform: translateY(-1px);
-        }
-
         .learning-teaser {
             background: linear-gradient(135deg, #eef3f0, #e4ece8);
             border-radius: 32px;
             padding: 40px 32px;
-            margin: 48px 0;
             text-align: center;
-            border: 1px solid #d3e3dc;
+            margin: 48px 0;
         }
-
         .footer {
             border-top: 1px solid rgba(30,60,80,0.15);
-            margin-top: 32px;
             padding: 32px 0;
             text-align: center;
-            color: #5b7f8e;
         }
-
         .footer-links {
             display: flex;
             justify-content: center;
             gap: 32px;
             margin-bottom: 16px;
         }
-
-        .footer-links a {
-            text-decoration: none;
-            color: #2c7a6b;
-            font-weight: 500;
-        }
-
         .toast {
             position: fixed;
             bottom: 30px;
@@ -448,260 +207,159 @@
             color: white;
             padding: 12px 24px;
             border-radius: 40px;
-            font-size: 0.85rem;
-            z-index: 1000;
             opacity: 0;
             transition: opacity 0.3s;
             pointer-events: none;
         }
-
         .toast.show { opacity: 1; }
-
-        .loading-spinner {
-            text-align: center;
-            padding: 60px;
-        }
-
+        .loading-spinner { text-align: center; padding: 60px; }
         .spinner {
-            display: inline-block;
             width: 40px;
             height: 40px;
             border: 3px solid rgba(44,122,107,0.2);
             border-top-color: #2c7a6b;
             border-radius: 50%;
             animation: spin 0.8s linear infinite;
+            margin: 0 auto;
         }
-
         @keyframes spin { to { transform: rotate(360deg); } }
-
         @media (max-width: 640px) {
-            .container { padding: 0 20px; }
             .hero h1 { font-size: 2.2rem; }
             .section-title { font-size: 1.5rem; }
-            .project-title { font-size: 1.3rem; }
         }
     </style>
 </head>
 <body>
-
 <div class="container">
     <nav class="nav">
         <div class="logo"><a href="/">Umesh Gohil</a></div>
         <div class="nav-links">
             <a href="/learning.html">Learning</a>
-            <a href="#" id="resumeTopBtn" class="btn-outline">📄 Resume</a>
+            <a href="#" id="resumeBtn" class="btn-outline">📄 Resume</a>
         </div>
     </nav>
-
     <div class="hero">
         <h1>Static Equipment Design Engineer</h1>
-        <div class="tagline">ASME VIII • PV Elite • Pressure Vessels & Heat Exchangers</div>
-        <div class="resume-btn">
-            <a href="#" id="resumeHeroBtn" class="btn-primary">⬇️ Download Resume (PDF)</a>
+        <div class="short-summary">
+            7+ years designing pressure vessels, heat exchangers, and filtration systems for oil & gas, chemical, and water treatment.
+            <strong>Open for freelance, remote, and relocation roles.</strong>
+        </div>
+        <div class="skills-strip">
+            <span class="skill-badge">ASME VIII Div.1</span>
+            <span class="skill-badge">PV Elite</span>
+            <span class="skill-badge">TEMA</span>
+            <span class="skill-badge">Compress</span>
+            <span class="skill-badge">AutoCAD / Inventor</span>
+            <span class="skill-badge">FEA Validation</span>
         </div>
     </div>
 
-    <!-- Short, punchy summary – not the full resume -->
-    <div class="short-summary">
-        7+ years designing pressure vessels, heat exchangers, and filtration systems for oil & gas, chemical, and water treatment. 
-        Direct collaboration with clients in Germany, USA, Italy, France, and Australia. 
-        <strong>Open for freelance, remote, and relocation roles.</strong>
-    </div>
-
-    <!-- Core skills as compact badges -->
-    <div class="skills-strip">
-        <span class="skill-badge">ASME VIII Div.1</span>
-        <span class="skill-badge">PV Elite</span>
-        <span class="skill-badge">TEMA</span>
-        <span class="skill-badge">Compress</span>
-        <span class="skill-badge">AutoCAD / Inventor</span>
-        <span class="skill-badge">PED / AD 2000</span>
-        <span class="skill-badge">FEA Validation</span>
-        <span class="skill-badge">MDR Preparation</span>
-    </div>
-
-    <!-- Featured Projects (core portfolio) -->
     <div class="section-title">Engineering Work</div>
     <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 28px; margin-bottom: 24px;">
         <div class="grid-card" onclick="showProject(0)">
             <h3>High‑Pressure Gas Suction Scrubber</h3>
             <p>Nozzle reinforcement • ASME VIII • NACE H₂S</p>
-            <span class="btn-outline" style="font-size:0.8rem;">View Project →</span>
+            <span class="btn-outline">View Project →</span>
         </div>
         <div class="grid-card" onclick="showProject(1)">
             <h3>Hydrogenation Reactor Shell</h3>
             <p>Cr‑Mo steel • 18 MPa • 450°C</p>
-            <span class="btn-outline" style="font-size:0.8rem;">View Project →</span>
+            <span class="btn-outline">View Project →</span>
         </div>
         <div class="grid-card" onclick="showProject(2)">
             <h3>Horizontal Vessel – Saddle Support</h3>
             <p>Zick's analysis • 12 m vessel • Wear plate</p>
-            <span class="btn-outline" style="font-size:0.8rem;">View Project →</span>
+            <span class="btn-outline">View Project →</span>
         </div>
     </div>
     <div id="project-detail-area" class="detail-area"></div>
 
     <div class="learning-teaser">
         <h3>📘 Weekly Deep‑Dives into Pressure Vessel Design</h3>
-        <p>ASME codes, FEA, materials, fabrication scenarios — generated with ChatGPT, verified via Notebook LM (ASME sources), shared on LinkedIn.</p>
-        <a href="/learning.html" class="btn-primary" style="background:#1e5a6e;">Explore Learning Hub →</a>
+        <p>ASME codes, FEA, materials, fabrication scenarios — generated with ChatGPT, verified via Notebook LM, shared on LinkedIn.</p>
+        <a href="/learning.html" class="btn-primary">Explore Learning Hub →</a>
     </div>
 
     <footer class="footer">
         <div class="footer-links">
-            <a href="https://github.com/UmeshG789" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/umeshg78/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/UmeshG789">GitHub</a>
+            <a href="https://linkedin.com/in/umeshg78/">LinkedIn</a>
             <a href="/learning.html">Learning</a>
-            <a href="#" id="resumeFooterBtn">Resume (PDF)</a>
+            <a href="#" id="resumeFooterBtn">Resume</a>
         </div>
         <div>© 2026 Umesh Gohil — Static Equipment Design Engineer</div>
     </footer>
 </div>
-
 <div id="toast" class="toast">✓ Download started</div>
 
 <script>
-    const projectsData = [
+    const projects = [
         {
             title: "High‑Pressure Gas Suction Scrubber — Nozzle Reinforcement",
-            subtitle: "ASME VIII Div.1 | PV Elite | NACE H₂S Service",
-            specs: [
-                ["Code", "ASME Section VIII Div. 1"],
-                ["Design Pressure", "8.5 MPa"],
-                ["Design Temperature", "160 °C"],
-                ["Material", "SA‑537 Cl.1 / SA‑106B"],
-                ["Shell ID / Thickness", "1,450 mm / 42 mm"],
-                ["Nozzles", "13 total (NPS 20 manway, 10, 6, 4, 3, 2)"],
-                ["Special Service", "NACE H₂S · Severe cyclic"]
-            ],
-            features: "Area replacement per UG‑37, overlapping nozzle limits per UG‑42, external piping loads, PWHT, MDMT evaluation, Charpy impact testing. Every nozzle required reinforcing pad.",
-            imgSrc: "images/scrubber-nozzles.png",
-            imgAlt: "PV Elite model — high-pressure scrubber with 13 nozzles",
-            pdfPath: "pdfs/Design%20Calculation%20Report_%20High-Pressure%20Gas%20Suction%20Scrubber%20Nozzles%20(Division%201).pdf",
-            pdfNote: "Complete nozzle reinforcement study — complex opening schedules under extreme NACE service."
+            subtitle: "ASME VIII Div.1 | PV Elite | NACE H₂S",
+            specs: [["Code","ASME VIII Div.1"],["Pressure","8.5 MPa"],["Temp","160°C"],["Material","SA‑537 Cl.1"],["Nozzles","13 total"],["Service","NACE H₂S"]],
+            features: "UG-37 area replacement, overlapping nozzle limits, PWHT, MDMT, Charpy impact.",
+            imgSrc: "images/scrubber.png",
+            pdf: "pdfs/scrubber-report.pdf"
         },
         {
             title: "High‑Pressure Hydrogenation Reactor Shell",
-            subtitle: "ASME VIII Div.1 | Cr‑Mo Steel | 18 MPa",
-            specs: [
-                ["Code", "ASME Section VIII Div. 1"],
-                ["Design Pressure", "18.0 MPa"],
-                ["Design Temperature", "450 °C"],
-                ["Material", "SA‑387 Gr.22 Cl.2 (2.25Cr‑1Mo)"],
-                ["Inside Diameter", "800 mm"],
-                ["Shell Length", "3,200 mm"],
-                ["Nominal Thickness", "75 mm"]
-            ],
-            features: "Full vacuum external pressure check, creep‑fatigue consideration at 450 °C, mandatory PWHT and PFHT, Charpy impact testing, high-alloy Cr‑Mo qualification.",
-            imgSrc: "images/reactor-shell.png",
-            imgAlt: "18 MPa reactor — 75 mm thick Cr‑Mo shell",
-            pdfPath: "pdfs/Design%20Calculation%20Report_%20High-Pressure%20Hydrogenation%20Reactor%20Shell%20(Division%201).pdf",
-            pdfNote: "Internal/external pressure, MDMT, PWHT, and PFHT evaluations for severe hydrogen service."
+            subtitle: "ASME VIII Div.1 | Cr‑Mo | 18 MPa",
+            specs: [["Code","ASME VIII Div.1"],["Pressure","18 MPa"],["Temp","450°C"],["Material","SA‑387 Gr.22"],["Diameter","800 mm"],["Thickness","75 mm"]],
+            features: "Creep-fatigue, PWHT, PFHT, Charpy testing, Cr‑Mo qualification.",
+            imgSrc: "images/reactor.png",
+            pdf: "pdfs/reactor-report.pdf"
         },
         {
-            title: "Horizontal Pressure Vessel — Saddle Support",
-            subtitle: "Zick's Analysis | ASME VIII Div.1 | 12 m vessel",
-            specs: [
-                ["Code", "ASME Section VIII Div. 1"],
-                ["Outside Diameter", "2,500 mm"],
-                ["Shell Thickness", "19 mm (corroded)"],
-                ["Tangent Length", "12,000 mm"],
-                ["Weight / Saddle", "421,011 N"],
-                ["Saddle Angle", "120°"],
-                ["Wear Plate", "13 mm · 140° sweep"]
-            ],
-            features: "Zick's analysis, longitudinal bending, tangential shear, circumferential horn stress, wear plate optimisation, base plate sizing, web splitting force check.",
-            imgSrc: "images/horizontal-vessel.png",
-            imgAlt: "12 m horizontal vessel — Zick's saddle support analysis",
-            pdfPath: "pdfs/Design%20Calculation%20Report_%20Horizontal%20Pressure%20Vessel%20(Division%201).pdf",
-            pdfNote: "Zick's saddle analysis — base plate sizing, wear plate specification, and horn stress check."
+            title: "Horizontal Vessel — Saddle Support",
+            subtitle: "Zick's Analysis | ASME VIII Div.1",
+            specs: [["Code","ASME VIII Div.1"],["OD","2500 mm"],["Length","12 m"],["Weight","421 kN"],["Saddle Angle","120°"],["Wear Plate","13 mm"]],
+            features: "Zick's analysis, longitudinal bending, horn stress, base plate sizing.",
+            imgSrc: "images/vessel.png",
+            pdf: "pdfs/saddle-report.pdf"
         }
     ];
 
-    const fullProjectHTMLs = [], compactProjectHTMLs = [];
-
-    for (let i = 0; i < projectsData.length; i++) {
-        const p = projectsData[i];
-        let specsTable = `<table class="specs-table"><tr><th colspan="2">Design Basis</th></tr>`;
-        p.specs.forEach(s => { specsTable += `<tr><td>${s[0]}</td><td>${s[1]}</td></tr>`; });
-        specsTable += `</table>`;
-        let compactSummary = `<div class="compact-summary"><strong>⚙️ Key Parameters</strong><br>`;
-        p.specs.forEach(s => { compactSummary += `<span style="font-weight:600;">${s[0]}:</span> ${s[1]}<br>`; });
-        compactSummary += `</div>`;
-
-        const fullHTML = `
-            <div>
-                <div class="project-header">
-                    <div class="breadcrumb"><a href="/">Home</a> / Portfolio / ${p.title}</div>
-                    <div class="project-title">${p.title}</div>
-                    <div class="project-sub">${p.subtitle}</div>
-                    <div class="project-counter">
-                        <div class="counter-nav"><button onclick="previousProject()">◀ Previous</button><span id="counterText">Project ${i+1} of ${projectsData.length}</span><button onclick="nextProject()">Next ▶</button></div>
-                        <button class="toggle-view" onclick="toggleView()">🔍 Compact View</button>
-                    </div>
-                </div>
-                <div class="project-body">
-                    <div><div id="specContainer">${specsTable}</div><div class="feature-box"><strong>Key Features</strong>${p.features}</div></div>
-                    <div><img class="project-image" src="${p.imgSrc}" alt="${p.imgAlt}" onerror="this.src='https://placehold.co/600x400?text=PV+Elite+Preview'"><div class="img-caption">${p.imgAlt}</div></div>
-                </div>
-                <div class="download-row"><a class="dl-btn" href="${p.pdfPath}" target="_blank" onclick="showToast('📄 Downloading project report...')">📄 Download Full Report (PDF)</a><span class="dl-note">${p.pdfNote}</span></div>
-            </div>
-        `;
-        const compactHTML = `
-            <div>
-                <div class="project-header">
-                    <div class="breadcrumb"><a href="/">Home</a> / Portfolio / ${p.title}</div>
-                    <div class="project-title">${p.title}</div>
-                    <div class="project-sub">${p.subtitle}</div>
-                    <div class="project-counter">
-                        <div class="counter-nav"><button onclick="previousProject()">◀ Previous</button><span id="counterText">Project ${i+1} of ${projectsData.length}</span><button onclick="nextProject()">Next ▶</button></div>
-                        <button class="toggle-view" onclick="toggleView()">🔍 Detailed View</button>
-                    </div>
-                </div>
-                <div class="project-body">
-                    <div><div id="specContainer">${compactSummary}</div><div class="feature-box"><strong>Key Features</strong>${p.features}</div></div>
-                    <div><img class="project-image" src="${p.imgSrc}" alt="${p.imgAlt}" onerror="this.src='https://placehold.co/600x400?text=PV+Elite+Preview'"><div class="img-caption">${p.imgAlt}</div></div>
-                </div>
-                <div class="download-row"><a class="dl-btn" href="${p.pdfPath}" target="_blank" onclick="showToast('📄 Downloading project report...')">📄 Download Full Report (PDF)</a><span class="dl-note">${p.pdfNote}</span></div>
-            </div>
-        `;
-        fullProjectHTMLs.push(fullHTML);
-        compactProjectHTMLs.push(compactHTML);
-    }
-
-    let currentIndex = 0, isCompact = false;
-
     function showToast(msg) {
-        const toast = document.getElementById('toast');
-        toast.textContent = msg;
-        toast.classList.add('show');
-        setTimeout(() => toast.classList.remove('show'), 2000);
+        const t = document.getElementById('toast');
+        t.textContent = msg;
+        t.classList.add('show');
+        setTimeout(() => t.classList.remove('show'), 2000);
     }
 
-    function renderProject(index, compact) {
+    function renderProject(idx) {
+        const p = projects[idx];
         const area = document.getElementById('project-detail-area');
-        area.innerHTML = `<div class="loading-spinner"><div class="spinner"></div><p>Loading project...</p></div>`;
-        setTimeout(() => {
-            area.innerHTML = compact ? compactProjectHTMLs[index] : fullProjectHTMLs[index];
-            const counterSpan = document.getElementById('counterText');
-            if (counterSpan) counterSpan.innerText = `Project ${index+1} of ${projectsData.length}`;
-        }, 150);
+        area.innerHTML = `<div class="loading-spinner"><div class="spinner"></div><p>Loading...</p></div>`;
+        let table = `<table class="specs-table"><tr><th colspan="2">Design Basis</th></tr>`;
+        p.specs.forEach(s => { table += `<tr><td>${s[0]}</td><td>${s[1]}</td></tr>`; });
+        table += `</table>`;
+        const html = `
+            <div>
+                <div class="project-header">
+                    <div style="font-size:0.75rem; color:#2c7a6b;">Home / Portfolio / ${p.title}</div>
+                    <div class="project-title">${p.title}</div>
+                    <div class="project-sub">${p.subtitle}</div>
+                </div>
+                <div class="project-body">
+                    <div>${table}<div class="feature-box"><strong>Key Features</strong><br>${p.features}</div></div>
+                    <div><img class="project-image" src="${p.imgSrc}" onerror="this.src='https://placehold.co/600x400?text=Image+Coming+Soon'"><div class="img-caption">PV Elite model preview</div></div>
+                </div>
+                <div class="download-row">
+                    <a class="dl-btn" href="${p.pdf}" target="_blank" onclick="showToast('Downloading PDF...')">📄 Download Report (PDF)</a>
+                </div>
+            </div>
+        `;
+        setTimeout(() => area.innerHTML = html, 150);
     }
 
-    window.showProject = function(index) { currentIndex = index; isCompact = false; renderProject(currentIndex, false); };
-    window.previousProject = function() { if (currentIndex > 0) { currentIndex--; renderProject(currentIndex, isCompact); } else showToast("Already at first project"); };
-    window.nextProject = function() { if (currentIndex < projectsData.length-1) { currentIndex++; renderProject(currentIndex, isCompact); } else showToast("Already at last project"); };
-    window.toggleView = function() { isCompact = !isCompact; renderProject(currentIndex, isCompact); };
-
-    // Resume PDF – use clean filename (rename your file to this)
-    const resumePdfUrl = "/pdfs/Umesh_Gohil_Resume.pdf";
-    function downloadResume() { window.open(resumePdfUrl, '_blank'); showToast("📄 Downloading your resume..."); }
-    ['resumeTopBtn', 'resumeHeroBtn', 'resumeFooterBtn'].forEach(id => {
-        const el = document.getElementById(id);
-        if (el) el.addEventListener('click', (e) => { e.preventDefault(); downloadResume(); });
+    window.showProject = (idx) => renderProject(idx);
+    const resumePdf = "/pdfs/resume.pdf";
+    function downloadResume() { window.open(resumePdf, '_blank'); showToast("Downloading resume..."); }
+    document.querySelectorAll('#resumeBtn, #resumeFooterBtn').forEach(btn => {
+        if(btn) btn.addEventListener('click', (e) => { e.preventDefault(); downloadResume(); });
     });
-
-    window.addEventListener('DOMContentLoaded', () => showProject(0));
+    renderProject(0);
 </script>
 </body>
 </html>
