@@ -3,192 +3,267 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Umesh Gohil - Pressure Vessel Learning Hub</title>
+    <title>Learning Hub | Umesh Gohil – Pressure Vessel Knowledge</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f9;
-            color: #1e2b37;
+            font-family: 'Inter', sans-serif;
+            background: #f8fafc;
+            color: #0f172a;
             line-height: 1.6;
-            padding: 30px 20px;
         }
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
+            padding: 0 24px;
+        }
+        nav {
             background: white;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            border-radius: 10px;
-            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background: rgba(255,255,255,0.95);
         }
-        header {
-            background: #1e2b37;
-            color: white;
-            padding: 30px 40px;
+        .nav-links {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            flex-wrap: wrap;
         }
-        header h1 {
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #2563eb, #1e40af);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .nav-menu {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+        .nav-menu a {
+            text-decoration: none;
+            color: #334155;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-menu a:hover {
+            color: #2563eb;
+        }
+        .hero-section {
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+            padding: 60px 0;
+            border-radius: 0 0 30px 30px;
+            margin-bottom: 40px;
+        }
+        .hero-section h1 {
             font-size: 2.5rem;
-            margin-bottom: 5px;
+            font-weight: 800;
+            margin-bottom: 12px;
         }
-        header .subtitle {
-            font-size: 1.1rem;
-            color: #a0c0d0;
+        .hero-section .subtitle {
+            font-size: 1.2rem;
+            color: #475569;
+            margin-bottom: 20px;
         }
         .back-link {
-            margin-top: 15px;
+            display: inline-block;
+            margin-top: 16px;
         }
         .back-link a {
-            color: #a0c0d0;
+            color: #2563eb;
             text-decoration: none;
-            border-bottom: 1px dotted #a0c0d0;
+            font-weight: 600;
+            border-bottom: 1px dotted #2563eb;
         }
         .back-link a:hover {
-            color: white;
-            border-bottom: 1px solid white;
-        }
-        .main-content {
-            padding: 40px;
+            color: #1e40af;
         }
         .intro {
-            background: #e7edf3;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            font-size: 1.1rem;
+            background: #eef2ff;
+            padding: 24px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            font-size: 1rem;
+            border: 1px solid #e2e8f0;
+        }
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 24px;
         }
         .category-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+            gap: 24px;
             margin: 30px 0;
         }
         .category-card {
-            background: #f9f9f9;
-            border-radius: 8px;
-            padding: 20px;
-            border-left: 5px solid #1e2b37;
-            transition: transform 0.2s;
+            background: white;
+            border-radius: 20px;
+            padding: 24px;
+            border-left: 5px solid #2563eb;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
         }
         .category-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.1);
         }
         .category-card h3 {
-            margin-bottom: 10px;
-            color: #1e2b37;
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: #1e293b;
         }
         .category-card p {
-            color: #5f6a7a;
-            margin-bottom: 15px;
+            color: #475569;
+            margin-bottom: 20px;
             font-size: 0.95rem;
         }
         .category-card a {
-            display: inline-block;
-            background: #1e2b37;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #2563eb;
             color: white;
-            padding: 8px 16px;
+            padding: 8px 18px;
             text-decoration: none;
-            border-radius: 5px;
-            font-weight: 500;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.2s;
         }
         .category-card a:hover {
-            background: #2c3e50;
+            background: #1d4ed8;
         }
-        .footer {
+        footer {
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 40px 0;
             text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            color: #5f6a7a;
-            font-size: 0.9rem;
-            border-top: 2px dashed #d0dde7;
+            margin-top: 60px;
         }
-        .footer a {
-            color: #1e2b37;
+        footer a {
+            color: #94a3b8;
             text-decoration: none;
-            font-weight: 600;
+            border-bottom: 1px dotted #475569;
+        }
+        footer a:hover {
+            color: white;
+        }
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 1.8rem;
+            }
+            .nav-menu {
+                gap: 20px;
+            }
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
+    <nav>
+        <div class="container">
+            <div class="nav-links">
+                <div class="logo">Static Equipment Design</div>
+                <ul class="nav-menu">
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#experience">Experience</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="index.html#skills">Skills</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="learning.html" style="color:#2563eb; font-weight:600;">Learning Hub</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero-section">
+        <div class="container">
             <h1>📘 Pressure Vessel Learning Hub</h1>
             <div class="subtitle">by Umesh Gohil – Static Equipment Design Engineer</div>
             <div class="back-link">
-                <a href="https://umeshg789.github.io/UmeshG789/">← Back to Resume</a>
-            </div>
-        </header>
-
-        <div class="main-content">
-            <div class="intro">
-                <p>Welcome to my learning series. Here I share practical knowledge about pressure vessel design, ASME codes, and engineering fundamentals – exactly as I use them in my daily work. Select a category below to dive into specific topics.</p>
-                <p style="margin-top: 10px;">🔗 Connect on <a href="https://linkedin.com/in/umeshg78/" target="_blank">LinkedIn</a> for discussions and updates.</p>
-            </div>
-
-            <h2 style="margin-bottom: 20px;">📚 Knowledge Categories</h2>
-
-            <div class="category-grid">
-                <!-- Category 1: Supports -->
-                <div class="category-card">
-                    <h3>🔧 Supports & Fundamentals</h3>
-                    <p>Types of supports, load paths, anchor bolts, base rings, wind/seismic considerations, and practical problems. Foundation knowledge for static equipment.</p>
-                    <a href="learning-supports.html">Explore →</a>
-                </div>
-
-                <!-- Category 2: Pressure Vessel Design -->
-                <div class="category-card">
-                    <h3>📐 Pressure Vessel Design</h3>
-                    <p>ASME VIII Div 1 & 2, EN standards, design calculations, MDMT, MAWP, nozzle reinforcement, and code rules explained with examples.</p>
-                    <a href="learning-design.html">Explore →</a>
-                </div>
-
-                <!-- Category 3: Heat Exchangers -->
-                <div class="category-card">
-                    <h3>🔥 Heat Exchangers</h3>
-                    <p>TEMA standards, mechanical design of shell & tube exchangers, tubesheet calculations, baffles, and common failure modes.</p>
-                    <a href="learning-hex.html">Explore →</a>
-                </div>
-
-                <!-- Category 4: Columns & Reactors -->
-                <div class="category-card">
-                    <h3>🏭 Columns & Reactors</h3>
-                    <p>Tall vertical vessels, internals, wind load analysis, skirt design, and special considerations for reactors.</p>
-                    <a href="learning-columns.html">Explore →</a>
-                </div>
-
-                <!-- Category 5: Materials & Corrosion -->
-                <div class="category-card">
-                    <h3>🧪 Materials & Corrosion</h3>
-                    <p>Material selection, corrosion allowances, cladding, heat treatment, and failure mechanisms.</p>
-                    <a href="learning-materials.html">Explore →</a>
-                </div>
-
-                <!-- Category 6: Fabrication & Inspection -->
-                <div class="category-card">
-                    <h3>🔨 Fabrication & Inspection</h3>
-                    <p>Welding, NDT, tolerances, PWHT, shop vs field fabrication, and practical quality control issues.</p>
-                    <a href="learning-fabrication.html">Explore →</a>
-                </div>
-
-                <!-- Category 7: Software -->
-                <div class="category-card">
-                    <h3>💻 Software</h3>
-                    <p>PV Elite tips, HTRI, Compress, and how to validate software outputs with hand calculations.</p>
-                    <a href="learning-software.html">Explore →</a>
-                </div>
-
-                <!-- Category 8: Scenarios & Troubleshooting -->
-                <div class="category-card">
-                    <h3>🔍 Scenarios & Troubleshooting</h3>
-                    <p>Real-world problems, failure analysis, and interview-style case studies.</p>
-                    <a href="learning-scenarios.html">Explore →</a>
-                </div>
-            </div>
-
-            <div class="footer">
-                <p>© 2026 Umesh Gohil | <a href="https://umeshg789.github.io/UmeshG789/">Resume</a> | <a href="https://linkedin.com/in/umeshg78/">LinkedIn</a></p>
+                <a href="index.html"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
             </div>
         </div>
     </div>
+
+    <div class="container">
+        <div class="intro">
+            <i class="fas fa-graduation-cap" style="color:#2563eb; margin-right:10px;"></i> 
+            Welcome to my learning series. Here I share practical knowledge about pressure vessel design, ASME codes, and engineering fundamentals – exactly as I use them in my daily work. Select a category below to dive into specific topics.
+            <div style="margin-top: 12px;">
+                <i class="fab fa-linkedin"></i> Connect on <a href="https://linkedin.com/in/umeshg78/" target="_blank" style="color:#2563eb;">LinkedIn</a> for discussions and updates.
+            </div>
+        </div>
+
+        <h2 class="section-title">📚 Knowledge Categories</h2>
+
+        <div class="category-grid">
+            <div class="category-card">
+                <h3>🔧 Supports & Fundamentals</h3>
+                <p>Types of supports, load paths, anchor bolts, base rings, wind/seismic considerations, and practical problems. Foundation knowledge for static equipment.</p>
+                <a href="#">Explore →</a>
+            </div>
+            <div class="category-card">
+                <h3>📐 Pressure Vessel Design</h3>
+                <p>ASME VIII Div 1 & 2, EN standards, design calculations, MDMT, MAWP, nozzle reinforcement, and code rules explained with examples.</p>
+                <a href="#">Explore →</a>
+            </div>
+            <div class="category-card">
+                <h3>🔥 Heat Exchangers</h3>
+                <p>TEMA standards, mechanical design of shell & tube exchangers, tubesheet calculations, baffles, and common failure modes.</p>
+                <a href="#">Explore →</a>
+            </div>
+            <div class="category-card">
+                <h3>🏭 Columns & Reactors</h3>
+                <p>Tall vertical vessels, internals, wind load analysis, skirt design, and special considerations for reactors.</p>
+                <a href="#">Explore →</a>
+            </div>
+            <div class="category-card">
+                <h3>🧪 Materials & Corrosion</h3>
+                <p>Material selection, corrosion allowances, cladding, heat treatment, and failure mechanisms.</p>
+                <a href="#">Explore →</a>
+            </div>
+            <div class="category-card">
+                <h3>🔨 Fabrication & Inspection</h3>
+                <p>Welding, NDT, tolerances, PWHT, shop vs field fabrication, and practical quality control issues.</p>
+                <a href="#">Explore →</a>
+            </div>
+            <div class="category-card">
+                <h3>💻 Software</h3>
+                <p>PV Elite tips, HTRI, Compress, and how to validate software outputs with hand calculations.</p>
+                <a href="#">Explore →</a>
+            </div>
+            <div class="category-card">
+                <h3>🔍 Scenarios & Troubleshooting</h3>
+                <p>Real-world problems, failure analysis, and interview-style case studies.</p>
+                <a href="#">Explore →</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Umesh Gohil – Static & Mechanical Equipment Design Engineer | <a href="index.html">Portfolio</a> | <a href="https://linkedin.com/in/umeshg78/">LinkedIn</a></p>
+        </div>
+    </footer>
 </body>
 </html>
