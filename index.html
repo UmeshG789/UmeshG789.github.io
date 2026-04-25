@@ -13,17 +13,35 @@
         }
 
         body {
-            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif;
-            background: #fafbfc;
-            color: #1e2a3a;
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #eef2f5;
+            color: #1a2c3c;
             line-height: 1.5;
             scroll-behavior: smooth;
+        }
+
+        /* Subtle engineering grid background */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(30, 60, 80, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(30, 60, 80, 0.02) 1px, transparent 1px);
+            background-size: 30px 30px;
+            pointer-events: none;
+            z-index: 0;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 24px;
+            position: relative;
+            z-index: 1;
         }
 
         /* Navigation */
@@ -34,14 +52,15 @@
             padding: 24px 0;
             flex-wrap: wrap;
             gap: 16px;
-            border-bottom: 1px solid #e2e8f0;
+            border-bottom: 1px solid rgba(30, 60, 80, 0.15);
+            backdrop-filter: blur(2px);
         }
 
         .logo a {
             font-weight: 700;
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             letter-spacing: -0.02em;
-            background: linear-gradient(135deg, #0f3b5c, #1e6f5c);
+            background: linear-gradient(135deg, #1a4c6e, #2c7a6b);
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
@@ -58,7 +77,7 @@
         .nav-links a {
             text-decoration: none;
             font-weight: 500;
-            color: #2c3e4e;
+            color: #2c5a6e;
             transition: color 0.2s;
         }
 
@@ -67,40 +86,44 @@
         }
 
         .btn-outline {
-            border: 1.5px solid #1e6f5c;
+            border: 1.5px solid #2c7a6b;
             padding: 6px 16px;
             border-radius: 40px;
             background: transparent;
             font-weight: 600;
-            color: #1e6f5c;
+            color: #2c7a6b;
             transition: all 0.2s;
             cursor: pointer;
             display: inline-block;
         }
 
         .btn-outline:hover {
-            background: #1e6f5c;
+            background: #2c7a6b;
             color: white;
-            border-color: #1e6f5c;
+            border-color: #2c7a6b;
+            box-shadow: 0 4px 10px rgba(44,122,107,0.2);
         }
 
         .btn-primary {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: #1e6f5c;
+            background: #1e5a6e;
             color: white;
             padding: 12px 28px;
             border-radius: 40px;
             font-weight: 600;
             text-decoration: none;
-            transition: background 0.2s;
+            transition: all 0.2s;
             border: none;
             cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
         .btn-primary:hover {
-            background: #0f4e40;
+            background: #0f4a5c;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
         }
 
         /* Hero */
@@ -113,7 +136,7 @@
             font-size: 3rem;
             font-weight: 700;
             letter-spacing: -0.02em;
-            background: linear-gradient(135deg, #1e2a3a, #1e6f5c);
+            background: linear-gradient(135deg, #1a3a4a, #2c7a6b);
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
@@ -142,12 +165,14 @@
         }
 
         .skill-badge {
-            background: #eef2f5;
+            background: rgba(44, 122, 107, 0.1);
             padding: 6px 16px;
             border-radius: 40px;
             font-size: 0.85rem;
             font-weight: 500;
-            color: #1e4a5c;
+            color: #1a5a4a;
+            backdrop-filter: blur(2px);
+            border: 0.5px solid rgba(44,122,107,0.2);
         }
 
         /* Section title */
@@ -156,116 +181,160 @@
             font-weight: 700;
             letter-spacing: -0.01em;
             margin-bottom: 32px;
-            border-left: 4px solid #1e6f5c;
+            border-left: 5px solid #2c7a6b;
             padding-left: 20px;
+            color: #1a3a4a;
         }
 
-        /* Grid card style */
+        /* Grid card (polished) */
         .grid-card {
             background: white;
-            border-radius: 20px;
-            border: 1px solid #e9edf2;
-            padding: 20px;
+            border-radius: 24px;
+            border: 1px solid #e2e8f0;
+            padding: 24px;
             cursor: pointer;
-            transition: all 0.2s;
-        }
-        .grid-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 20px -10px rgba(0,0,0,0.08);
-            border-color: #cbdde6;
-        }
-
-        /* Full detail area (dynamic) */
-        .detail-area {
-            background: white;
-            border-radius: 28px;
-            border: 1px solid #e9edf2;
-            margin-bottom: 48px;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.02);
+            position: relative;
             overflow: hidden;
         }
-
-        /* Project detail internal styles (from your original) */
-        .project-header {
-            background: #f8fafc;
-            padding: 20px 28px;
-            border-bottom: 1px solid #eef2f6;
+        .grid-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: #2c7a6b;
+            opacity: 0;
+            transition: opacity 0.2s;
         }
-        .project-title {
-            font-size: 1.5rem;
+        .grid-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.12);
+            border-color: #cbdde6;
+        }
+        .grid-card:hover::before {
+            opacity: 1;
+        }
+        .grid-card h3 {
+            font-size: 1.25rem;
             font-weight: 700;
-            color: #0f2b3b;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
+            color: #1a3a4a;
         }
-        .project-sub {
+        .grid-card p {
             color: #4a6a7c;
             font-size: 0.85rem;
+            line-height: 1.4;
+        }
+
+        /* Detail area – engineering finish */
+        .detail-area {
+            background: white;
+            border-radius: 32px;
+            margin-bottom: 48px;
+            overflow: hidden;
+            box-shadow: 0 12px 30px -12px rgba(0,0,0,0.1);
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s;
+        }
+
+        /* Project detail internal styles (enhanced) */
+        .project-header {
+            background: linear-gradient(135deg, #f8fafc 0%, #f0f4f8 100%);
+            padding: 24px 32px;
+            border-bottom: 1px solid #e2edf2;
+        }
+        .project-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #1a3a4a;
+            margin-bottom: 8px;
+            letter-spacing: -0.3px;
+        }
+        .project-sub {
+            color: #2c7a6b;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
         .project-body {
-            padding: 28px;
+            padding: 32px;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 32px;
         }
         @media (max-width: 750px) {
-            .project-body { grid-template-columns: 1fr; }
+            .project-body { grid-template-columns: 1fr; padding: 24px; }
+            .project-header { padding: 20px 24px; }
+            .project-title { font-size: 1.3rem; }
         }
         .specs-table {
             width: 100%;
             border-collapse: collapse;
             font-size: 0.85rem;
             background: #fff;
-            border-radius: 16px;
+            border-radius: 20px;
             overflow: hidden;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.03);
             border: 1px solid #eef2f6;
         }
         .specs-table th {
-            background: #1e2a3a;
+            background: #1a3a4a;
             color: white;
-            padding: 10px 12px;
+            padding: 12px 14px;
             text-align: left;
             font-weight: 600;
             font-size: 0.8rem;
+            letter-spacing: 0.3px;
         }
         .specs-table td {
-            padding: 8px 12px;
+            padding: 10px 14px;
             border-bottom: 1px solid #eef2f6;
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            font-size: 0.85rem;
         }
         .specs-table tr:last-child td { border-bottom: none; }
         .specs-table td:first-child {
-            font-weight: 600;
+            font-weight: 700;
             background: #fafcfd;
-            width: 40%;
+            width: 42%;
+            color: #1a4c6e;
         }
         .feature-box {
-            margin-top: 20px;
-            background: #f4f9fc;
-            padding: 16px 18px;
+            margin-top: 24px;
+            background: #f0f7f4;
+            padding: 18px 20px;
             border-radius: 20px;
             font-size: 0.85rem;
-            border-left: 3px solid #1e6f5c;
+            border-left: 4px solid #2c7a6b;
         }
         .feature-box strong {
             display: block;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: #1e6f5c;
+            color: #2c7a6b;
             margin-bottom: 8px;
         }
         .project-image {
             width: 100%;
             border-radius: 20px;
-            border: 1px solid #e2edf2;
+            border: 1px solid #dce5ec;
             background: #fefefe;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
         }
         .img-caption {
             font-size: 0.75rem;
             color: #6c8d9e;
             text-align: center;
             margin-top: 12px;
+            font-style: italic;
         }
         .download-row {
-            padding: 20px 28px 28px 28px;
+            padding: 20px 32px 32px 32px;
             border-top: 1px solid #eef2f6;
             display: flex;
             flex-wrap: wrap;
@@ -274,7 +343,7 @@
             background: #fefefe;
         }
         .dl-btn {
-            background: #1e2a3a;
+            background: #1e5a6e;
             color: white;
             padding: 10px 24px;
             border-radius: 40px;
@@ -284,20 +353,43 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
+            transition: all 0.2s;
         }
-        .dl-btn:hover { background: #0f3b5c; }
-        .dl-note { font-size: 0.8rem; color: #617e8f; }
+        .dl-btn:hover {
+            background: #0f4a5c;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .dl-note {
+            font-size: 0.8rem;
+            color: #617e8f;
+        }
 
+        /* Learning teaser */
         .learning-teaser {
-            background: #eef3f0;
+            background: linear-gradient(135deg, #eef3f0, #e4ece8);
             border-radius: 32px;
             padding: 40px 32px;
             margin: 48px 0;
             text-align: center;
             border: 1px solid #d3e3dc;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
         }
+        .learning-teaser h3 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #1a4c6e;
+        }
+        .learning-teaser p {
+            max-width: 600px;
+            margin: 0 auto 24px;
+            color: #2a5a68;
+        }
+
+        /* Footer */
         .footer {
-            border-top: 1px solid #e2e8f0;
+            border-top: 1px solid rgba(30, 60, 80, 0.15);
             margin-top: 48px;
             padding: 32px 0;
             text-align: center;
@@ -314,6 +406,9 @@
             text-decoration: none;
             color: #2c7a6b;
             font-weight: 500;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
         }
         @media (max-width: 640px) {
             .container { padding: 0 20px; }
@@ -353,21 +448,21 @@
         <h2 class="section-title">Featured Engineering Work</h2>
 
         <!-- Grid of 3 project cards -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; margin-bottom: 48px;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 28px; margin-bottom: 48px;">
             <div class="grid-card" onclick="showProject(0)">
-                <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 8px;">High‑Pressure Gas Suction Scrubber</h3>
-                <p style="color: #4a6a7c; font-size: 0.85rem;">Nozzle reinforcement | ASME VIII | NACE H₂S</p>
-                <div style="margin-top: 16px;"><span class="btn-outline" style="font-size: 0.8rem;">View Project →</span></div>
+                <h3>High‑Pressure Gas Suction Scrubber</h3>
+                <p>Nozzle reinforcement | ASME VIII | NACE H₂S</p>
+                <div style="margin-top: 20px;"><span class="btn-outline" style="font-size: 0.8rem;">View Project →</span></div>
             </div>
             <div class="grid-card" onclick="showProject(1)">
-                <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 8px;">High‑Pressure Hydrogenation Reactor</h3>
-                <p style="color: #4a6a7c; font-size: 0.85rem;">Cr‑Mo steel | 18 MPa | 450°C</p>
-                <div style="margin-top: 16px;"><span class="btn-outline" style="font-size: 0.8rem;">View Project →</span></div>
+                <h3>High‑Pressure Hydrogenation Reactor</h3>
+                <p>Cr‑Mo steel | 18 MPa | 450°C</p>
+                <div style="margin-top: 20px;"><span class="btn-outline" style="font-size: 0.8rem;">View Project →</span></div>
             </div>
             <div class="grid-card" onclick="showProject(2)">
-                <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 8px;">Horizontal Vessel – Saddle Support</h3>
-                <p style="color: #4a6a7c; font-size: 0.85rem;">Zick's analysis | 12 m vessel | Wear plate</p>
-                <div style="margin-top: 16px;"><span class="btn-outline" style="font-size: 0.8rem;">View Project →</span></div>
+                <h3>Horizontal Vessel – Saddle Support</h3>
+                <p>Zick's analysis | 12 m vessel | Wear plate</p>
+                <div style="margin-top: 20px;"><span class="btn-outline" style="font-size: 0.8rem;">View Project →</span></div>
             </div>
         </div>
 
@@ -378,7 +473,7 @@
     <div class="learning-teaser">
         <h3>📘 Weekly Deep‑Dives into Pressure Vessel Design</h3>
         <p>ASME codes, FEA, materials, fabrication scenarios — each week I generate questions, verify with Notebook LM (ASME sources), and share slide summaries on LinkedIn.</p>
-        <a href="/learning.html" class="btn-primary" style="background:#2c5a6e;">Explore Learning Hub →</a>
+        <a href="/learning.html" class="btn-primary" style="background:#1e5a6e;">Explore Learning Hub →</a>
     </div>
 
     <footer class="footer">
@@ -393,7 +488,7 @@
 </div>
 
 <script>
-    // Full HTML for each project (exactly as before)
+    // Project 1 full HTML
     const project1HTML = `
         <div>
             <div class="project-header">
@@ -503,17 +598,15 @@
 
     function showProject(index) {
         document.getElementById('project-detail-area').innerHTML = allProjects[index];
-        // Smooth scroll into view
         document.getElementById('project-detail-area').scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
-    // Load first project by default when page loads
     window.addEventListener('DOMContentLoaded', () => {
         showProject(0);
     });
 
-    // Resume download
-    const resumePdfUrl = "/pdfs/Umesh_Gohil_Resume.pdf";  // <-- UPDATE with your actual resume PDF path
+    // Resume PDF – UPDATE THIS PATH TO YOUR ACTUAL RESUME FILE
+    const resumePdfUrl = "/pdfs/Umesh_Gohil_Resume.pdf";
     function downloadResume() {
         window.open(resumePdfUrl, '_blank');
     }
