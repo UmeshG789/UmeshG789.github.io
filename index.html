@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Umesh Gohil | Static Equipment Design Engineer – Portfolio</title>
-    <meta name="description" content="Portfolio of Umesh Gohil – Static Equipment Design Engineer. Featured projects: ASME VIII pressure vessels, PV Elite designs, heat exchangers.">
+    <meta name="description" content="Portfolio of Umesh Gohil – Static Equipment Design Engineer. ASME VIII, PV Elite, pressure vessels, heat exchangers.">
     <style>
         * {
             margin: 0;
@@ -125,8 +125,10 @@
 
         /* Hero */
         .hero {
-            padding: 64px 0 48px 0;
+            padding: 64px 0 32px 0;
             text-align: center;
+            border-bottom: 1px solid rgba(30,60,80,0.1);
+            margin-bottom: 32px;
         }
 
         .hero h1 {
@@ -148,36 +150,155 @@
             margin: 16px auto 0;
         }
 
-        .skills-strip {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 12px;
-            margin: 32px auto 0;
-            max-width: 800px;
+        .hero .resume-btn {
+            margin-top: 32px;
         }
 
-        .skill-badge {
-            background: rgba(44, 122, 107, 0.1);
-            padding: 6px 16px;
-            border-radius: 40px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: #1a5a4a;
-            border: 0.5px solid rgba(44,122,107,0.2);
-        }
-
+        /* Section styles */
         .section-title {
             font-size: 1.8rem;
             font-weight: 700;
             letter-spacing: -0.01em;
-            margin-bottom: 32px;
+            margin: 48px 0 24px 0;
             border-left: 5px solid #2c7a6b;
             padding-left: 20px;
             color: #1a3a4a;
         }
 
-        /* Grid Card */
+        .section-subtitle {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 24px 0 16px 0;
+            color: #1a4c6e;
+        }
+
+        /* Professional summary box */
+        .summary-box {
+            background: white;
+            border-radius: 24px;
+            padding: 28px 32px;
+            margin-bottom: 32px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        .summary-box p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #2c4e6e;
+        }
+
+        /* Skills grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        .skill-category {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .skill-category h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1a4c6e;
+            border-left: 3px solid #2c7a6b;
+            padding-left: 12px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            background: #eef2f5;
+            padding: 4px 12px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            color: #2c5a6e;
+        }
+
+        /* Experience card */
+        .exp-card {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .exp-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1a3a4a;
+        }
+
+        .exp-company {
+            font-weight: 600;
+            color: #2c7a6b;
+            margin: 4px 0;
+        }
+
+        .exp-date {
+            font-size: 0.8rem;
+            color: #6c8d9e;
+            margin-bottom: 12px;
+        }
+
+        .exp-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .exp-list li {
+            font-size: 0.85rem;
+            margin-bottom: 6px;
+            padding-left: 18px;
+            position: relative;
+        }
+
+        .exp-list li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #2c7a6b;
+        }
+
+        /* Certifications & Education */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .cert-item, .edu-item {
+            background: white;
+            border-radius: 16px;
+            padding: 16px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .cert-item strong, .edu-item strong {
+            display: block;
+            font-size: 0.9rem;
+            color: #1a4c6e;
+        }
+
+        .cert-item span, .edu-item span {
+            font-size: 0.8rem;
+            color: #6c8d9e;
+        }
+
+        /* Project grid (same as before, polished) */
         .grid-card {
             background: white;
             border-radius: 24px;
@@ -217,18 +338,16 @@
             font-size: 0.85rem;
         }
 
-        /* Detail area */
+        /* Detail area (same as before) */
         .detail-area {
             background: white;
             border-radius: 32px;
-            margin-bottom: 48px;
+            margin: 32px 0 48px;
             overflow: hidden;
             box-shadow: 0 12px 30px -12px rgba(0,0,0,0.1);
             border: 1px solid #e2e8f0;
-            transition: all 0.2s;
         }
 
-        /* Loading spinner */
         .loading-spinner {
             text-align: center;
             padding: 60px;
@@ -246,7 +365,6 @@
         }
         @keyframes spin { to { transform: rotate(360deg); } }
 
-        /* Toast notification */
         .toast {
             position: fixed;
             bottom: 30px;
@@ -264,7 +382,7 @@
         }
         .toast.show { opacity: 1; }
 
-        /* Project header with breadcrumb and toggle */
+        /* Project internal styles (compact) */
         .project-header {
             background: linear-gradient(135deg, #f8fafc, #f0f4f8);
             padding: 20px 32px;
@@ -275,10 +393,7 @@
             color: #2c7a6b;
             margin-bottom: 8px;
         }
-        .breadcrumb a {
-            color: #1e5a6e;
-            text-decoration: none;
-        }
+        .breadcrumb a { color: #1e5a6e; text-decoration: none; }
         .breadcrumb a:hover { text-decoration: underline; }
         .project-title {
             font-size: 1.6rem;
@@ -291,7 +406,6 @@
             font-size: 0.85rem;
             font-weight: 500;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
         }
         .project-counter {
             margin-top: 12px;
@@ -301,97 +415,61 @@
             flex-wrap: wrap;
             gap: 12px;
         }
-        .counter-nav {
-            display: flex;
-            gap: 12px;
-            align-items: center;
-        }
-        .counter-nav button {
+        .counter-nav button, .toggle-view {
             background: white;
             border: 1px solid #cbdde6;
             padding: 6px 14px;
             border-radius: 30px;
             cursor: pointer;
             font-weight: 500;
-            transition: 0.2s;
+            font-size: 0.75rem;
         }
-        .counter-nav button:hover {
+        .counter-nav button:hover, .toggle-view:hover {
             background: #2c7a6b;
             color: white;
-            border-color: #2c7a6b;
         }
-        .toggle-view {
-            background: #eef2f5;
-            border: none;
-            padding: 6px 14px;
-            border-radius: 30px;
-            cursor: pointer;
-            font-size: 0.75rem;
-            font-weight: 500;
-        }
-
-        /* Project body */
         .project-body {
             padding: 32px;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 32px;
-            transition: all 0.2s;
         }
         @media (max-width: 750px) {
-            .project-body { grid-template-columns: 1fr; padding: 24px; }
-            .project-header { padding: 20px 24px; }
-            .project-title { font-size: 1.3rem; }
+            .project-body { grid-template-columns: 1fr; }
         }
         .specs-table {
             width: 100%;
             border-collapse: collapse;
             font-size: 0.85rem;
-            background: #fff;
-            border-radius: 20px;
-            overflow: hidden;
             border: 1px solid #eef2f6;
         }
         .specs-table th {
             background: #1a3a4a;
             color: white;
-            padding: 12px 14px;
+            padding: 10px;
             text-align: left;
-            font-weight: 600;
         }
         .specs-table td {
-            padding: 10px 14px;
+            padding: 8px 10px;
             border-bottom: 1px solid #eef2f6;
-            font-family: 'SF Mono', monospace;
+            font-family: monospace;
         }
         .specs-table td:first-child {
             font-weight: 700;
             background: #fafcfd;
-            width: 42%;
-            color: #1a4c6e;
         }
         .compact-summary {
             background: #f4f9fc;
             padding: 16px;
             border-radius: 20px;
             font-size: 0.85rem;
-            line-height: 1.6;
         }
-        .compact-summary p { margin: 6px 0; }
         .feature-box {
             margin-top: 24px;
             background: #f0f7f4;
-            padding: 18px 20px;
+            padding: 16px;
             border-radius: 20px;
             border-left: 4px solid #2c7a6b;
-        }
-        .feature-box strong {
-            display: block;
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #2c7a6b;
-            margin-bottom: 8px;
         }
         .project-image {
             width: 100%;
@@ -402,33 +480,24 @@
             font-size: 0.75rem;
             color: #6c8d9e;
             text-align: center;
-            margin-top: 12px;
+            margin-top: 8px;
         }
         .download-row {
-            padding: 20px 32px 32px;
+            padding: 20px 32px;
             border-top: 1px solid #eef2f6;
             display: flex;
             flex-wrap: wrap;
-            align-items: center;
             gap: 16px;
             background: #fefefe;
         }
         .dl-btn {
             background: #1e5a6e;
             color: white;
-            padding: 10px 24px;
+            padding: 8px 20px;
             border-radius: 40px;
             text-decoration: none;
             font-weight: 600;
             font-size: 0.85rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: 0.2s;
-        }
-        .dl-btn:hover {
-            background: #0f4a5c;
-            transform: translateY(-1px);
         }
         .learning-teaser {
             background: linear-gradient(135deg, #eef3f0, #e4ece8);
@@ -458,6 +527,7 @@
         @media (max-width: 640px) {
             .container { padding: 0 20px; }
             .hero h1 { font-size: 2.2rem; }
+            .section-title { font-size: 1.5rem; }
         }
     </style>
 </head>
@@ -472,47 +542,123 @@
         </div>
     </nav>
 
+    <!-- Hero -->
     <section class="hero">
         <h1>Static Equipment Design Engineer</h1>
         <div class="tagline">ASME VIII • PV Elite • Pressure Vessels & Heat Exchangers</div>
         <div class="resume-btn">
             <a href="#" id="resumeHeroBtn" class="btn-primary">⬇️ Download Resume (PDF)</a>
         </div>
-        <div class="skills-strip">
-            <span class="skill-badge">ASME Sec. VIII Div.1</span>
-            <span class="skill-badge">PV Elite</span>
-            <span class="skill-badge">TEMA</span>
-            <span class="skill-badge">Compress</span>
-            <span class="skill-badge">AutoCAD</span>
-            <span class="skill-badge">FEA Basics</span>
-        </div>
     </section>
 
-    <section>
-        <h2 class="section-title">Featured Engineering Work</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 28px; margin-bottom: 48px;">
-            <div class="grid-card" onclick="showProject(0)">
-                <h3>High‑Pressure Gas Suction Scrubber</h3>
-                <p>Nozzle reinforcement | ASME VIII | NACE H₂S</p>
-                <div style="margin-top: 20px;"><span class="btn-outline" style="font-size: 0.8rem;">View Project →</span></div>
-            </div>
-            <div class="grid-card" onclick="showProject(1)">
-                <h3>High‑Pressure Hydrogenation Reactor</h3>
-                <p>Cr‑Mo steel | 18 MPa | 450°C</p>
-                <div style="margin-top: 20px;"><span class="btn-outline" style="font-size: 0.8rem;">View Project →</span></div>
-            </div>
-            <div class="grid-card" onclick="showProject(2)">
-                <h3>Horizontal Vessel – Saddle Support</h3>
-                <p>Zick's analysis | 12 m vessel | Wear plate</p>
-                <div style="margin-top: 20px;"><span class="btn-outline" style="font-size: 0.8rem;">View Project →</span></div>
+    <!-- Professional Summary (from resume) -->
+    <div class="summary-box">
+        <p><strong>Results-driven Static Equipment Design Engineer</strong> with 7+ years of experience designing pressure vessels, heat exchangers, columns, and filtration/drying systems for oil & gas, water treatment, chemical, and industrial filtration industries. Proficient in ASME Section VIII with hands-on software experience in PV Elite, Compress, and DIMy. Proven ability to adapt across international codes including AD 2000, EN 13445/PED, and AS 1210. Track record of direct collaboration with overseas clients across Germany, USA, Italy, France, and Australia. Actively seeking remote or global relocation roles; open to positions with or without visa sponsorship. Available for full-time remote and freelance/contract engagements.</p>
+    </div>
+
+    <!-- Core Skills (categorized) -->
+    <div class="skills-grid">
+        <div class="skill-category">
+            <h3>Software</h3>
+            <div class="skill-tags">
+                <span class="skill-tag">PV Elite</span><span class="skill-tag">Compress</span><span class="skill-tag">DIMy</span>
+                <span class="skill-tag">Inventor</span><span class="skill-tag">SolidWorks</span><span class="skill-tag">AutoCAD</span>
+                <span class="skill-tag">Vault</span><span class="skill-tag">Agile PLM</span><span class="skill-tag">SAP</span>
             </div>
         </div>
-        <div id="project-detail-area" class="detail-area"></div>
-    </section>
+        <div class="skill-category">
+            <h3>Codes & Standards</h3>
+            <div class="skill-tags">
+                <span class="skill-tag">ASME VIII Div.1</span><span class="skill-tag">TEMA</span><span class="skill-tag">ASME B31.3</span>
+                <span class="skill-tag">EN 13445/PED</span><span class="skill-tag">AD 2000</span><span class="skill-tag">ISO 9001</span>
+            </div>
+        </div>
+        <div class="skill-category">
+            <h3>Technical</h3>
+            <div class="skill-tags">
+                <span class="skill-tag">Design Calculations</span><span class="skill-tag">GD&T</span><span class="skill-tag">FEA Cross-validation</span>
+                <span class="skill-tag">MDR</span><span class="skill-tag">P&ID/PFD</span><span class="skill-tag">DFM/DFA</span>
+            </div>
+        </div>
+        <div class="skill-category">
+            <h3>Professional</h3>
+            <div class="skill-tags">
+                <span class="skill-tag">Project Management</span><span class="skill-tag">Vendor Management</span><span class="skill-tag">International Client Collaboration</span>
+                <span class="skill-tag">Remote Collaboration</span><span class="skill-tag">Technical Mentoring</span>
+            </div>
+        </div>
+    </div>
 
+    <!-- Work Experience Highlights -->
+    <div class="section-title">Work Experience</div>
+    <div class="exp-card">
+        <div class="exp-title">Senior Engineer — Static Equipment Design</div>
+        <div class="exp-company">GMM Pfaudler, Karamsad, India</div>
+        <div class="exp-date">Current</div>
+        <ul class="exp-list">
+            <li>Design 15+ pressure vessels, filtration and drying systems per ASME VIII annually.</li>
+            <li>Execute European code projects using DIMy for AD 2000 vessels under PED.</li>
+            <li>Validate design parameters (thickness, MDMT, PWHT, MAWP) using PV Elite.</li>
+            <li>Mentor 3-4 junior engineers, reducing drawing revision cycles by ~25%.</li>
+        </ul>
+    </div>
+    <div class="exp-card">
+        <div class="exp-title">Engineer — Static Equipment Design</div>
+        <div class="exp-company">L&T Technology Services, Vadodara, India</div>
+        <div class="exp-date">3 years</div>
+        <ul class="exp-list">
+            <li>Designed pressure vessels, heat exchangers, columns per ASME VIII & TEMA.</li>
+            <li>Hands-on PV Elite for thickness, nozzle reinforcement, load cases across 30+ vessels.</li>
+            <li>Managed 50+ design change orders in Oracle Agile PLM.</li>
+        </ul>
+    </div>
+    <div class="exp-card">
+        <div class="exp-title">Design Engineer — Static Equipment & Filtration Products</div>
+        <div class="exp-company">Aqspectence Group (Johnson Screens), Sanand, India</div>
+        <div class="exp-date">Earlier role</div>
+        <ul class="exp-list">
+            <li>Led team of 4-5 drafters; direct collaboration with overseas clients (Germany, USA, Italy, France, Australia).</li>
+            <li>Designed 200+ components; V-wire screens for mining/water treatment.</li>
+            <li>Key achievements: 40-50% lead time reduction on screen cutting, 15-20% capex reduction on machine base.</li>
+        </ul>
+    </div>
+
+    <!-- Certifications & Education -->
+    <div class="section-title">Certifications & Education</div>
+    <div class="cert-grid">
+        <div class="cert-item"><strong>Ansys – Stresses in Pressure Vessels</strong><span>Nov 2025</span></div>
+        <div class="cert-item"><strong>CSWA – SolidWorks Associate</strong><span>Oct 2017</span></div>
+        <div class="cert-item"><strong>GE Aerospace – Supply Chain Simulation</strong><span>Oct 2023</span></div>
+        <div class="cert-item"><strong>Be10x – AI Tools Workshop</strong><span>Nov 2025</span></div>
+        <div class="edu-item"><strong>B.E. Mechanical Engineering</strong><span>LJ Institute, CGPA 8.1/10 | 2017</span></div>
+        <div class="edu-item"><strong>BAJA SAEINDIA 2017</strong><span>34th rank nationally – Transmission Department</span></div>
+    </div>
+
+    <!-- Featured Projects (interactive grid) -->
+    <div class="section-title">Featured Engineering Work</div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 28px; margin-bottom: 24px;">
+        <div class="grid-card" onclick="showProject(0)">
+            <h3>High‑Pressure Gas Suction Scrubber</h3>
+            <p>Nozzle reinforcement | ASME VIII | NACE H₂S</p>
+            <div style="margin-top: 20px;"><span class="btn-outline" style="font-size: 0.8rem;">View Project →</span></div>
+        </div>
+        <div class="grid-card" onclick="showProject(1)">
+            <h3>High‑Pressure Hydrogenation Reactor</h3>
+            <p>Cr‑Mo steel | 18 MPa | 450°C</p>
+            <div style="margin-top: 20px;"><span class="btn-outline" style="font-size: 0.8rem;">View Project →</span></div>
+        </div>
+        <div class="grid-card" onclick="showProject(2)">
+            <h3>Horizontal Vessel – Saddle Support</h3>
+            <p>Zick's analysis | 12 m vessel | Wear plate</p>
+            <div style="margin-top: 20px;"><span class="btn-outline" style="font-size: 0.8rem;">View Project →</span></div>
+        </div>
+    </div>
+    <div id="project-detail-area" class="detail-area"></div>
+
+    <!-- Learning Teaser -->
     <div class="learning-teaser">
         <h3>📘 Weekly Deep‑Dives into Pressure Vessel Design</h3>
-        <p>ASME codes, FEA, materials, fabrication scenarios — each week I generate questions, verify with Notebook LM (ASME sources), and share slide summaries on LinkedIn.</p>
+        <p>ASME codes, FEA, materials, fabrication scenarios — generated with ChatGPT, verified via Notebook LM (ASME sources), shared on LinkedIn.</p>
         <a href="/learning.html" class="btn-primary" style="background:#1e5a6e;">Explore Learning Hub →</a>
     </div>
 
@@ -530,20 +676,7 @@
 <div id="toast" class="toast">✓ Download started</div>
 
 <script>
-    // Project data (store raw HTML for each, but we will also store compact versions)
-    const fullProjectHTMLs = {
-        0: ``, // filled below
-        1: ``,
-        2: ``
-    };
-    const compactProjectHTMLs = {
-        0: ``,
-        1: ``,
-        2: ``
-    };
-
-    // We'll build both detailed and compact versions from the same data.
-    // To avoid duplication, we define project data as objects.
+    // Project data (same as before, but using modern JS)
     const projectsData = [
         {
             title: "High‑Pressure Gas Suction Scrubber — Nozzle Reinforcement",
@@ -601,21 +734,15 @@
         }
     ];
 
-    // Generate full and compact HTML for each project
+    const fullProjectHTMLs = [], compactProjectHTMLs = [];
+
     for (let i = 0; i < projectsData.length; i++) {
         const p = projectsData[i];
-        // Full specs table
         let specsTable = `<table class="specs-table"><tr><th colspan="2">Design Basis</th></tr>`;
-        p.specs.forEach(spec => {
-            specsTable += `<tr><td>${spec[0]}</td><td>${spec[1]}</td></tr>`;
-        });
+        p.specs.forEach(s => { specsTable += `<tr><td>${s[0]}</td><td>${s[1]}</td></tr>`; });
         specsTable += `</table>`;
-
-        // Compact summary: just key/value lines
         let compactSummary = `<div class="compact-summary"><strong>⚙️ Key Parameters</strong><br>`;
-        p.specs.forEach(spec => {
-            compactSummary += `<span style="font-weight:600;">${spec[0]}:</span> ${spec[1]}<br>`;
-        });
+        p.specs.forEach(s => { compactSummary += `<span style="font-weight:600;">${s[0]}:</span> ${s[1]}<br>`; });
         compactSummary += `</div>`;
 
         const fullHTML = `
@@ -625,31 +752,17 @@
                     <div class="project-title">${p.title}</div>
                     <div class="project-sub">${p.subtitle}</div>
                     <div class="project-counter">
-                        <div class="counter-nav">
-                            <button onclick="previousProject()">◀ Previous</button>
-                            <span id="counterText">Project ${i+1} of ${projectsData.length}</span>
-                            <button onclick="nextProject()">Next ▶</button>
-                        </div>
+                        <div class="counter-nav"><button onclick="previousProject()">◀ Previous</button><span id="counterText">Project ${i+1} of ${projectsData.length}</span><button onclick="nextProject()">Next ▶</button></div>
                         <button class="toggle-view" onclick="toggleView()">🔍 Switch to Compact View</button>
                     </div>
                 </div>
-                <div class="project-body" id="projectBody">
-                    <div id="leftColumn">
-                        <div id="specContainer">${specsTable}</div>
-                        <div class="feature-box"><strong>Key Features</strong>${p.features}</div>
-                    </div>
-                    <div>
-                        <img class="project-image" src="${p.imgSrc}" alt="${p.imgAlt}" onerror="this.src='https://placehold.co/400x300?text=PV+Elite+Preview'">
-                        <div class="img-caption">${p.imgAlt}</div>
-                    </div>
+                <div class="project-body">
+                    <div><div id="specContainer">${specsTable}</div><div class="feature-box"><strong>Key Features</strong>${p.features}</div></div>
+                    <div><img class="project-image" src="${p.imgSrc}" alt="${p.imgAlt}" onerror="this.src='https://placehold.co/400x300?text=PV+Elite+Preview'"><div class="img-caption">${p.imgAlt}</div></div>
                 </div>
-                <div class="download-row">
-                    <a class="dl-btn" href="${p.pdfPath}" target="_blank" onclick="showToast('📄 Downloading project report...')">📄 Download Full Report (PDF)</a>
-                    <span class="dl-note">${p.pdfNote}</span>
-                </div>
+                <div class="download-row"><a class="dl-btn" href="${p.pdfPath}" target="_blank" onclick="showToast('📄 Downloading project report...')">📄 Download Full Report (PDF)</a><span class="dl-note">${p.pdfNote}</span></div>
             </div>
         `;
-
         const compactHTML = `
             <div>
                 <div class="project-header">
@@ -657,37 +770,22 @@
                     <div class="project-title">${p.title}</div>
                     <div class="project-sub">${p.subtitle}</div>
                     <div class="project-counter">
-                        <div class="counter-nav">
-                            <button onclick="previousProject()">◀ Previous</button>
-                            <span id="counterText">Project ${i+1} of ${projectsData.length}</span>
-                            <button onclick="nextProject()">Next ▶</button>
-                        </div>
+                        <div class="counter-nav"><button onclick="previousProject()">◀ Previous</button><span id="counterText">Project ${i+1} of ${projectsData.length}</span><button onclick="nextProject()">Next ▶</button></div>
                         <button class="toggle-view" onclick="toggleView()">🔍 Switch to Detailed View</button>
                     </div>
                 </div>
-                <div class="project-body" id="projectBody">
-                    <div id="leftColumn">
-                        <div id="specContainer">${compactSummary}</div>
-                        <div class="feature-box"><strong>Key Features</strong>${p.features}</div>
-                    </div>
-                    <div>
-                        <img class="project-image" src="${p.imgSrc}" alt="${p.imgAlt}" onerror="this.src='https://placehold.co/400x300?text=PV+Elite+Preview'">
-                        <div class="img-caption">${p.imgAlt}</div>
-                    </div>
+                <div class="project-body">
+                    <div><div id="specContainer">${compactSummary}</div><div class="feature-box"><strong>Key Features</strong>${p.features}</div></div>
+                    <div><img class="project-image" src="${p.imgSrc}" alt="${p.imgAlt}" onerror="this.src='https://placehold.co/400x300?text=PV+Elite+Preview'"><div class="img-caption">${p.imgAlt}</div></div>
                 </div>
-                <div class="download-row">
-                    <a class="dl-btn" href="${p.pdfPath}" target="_blank" onclick="showToast('📄 Downloading project report...')">📄 Download Full Report (PDF)</a>
-                    <span class="dl-note">${p.pdfNote}</span>
-                </div>
+                <div class="download-row"><a class="dl-btn" href="${p.pdfPath}" target="_blank" onclick="showToast('📄 Downloading project report...')">📄 Download Full Report (PDF)</a><span class="dl-note">${p.pdfNote}</span></div>
             </div>
         `;
-
-        fullProjectHTMLs[i] = fullHTML;
-        compactProjectHTMLs[i] = compactHTML;
+        fullProjectHTMLs.push(fullHTML);
+        compactProjectHTMLs.push(compactHTML);
     }
 
-    let currentIndex = 0;
-    let isCompact = false;
+    let currentIndex = 0, isCompact = false;
 
     function showToast(msg) {
         const toast = document.getElementById('toast');
@@ -698,62 +796,28 @@
 
     function renderProject(index, compact) {
         const area = document.getElementById('project-detail-area');
-        // Show loading spinner
         area.innerHTML = `<div class="loading-spinner"><div class="spinner"></div><p>Loading project...</p></div>`;
         setTimeout(() => {
-            const html = compact ? compactProjectHTMLs[index] : fullProjectHTMLs[index];
-            area.innerHTML = html;
-            // Update counter text in the newly rendered DOM
+            area.innerHTML = compact ? compactProjectHTMLs[index] : fullProjectHTMLs[index];
             const counterSpan = document.getElementById('counterText');
             if (counterSpan) counterSpan.innerText = `Project ${index+1} of ${projectsData.length}`;
-            // Also reattach the toggle view function is already global
         }, 200);
     }
 
-    window.showProject = function(index) {
-        currentIndex = index;
-        isCompact = false; // reset to detailed when clicking from grid
-        renderProject(currentIndex, false);
-    };
+    window.showProject = function(index) { currentIndex = index; isCompact = false; renderProject(currentIndex, false); };
+    window.previousProject = function() { if (currentIndex > 0) { currentIndex--; renderProject(currentIndex, isCompact); } else showToast("Already at first project"); };
+    window.nextProject = function() { if (currentIndex < projectsData.length-1) { currentIndex++; renderProject(currentIndex, isCompact); } else showToast("Already at last project"); };
+    window.toggleView = function() { isCompact = !isCompact; renderProject(currentIndex, isCompact); };
 
-    window.previousProject = function() {
-        if (currentIndex > 0) {
-            currentIndex--;
-            renderProject(currentIndex, isCompact);
-        } else {
-            showToast("Already at first project");
-        }
-    };
-
-    window.nextProject = function() {
-        if (currentIndex < projectsData.length - 1) {
-            currentIndex++;
-            renderProject(currentIndex, isCompact);
-        } else {
-            showToast("Already at last project");
-        }
-    };
-
-    window.toggleView = function() {
-        isCompact = !isCompact;
-        renderProject(currentIndex, isCompact);
-    };
-
-    // Resume PDF download with toast
-    const resumePdfUrl = "/pdfs/Umesh Gohil_static equipment design engineer"; // UPDATE as needed
-    function downloadResume() {
-        window.open(resumePdfUrl, '_blank');
-        showToast("📄 Downloading your resume...");
-    }
+    // Resume PDF – FIXED: use clean filename (rename your PDF to this or update path)
+    const resumePdfUrl = "/pdfs/Umesh_Gohil_Resume.pdf";
+    function downloadResume() { window.open(resumePdfUrl, '_blank'); showToast("📄 Downloading your resume..."); }
     ['resumeTopBtn', 'resumeHeroBtn', 'resumeFooterBtn'].forEach(id => {
         const el = document.getElementById(id);
         if (el) el.addEventListener('click', (e) => { e.preventDefault(); downloadResume(); });
     });
 
-    // Initial load
-    window.addEventListener('DOMContentLoaded', () => {
-        showProject(0);
-    });
+    window.addEventListener('DOMContentLoaded', () => showProject(0));
 </script>
 </body>
 </html>
