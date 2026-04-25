@@ -44,10 +44,6 @@
             box-shadow: 0 4px 10px rgba(16, 185, 129, 0.2);
         }
 
-        .status-badge i {
-            font-size: 14px;
-        }
-
         /* Navigation */
         nav {
             background: white;
@@ -256,10 +252,10 @@
             display: block;
         }
 
-        /* Projects Grid */
+        /* Projects Grid - updated for 3 cards */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 30px;
         }
 
@@ -270,6 +266,8 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.08);
             transition: all 0.3s;
             border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
         }
 
         .project-card:hover {
@@ -278,28 +276,33 @@
         }
 
         .project-img {
-            height: 200px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 220px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #e2e8f0;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 3rem;
-        }
-
-        .project-content {
-            padding: 24px;
+            align-items: flex-end;
+            justify-content: flex-start;
+            padding: 12px;
         }
 
         .project-tag {
             display: inline-block;
-            background: #e0e7ff;
-            color: #3730a3;
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(4px);
+            color: white;
             padding: 4px 12px;
             border-radius: 20px;
             font-size: 0.75rem;
             font-weight: 600;
-            margin-bottom: 12px;
+        }
+
+        .project-content {
+            padding: 24px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .project-card h3 {
@@ -326,6 +329,27 @@
             border-radius: 20px;
             font-size: 0.75rem;
             font-weight: 500;
+        }
+
+        .pdf-link {
+            margin-top: auto;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #2563eb10;
+            padding: 10px 16px;
+            border-radius: 30px;
+            text-decoration: none;
+            color: #2563eb;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+            width: fit-content;
+        }
+
+        .pdf-link:hover {
+            background: #2563eb;
+            color: white;
         }
 
         /* Skills */
@@ -410,7 +434,6 @@
             text-align: center;
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             .hero-text h1 {
                 font-size: 2.2rem;
@@ -454,7 +477,7 @@
                         <i class="fas fa-briefcase"></i> OPEN TO WORK
                     </div>
                     <h1>Static & Mechanical Equipment<br><span class="highlight">Design Engineer</span></h1>
-                    <p>7+ years of experience in pressure vessels, heat exchangers, columns, and filtration/drying systems. ASME, API, TEMA, and EN standards expert.</p>
+                    <p>7+ years of experience in pressure vessels, heat exchangers, columns, and filtration/drying systems. <strong>ASME Sec VIII Div 1 & Div 2</strong>, API, TEMA, and EN standards expert.</p>
                     <div class="availability-badges">
                         <span class="badge badge-blue"><i class="fas fa-globe"></i> Remote Worldwide</span>
                         <span class="badge badge-green"><i class="fas fa-passport"></i> Visa Sponsorship OK</span>
@@ -501,96 +524,75 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Projects Section - Now with your 3 real projects -->
     <section id="projects" style="background: #f1f5f9;">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <p class="section-subtitle">Pressure vessels, heat exchangers, columns & filtration systems</p>
+            <h2 class="section-title">Featured Engineering Projects</h2>
+            <p class="section-subtitle">ASME Section VIII Division 1 – Pressure Vessel Design & Analysis</p>
             <div class="projects-grid">
-                <!-- Project 1 -->
+                <!-- Project 1: High-Pressure Gas Suction Scrubber Nozzles -->
                 <div class="project-card">
-                    <div class="project-img">
-                        <i class="fas fa-industry"></i>
+                    <div class="project-img" style="background-image: url('images/scrubber-nozzles.png');">
+                        <span class="project-tag">ASME Sec VIII Div 1</span>
                     </div>
                     <div class="project-content">
-                        <span class="project-tag">Pressure Vessel</span>
-                        <h3>ASME Sec VIII Div 1 - Nitrogen Storage Vessel</h3>
-                        <p>Designed a 45m³ horizontal pressure vessel for 20 bar(g) service. Performed stress analysis, nozzle reinforcement, and saddle support design. Delivered fabrication drawings and calculation report.</p>
+                        <h3>High-Pressure Gas Suction Scrubber Nozzles</h3>
+                        <p>Complete mechanical design of inlet/outlet nozzles for a high-pressure gas scrubber (120 bar design pressure). Performed nozzle reinforcement, local stresses, and flange rating checks per ASME VIII Div 1. Delivered certified calculation report.</p>
                         <div class="tech-stack">
-                            <span>PV Elite</span><span>AutoCAD</span><span>ASME VIII</span><span>FEA</span>
+                            <span>PV Elite</span>
+                            <span>NozzlePRO</span>
+                            <span>ASME VIII Div 1</span>
+                            <span>FEA</span>
                         </div>
+                        <a href="pdf/Design Calculation Report_ High-Pressure Gas Suction Scrubber Nozzles (Division 1).pdf" class="pdf-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> View Calculation Report (PDF)
+                        </a>
                     </div>
                 </div>
-                <!-- Project 2 -->
+
+                <!-- Project 2: High-Pressure Hydrogenation Reactor Shell -->
                 <div class="project-card">
-                    <div class="project-img">
-                        <i class="fas fa-fire"></i>
+                    <div class="project-img" style="background-image: url('images/reactor-shell.png');">
+                        <span class="project-tag">ASME Sec VIII Div 1</span>
                     </div>
                     <div class="project-content">
-                        <span class="project-tag">Heat Exchanger</span>
-                        <h3>Shell & Tube Heat Exchanger - TEMA Class R</h3>
-                        <p>Thermal and mechanical design of a 500 ft² carbon steel/stainless heat exchanger for refinery service. Optimized baffle spacing to reduce vibration and improve heat transfer by 12%.</p>
+                        <h3>High-Pressure Hydrogenation Reactor Shell</h3>
+                        <p>Design of a 3.5m ID, 25m tall reactor shell for hydrogenation service at 180 bar and 350°C. Included thickness calculation, wind & seismic analysis, support lug design, and fatigue screening per Div 1.</p>
                         <div class="tech-stack">
-                            <span>HTRI</span><span>Compress</span><span>TEMA</span><span>API 660</span>
+                            <span>Compress</span>
+                            <span>ANSYS Mechanical</span>
+                            <span>API 579</span>
+                            <span>ASME VIII Div 1</span>
                         </div>
+                        <a href="pdf/Design Calculation Report_ High-Pressure Hydrogenation Reactor Shell (Division 1).pdf" class="pdf-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> View Calculation Report (PDF)
+                        </a>
                     </div>
                 </div>
-                <!-- Project 3 -->
+
+                <!-- Project 3: Horizontal Pressure Vessel -->
                 <div class="project-card">
-                    <div class="project-img">
-                        <i class="fas fa-chart-line"></i>
+                    <div class="project-img" style="background-image: url('images/horizontal-vessel.png');">
+                        <span class="project-tag">ASME Sec VIII Div 1</span>
                     </div>
                     <div class="project-content">
-                        <span class="project-tag">Distillation Column</span>
-                        <h3>30-Tray Distillation Column for Chemical Plant</h3>
-                        <p>Mechanical design of a 3.5m diameter, 28m height carbon steel column with sieve trays. Wind & seismic analysis per ASCE 7, plus nozzle orientation and lifting lug design.</p>
+                        <h3>Horizontal Pressure Vessel (Division 1)</h3>
+                        <p>Designed a 50m³ horizontal separator for hydrocarbon service, 40 barg, carbon steel. Performed saddle support analysis, nozzle schedule, hydrotest pressure, and UG-22 load combinations. Complete code-compliant report.</p>
                         <div class="tech-stack">
-                            <span>PV Elite</span><span>NozzlePRO</span><span>ASME VIII</span>
+                            <span>PV Elite</span>
+                            <span>AutoCAD</span>
+                            <span>ASME VIII Div 1</span>
+                            <span>WRC 107</span>
                         </div>
+                        <a href="pdf/Design Calculation Report_ Horizontal Pressure Vessel (Division 1).pdf" class="pdf-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> View Calculation Report (PDF)
+                        </a>
                     </div>
                 </div>
-                <!-- Project 4 -->
-                <div class="project-card">
-                    <div class="project-img">
-                        <i class="fas fa-filter"></i>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-tag">Filtration System</span>
-                        <h3>Pharmaceutical Nutsche Filter Dryer</h3>
-                        <p>Designed a 2m³ agitated Nutsche filter dryer with jacket heating, CIP/SIP capabilities. Compliant with ASME BPE, GMP standards. Reduced batch cycle time by 20%.</p>
-                        <div class="tech-stack">
-                            <span>SolidWorks</span><span>FEA</span><span>ASME BPE</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 5 -->
-                <div class="project-card">
-                    <div class="project-img">
-                        <i class="fas fa-temperature-low"></i>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-tag">Drying System</span>
-                        <h3>Rotary Vacuum Dryer (RVD) for API Manufacturing</h3>
-                        <p>Mechanical design of a 5m³ jacketed rotary vacuum dryer with shaft seal and vacuum system. Conducted heat transfer calculations and structural optimization.</p>
-                        <div class="tech-stack">
-                            <span>AutoCAD</span><span>ANSYS</span><span>PDC</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 6 -->
-                <div class="project-card">
-                    <div class="project-img">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-tag">Storage Tank</span>
-                        <h3>API 650 - Crude Oil Storage Tank</h3>
-                        <p>Designed a 15,000m³ floating roof tank with annular plate, wind girder, and seismic anchor chairs. Prepared tank data sheets and material take-off.</p>
-                        <div class="tech-stack">
-                            <span>TANK software</span><span>API 650</span><span>AutoCAD</span>
-                        </div>
-                    </div>
-                </div>
+            </div>
+            <!-- Note about other projects -->
+            <div style="text-align: center; margin-top: 40px; font-size: 0.9rem; color: #475569;">
+                <i class="fas fa-calculator"></i> Additional projects available: Heat exchangers (TEMA), columns, storage tanks (API 650), and filtration/drying systems — upon request.
             </div>
         </div>
     </section>
@@ -685,7 +687,7 @@
 <footer>
     <div class="container">
         <p>© 2026 Static & Mechanical Equipment Design Engineer — Open for opportunities worldwide</p>
-        <p style="margin-top: 12px;"><i class="fas fa-file-pdf"></i> Resume & credentials available upon request</p>
+        <p style="margin-top: 12px;"><i class="fas fa-file-pdf"></i> Complete design calculation reports available in the project cards above.</p>
     </div>
 </footer>
 
