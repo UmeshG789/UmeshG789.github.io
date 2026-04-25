@@ -2,225 +2,323 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Umesh Gohil - Static Equipment Design Engineer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Umesh Gohil – Static Equipment Design Engineer | Resume</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
+        /* ----- COLOR SCHEME from second design (premium dark teal + soft background) ----- */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f9;
-            color: #1e2b37;
-            line-height: 1.5;
-            padding: 30px 20px;
+            background: #f4f7f9;      /* soft cool gray-blue background */
+            font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+            color: #1e2b37;            /* primary dark teal for text */
+            line-height: 1.45;
+            padding: 2rem 1rem;
         }
-        .container {
+
+        .resume {
             max-width: 1000px;
             margin: 0 auto;
             background: white;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            border-radius: 10px;
-            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+            overflow: hidden;           /* keeps header corners rounded */
+            transition: all 0.2s;
         }
-        header {
-            background: #1e2b37;
+
+        /* ----- HEADER (colour-rated from second: dark teal background, white text) ----- */
+        .header {
+            background: #1e2b37;        /* signature deep teal */
             color: white;
-            padding: 30px 40px;
+            text-align: center;
+            padding: 2rem 1.5rem 1.5rem 1.5rem;
+            border-bottom: none;
         }
-        header h1 {
-            font-size: 2.8rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
+
+        .name {
+            font-size: 2.4rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.35rem;
+            color: white;
         }
-        header .title {
-            font-size: 1.3rem;
-            color: #a0c0d0;
-            margin-bottom: 15px;
+
+        .title {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: #cbdbe2;
+            letter-spacing: 0.3px;
         }
+
         .contact {
+            font-size: 0.85rem;
+            color: #e0e7ef;
+            margin-bottom: 0.75rem;
             display: flex;
             flex-wrap: wrap;
-            gap: 25px;
-            font-size: 0.95rem;
+            justify-content: center;
+            gap: 1.2rem;
+            row-gap: 0.4rem;
         }
-        .contact span {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
+
         .contact a {
-            color: white;
+            color: #ffffff;
             text-decoration: none;
-            border-bottom: 1px dotted #a0c0d0;
+            border-bottom: 1px dotted rgba(255,255,255,0.5);
+            transition: border 0.2s;
         }
+
         .contact a:hover {
             border-bottom: 1px solid white;
+            text-decoration: none;
         }
-        .main-content {
-            padding: 40px;
+
+        .availability {
+            font-size: 0.85rem;
+            font-style: italic;
+            margin-top: 0.3rem;
+            color: #bbd4e5;
+            background: rgba(255,255,255,0.08);
+            display: inline-block;
+            padding: 0.2rem 1rem;
+            border-radius: 40px;
+            backdrop-filter: blur(2px);
         }
-        h2 {
-            font-size: 1.8rem;
+
+        /* ----- Section styling (teal accents) ----- */
+        .section {
+            margin-top: 1.6rem;
+            padding: 0 1.8rem;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            border-bottom: 3px solid #1e2b37;   /* primary colour border */
+            padding-bottom: 0.35rem;
+            margin-bottom: 1rem;
             color: #1e2b37;
-            border-bottom: 3px solid #1e2b37;
-            padding-bottom: 8px;
-            margin: 30px 0 20px;
         }
-        h2:first-of-type {
-            margin-top: 0;
-        }
-        h3 {
-            font-size: 1.3rem;
-            color: #1e2b37;
-            margin: 20px 0 5px;
-        }
+
+        /* Job / Experience */
         .job {
-            margin-bottom: 30px;
+            margin-bottom: 1.5rem;
         }
+
         .job-header {
             display: flex;
             justify-content: space-between;
-            align-items: baseline;
             flex-wrap: wrap;
-            margin-bottom: 5px;
+            align-items: baseline;
+            margin-bottom: 0.15rem;
         }
+
         .job-title {
             font-weight: 700;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: #1e2b37;
         }
-        .company {
-            font-weight: 600;
-            color: #2c3e50;
-        }
-        .date {
+
+        .job-date {
             font-style: italic;
-            color: #5f6a7a;
+            font-weight: normal;
+            color: #4a6272;
+            font-size: 0.85rem;
         }
-        .job + .job {
-            margin-top: 25px;
-        }
-        ul {
-            list-style-type: none;
-            padding-left: 20px;
-        }
-        ul li {
-            margin-bottom: 8px;
-            position: relative;
-            padding-left: 20px;
-        }
-        ul li::before {
-            content: "▪";
-            position: absolute;
-            left: 0;
-            color: #1e2b37;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 15px;
-        }
-        .skill-category h4 {
-            font-weight: 600;
-            margin-bottom: 10px;
-            color: #1e2b37;
-            border-left: 4px solid #1e2b37;
-            padding-left: 10px;
-        }
-        .skill-items {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-        .skill-tag {
-            background: #e7edf3;
-            padding: 5px 12px;
-            border-radius: 20px;
+
+        .company {
+            font-style: italic;
             font-size: 0.9rem;
+            margin-bottom: 0.4rem;
+            color: #2c4b5e;
+            font-weight: 500;
         }
-        .education-item, .project-item, .cert-item {
-            margin-bottom: 20px;
+
+        ul {
+            list-style: none;
+            padding-left: 1.2rem;
+            margin: 0.4rem 0 0.2rem;
         }
-        .education-item h4, .project-item h4 {
+
+        li {
+            margin-bottom: 0.35rem;
+            position: relative;
+            padding-left: 0.3rem;
+            font-size: 0.92rem;
+            line-height: 1.45;
+        }
+
+        li::before {
+            content: "•";
+            position: absolute;
+            left: -1rem;
+            color: #1e2b37;            /* teal bullet */
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .achievements {
+            margin-top: 0.3rem;
+            margin-bottom: 0.3rem;
+            font-size: 0.92rem;
+        }
+
+        .achievements strong {
             font-weight: 700;
             color: #1e2b37;
         }
-        .institution {
-            font-weight: 500;
-            color: #2c3e50;
+
+        /* Skills table (clean with teal emphasis) */
+        .skills-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0.7rem 0 0.5rem;
         }
-        .date-place {
-            font-style: italic;
-            color: #5f6a7a;
-            margin-bottom: 5px;
+
+        .skills-table tr {
+            vertical-align: top;
+            border-bottom: 1px solid #e2e8f0;
         }
-        .project-meta {
-            display: flex;
-            gap: 20px;
+
+        .skills-table td:first-child {
+            font-weight: 700;
+            width: 140px;
+            padding: 0.5rem 0.75rem 0.5rem 0;
+            color: #1e2b37;
+        }
+
+        .skills-table td:last-child {
+            padding: 0.5rem 0;
+            color: #2d3e4b;
+        }
+
+        /* certificate / education lists */
+        .cert-list, .education-list {
+            list-style: none;
+            padding-left: 1.2rem;
+        }
+
+        .education-item {
+            margin-bottom: 0.7rem;
+        }
+
+        .recognition {
             font-size: 0.9rem;
-            color: #5f6a7a;
-            margin: 5px 0;
+            margin-top: 0.5rem;
+            background: #f0f4f8;
+            padding: 0.5rem 1rem;
+            border-radius: 14px;
+            color: #1e2b37;
         }
-        .badge {
-            background: #1e2b37;
-            color: white;
-            padding: 2px 8px;
-            border-radius: 12px;
-            font-size: 0.8rem;
-        }
-        .lang-list {
+
+        .languages {
             display: flex;
-            gap: 30px;
             flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 0.5rem;
+            margin-bottom: 0.8rem;
         }
-        .lang-item {
+
+        .lang-badge {
             background: #e7edf3;
-            padding: 5px 15px;
-            border-radius: 20px;
+            padding: 5px 14px;
+            border-radius: 40px;
             font-weight: 500;
+            font-size: 0.85rem;
+            color: #1e2b37;
         }
-        .portfolio-button {
+
+        /* buttons */
+        .buttons {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1rem 1.8rem 2rem 1.8rem;
+            border-top: 1px solid #e2edf2;
+        }
+
+        .btn {
             display: inline-block;
             background: #1e2b37;
             color: white;
-            padding: 12px 30px;
+            padding: 10px 26px;
             text-decoration: none;
             border-radius: 40px;
             font-weight: 600;
-            margin: 30px 0 10px;
-            border: 2px solid #1e2b37;
-            transition: all 0.2s;
+            font-size: 0.85rem;
+            margin: 0 8px;
+            border: 1.5px solid #1e2b37;
+            transition: all 0.25s ease;
+            cursor: pointer;
+            font-family: inherit;
         }
-        .portfolio-button:hover {
+
+        .btn:hover {
             background: white;
             color: #1e2b37;
+            border-color: #1e2b37;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
-        hr {
-            border: 0;
-            border-top: 2px dashed #d0dde7;
-            margin: 40px 0 20px;
+
+        /* responsive touches */
+        @media (max-width: 650px) {
+            body {
+                padding: 1rem;
+            }
+            .section {
+                padding: 0 1.2rem;
+            }
+            .skills-table td {
+                display: block;
+                width: 100%;
+                padding: 0.3rem 0;
+            }
+            .skills-table td:first-child {
+                width: auto;
+                padding-bottom: 0;
+            }
+            .skills-table tr {
+                display: block;
+                margin-bottom: 0.75rem;
+            }
+            .btn {
+                margin: 5px;
+                padding: 8px 20px;
+            }
+            .contact {
+                gap: 0.8rem;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .name {
+                font-size: 1.9rem;
+            }
         }
-        @media (max-width: 600px) {
-            header { padding: 20px; }
-            header h1 { font-size: 2rem; }
-            .contact { flex-direction: column; gap: 10px; }
-            .main-content { padding: 20px; }
+
+        /* minor extra polish */
+        .job:last-child {
+            margin-bottom: 0.2rem;
+        }
+        .section:last-of-type {
+            margin-bottom: 0.5rem;
+        }
+        a {
+            transition: color 0.2s;
         }
     </style>
 </head>
 <body>
-   <div class="resume">
+<div class="resume">
     <!-- Header -->
     <div class="header">
         <div class="name">UMESH GOHIL</div>
-        <div class="title">Static Equipment Design Engineer | 7+ Years Experience</div>
+        <div class="title">Static Equipment Design Engineer</div>   <!-- removed "7+ Years Experience" -->
         <div class="contact">
             Ahmedabad, Gujarat, India &nbsp;|&nbsp;
             +91-9725543954 &nbsp;|&nbsp;
@@ -228,14 +326,14 @@
             <a href="https://linkedin.com/in/umeshg78/">linkedin.com/in/umeshg78</a>
         </div>
         <div class="availability">
-            Open to remote roles globally | Relocation with or without visa sponsorship | Freelance/Contract available
+            Open to remote roles globally | Relocation with or without visa sponsorship | Freelance available   <!-- removed "Contract" -->
         </div>
     </div>
 
     <!-- Professional Summary -->
     <div class="section">
         <div class="section-title">Professional Summary</div>
-        <p>Results-driven Static Equipment Design Engineer with <strong>7+ years</strong> of experience designing pressure vessels, heat exchangers, columns, and filtration/drying systems for oil & gas, water treatment, chemical, and industrial filtration industries. Proficient in <strong>ASME Section VIII</strong> with hands-on software experience in <strong>PV Elite, Compress, and DIMy</strong>. Proven ability to adapt across international codes including <strong>AD 2000, EN 13445/PED, and AS 1210</strong>. Track record of direct collaboration with overseas clients across Germany, USA, Italy, France, and Australia. Actively seeking remote or global relocation roles; open to positions with or without visa sponsorship. Available for full-time remote and freelance/contract engagements.</p>
+        <p>Results-driven Static Equipment Design Engineer with <strong>8+ years</strong> of experience designing pressure vessels, heat exchangers, columns, and filtration/drying systems for oil & gas, water treatment, chemical, and industrial filtration industries. Proficient in <strong>ASME Section VIII</strong> with hands-on software experience in <strong>PV Elite, Compress, and DIMy</strong>. Proven ability to adapt across international codes including <strong>AD 2000, EN 13445/PED, and AS 1210</strong>. Track record of direct collaboration with overseas clients across Germany, USA, Italy, France, and Australia. Actively seeking remote or global relocation roles; open to positions with or without visa sponsorship. Available for full-time remote and freelance engagements.</p>   <!-- changed 7+ → 8+, removed "contract" -->
     </div>
 
     <!-- Core Skills -->
