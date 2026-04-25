@@ -1,580 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Umesh Gohil – Static Equipment Design Engineer | Resume</title>
-<style>
-/* ── RESET & BASE ─────────────────────────── */
-*{margin:0;padding:0;box-sizing:border-box;}
-body{
-  background:#dde3e8;
-  font-family:'Segoe UI','Roboto','Helvetica Neue',sans-serif;
-  color:#1a2530;
-  line-height:1.5;
-  padding:2.5rem 1rem;
-  min-height:100vh;
-}
-
-/* ── PAPER ────────────────────────────────── */
-.paper{
-  max-width:900px;
-  margin:0 auto;
-  background:#ffffff;
-  box-shadow:0 4px 6px rgba(0,0,0,.07),0 12px 40px rgba(0,0,0,.13);
-  border-radius:4px;
-  overflow:hidden;
-}
-
-/* ── HEADER ───────────────────────────────── */
-.hd{
-  background:#1a2e3f;
-  padding:2.2rem 2.5rem 1.8rem;
-  position:relative;
-}
-.hd-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1rem;}
-.hd-left{}
-.hd-name{
-  font-size:2rem;
-  font-weight:700;
-  color:#ffffff;
-  letter-spacing:1.5px;
-  text-transform:uppercase;
-  line-height:1.1;
-  margin-bottom:.3rem;
-}
-.hd-title{
-  font-size:.95rem;
-  color:#8fb8cc;
-  font-weight:400;
-  letter-spacing:.5px;
-  margin-bottom:.1rem;
-}
-.hd-exp{
-  font-size:.82rem;
-  color:#5a8fa8;
-  font-style:italic;
-}
-.hd-right{
-  text-align:right;
-}
-.hd-contact{
-  list-style:none;
-  font-size:.8rem;
-  color:#b0ccda;
-  line-height:2;
-}
-.hd-contact a{color:#b0ccda;text-decoration:none;border-bottom:1px dotted rgba(176,204,218,.4);transition:color .2s;}
-.hd-contact a:hover{color:#fff;}
-.hd-divider{
-  border:none;
-  border-top:1px solid rgba(255,255,255,.1);
-  margin:1.4rem 0 1rem;
-}
-.hd-avail{
-  font-size:.78rem;
-  color:#7ab0c8;
-  font-style:italic;
-  letter-spacing:.3px;
-}
-.hd-avail span{
-  display:inline-block;
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.1);
-  border-radius:30px;
-  padding:.2rem .85rem;
-  margin:.2rem .3rem .2rem 0;
-}
-
-/* ── BODY ─────────────────────────────────── */
-.body{padding:0 2.5rem 2rem;}
-
-/* ── SECTION ──────────────────────────────── */
-.sec{margin-top:1.6rem;}
-.sec-title{
-  font-size:.72rem;
-  font-weight:700;
-  text-transform:uppercase;
-  letter-spacing:2px;
-  color:#1a2e3f;
-  border-bottom:2.5px solid #1a2e3f;
-  padding-bottom:.3rem;
-  margin-bottom:.9rem;
-}
-
-/* ── SUMMARY ──────────────────────────────── */
-.summary{
-  font-size:.875rem;
-  color:#2a3a48;
-  line-height:1.65;
-}
-.summary strong{color:#1a2e3f;}
-
-/* ── SKILLS TABLE ─────────────────────────── */
-.sk-table{width:100%;border-collapse:collapse;font-size:.84rem;}
-.sk-table tr{border-bottom:1px solid #eaeff3;vertical-align:top;}
-.sk-table tr:last-child{border-bottom:none;}
-.sk-table td{padding:.45rem 0;}
-.sk-label{
-  font-weight:700;
-  color:#1a2e3f;
-  width:130px;
-  padding-right:1rem;
-  white-space:nowrap;
-}
-.sk-val{color:#2d3e4d;line-height:1.55;}
-.sk-val em{
-  background:#eef2f5;
-  border-radius:3px;
-  padding:.05rem .35rem;
-  font-style:normal;
-  font-size:.78rem;
-  color:#3a5060;
-  margin-right:.25rem;
-  display:inline-block;
-  margin-bottom:.2rem;
-}
-.sk-val em.hi{
-  background:#1a2e3f;
-  color:#fff;
-}
-
-/* ── EXPERIENCE ───────────────────────────── */
-.job{margin-bottom:1.3rem;padding-bottom:1.2rem;border-bottom:1px dashed #e0e7ed;}
-.job:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
-.job-hd{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:.3rem;margin-bottom:.12rem;}
-.job-title{font-weight:700;font-size:.95rem;color:#1a2e3f;}
-.job-date{
-  font-size:.78rem;
-  color:#fff;
-  background:#1a2e3f;
-  padding:.15rem .6rem;
-  border-radius:30px;
-  white-space:nowrap;
-  font-style:normal;
-}
-.job-date.current{background:#2a7a4f;}
-.job-co{font-size:.82rem;color:#4a6878;font-style:italic;margin-bottom:.5rem;}
-.job ul{list-style:none;padding-left:1rem;}
-.job li{
-  font-size:.84rem;
-  color:#2d3e4d;
-  margin-bottom:.3rem;
-  position:relative;
-  padding-left:.2rem;
-  line-height:1.5;
-}
-.job li::before{
-  content:"▸";
-  position:absolute;
-  left:-.9rem;
-  color:#1a2e3f;
-  font-size:.75rem;
-  top:.05rem;
-}
-.ach-label{
-  font-size:.78rem;
-  font-weight:700;
-  color:#1a2e3f;
-  text-transform:uppercase;
-  letter-spacing:.8px;
-  margin:.6rem 0 .3rem;
-  display:flex;
-  align-items:center;
-  gap:.4rem;
-}
-.ach-label::after{
-  content:'';
-  flex:1;
-  height:1px;
-  background:#e0e7ed;
-}
-.job .ach li::before{color:#b8860b;}
-
-/* ── CERTIFICATIONS ───────────────────────── */
-.cert-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:.3rem .5rem;
-}
-.cert-item{
-  font-size:.82rem;
-  color:#2d3e4d;
-  display:flex;
-  gap:.4rem;
-  align-items:flex-start;
-  padding:.25rem 0;
-  border-bottom:1px solid #f0f4f7;
-}
-.cert-item:nth-last-child(-n+2){border-bottom:none;}
-.cert-dot{
-  width:5px;height:5px;
-  background:#1a2e3f;
-  border-radius:50%;
-  flex-shrink:0;
-  margin-top:.4rem;
-}
-.cert-item strong{color:#1a2e3f;display:block;font-size:.83rem;}
-.cert-item span{color:#6a7e8e;font-size:.76rem;}
-.cert-item.feat .cert-dot{background:#c8940a;width:7px;height:7px;margin-top:.3rem;}
-.cert-item.feat strong{color:#b8780a;}
-
-/* ── EDUCATION ────────────────────────────── */
-.edu-row{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:.3rem;}
-.edu-deg{font-weight:700;font-size:.92rem;color:#1a2e3f;}
-.edu-meta{font-size:.8rem;color:#1a2e3f;background:#eef2f5;padding:.2rem .7rem;border-radius:30px;}
-.edu-inst{font-size:.82rem;color:#4a6878;font-style:italic;margin:.15rem 0;}
-.edu-note{
-  font-size:.8rem;
-  color:#2d3e4d;
-  background:#f5f8fa;
-  border-left:3px solid #b8860b;
-  padding:.35rem .75rem;
-  border-radius:0 4px 4px 0;
-  margin-top:.5rem;
-}
-
-/* ── LANGUAGES ────────────────────────────── */
-.lang-row{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.3rem;}
-.lang-pill{
-  font-size:.8rem;
-  background:#eef2f5;
-  border:1px solid #d5dfe6;
-  border-radius:30px;
-  padding:.25rem .9rem;
-  color:#1a2e3f;
-}
-.lang-pill strong{font-weight:700;}
-
-/* ── FOOTER ───────────────────────────────── */
-.resume-footer{
-  margin-top:1.8rem;
-  padding-top:1.2rem;
-  border-top:1px solid #e0e7ed;
-  display:flex;
-  justify-content:center;
-  gap:1rem;
-  flex-wrap:wrap;
-}
-.rf-btn{
-  display:inline-block;
-  font-size:.8rem;
-  font-weight:600;
-  color:#1a2e3f;
-  border:1.5px solid #1a2e3f;
-  border-radius:30px;
-  padding:.4rem 1.2rem;
-  text-decoration:none;
-  transition:all .2s;
-  letter-spacing:.3px;
-}
-.rf-btn:hover{background:#1a2e3f;color:#fff;}
-.rf-btn.primary{background:#1a2e3f;color:#fff;}
-.rf-btn.primary:hover{background:#253e54;}
-
-/* ── PRINT NOTE ───────────────────────────── */
-.print-note{
-  text-align:center;
-  font-size:.72rem;
-  color:#8a9aaa;
-  margin-top:1rem;
-  font-style:italic;
-}
-
-/* ── RESPONSIVE ───────────────────────────── */
-@media(max-width:640px){
-  body{padding:1rem .5rem;}
-  .hd{padding:1.5rem 1.2rem 1.2rem;}
-  .body{padding:0 1.2rem 1.5rem;}
-  .hd-top{flex-direction:column;}
-  .hd-right{text-align:left;}
-  .hd-name{font-size:1.6rem;}
-  .cert-grid{grid-template-columns:1fr;}
-  .cert-item:nth-last-child(-n+2){border-bottom:1px solid #f0f4f7;}
-  .cert-item:last-child{border-bottom:none;}
-}
-
-/* ── PRINT ────────────────────────────────── */
-@media print{
-  body{background:#fff;padding:0;}
-  .paper{box-shadow:none;border-radius:0;}
-  .print-note,.rf-btn{display:none;}
-  .job-date{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
-  .hd{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umesh Gohil - Design Portfolio</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f9;
+            color: #1e2b37;
+            line-height: 1.6;
+            padding: 30px 20px;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        header {
+            background: #1e2b37;
+            color: white;
+            padding: 30px 40px;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+        }
+        .back-link {
+            margin-top: 15px;
+        }
+        .back-link a {
+            color: #a0c0d0;
+            text-decoration: none;
+            border-bottom: 1px dotted #a0c0d0;
+        }
+        .back-link a:hover {
+            color: white;
+            border-bottom: 1px solid white;
+        }
+        .main-content {
+            padding: 40px;
+        }
+        .intro {
+            background: #e7edf3;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .project {
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #d0dde7;
+        }
+        .project:last-child {
+            border-bottom: none;
+        }
+        .project-title {
+            font-size: 1.8rem;
+            color: #1e2b37;
+            margin-bottom: 15px;
+            background: #f0f4f8;
+            padding: 10px 15px;
+            border-left: 5px solid #1e2b37;
+        }
+        .project-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .project-specs {
+            flex: 1 1 300px;
+        }
+        .project-sketch {
+            flex: 1 1 300px;
+            text-align: center;
+        }
+        .project-sketch img {
+            max-width: 100%;
+            border: 1px solid #d0dde7;
+            border-radius: 8px;
+            padding: 10px;
+            background: #f9f9f9;
+        }
+        .sketch-placeholder {
+            background: #f0f4f8;
+            border: 2px dashed #a0c0d0;
+            border-radius: 8px;
+            padding: 40px 20px;
+            color: #5f6a7a;
+            font-style: italic;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: white;
+        }
+        th {
+            background: #1e2b37;
+            color: white;
+            padding: 10px;
+            text-align: left;
+        }
+        td {
+            padding: 8px 10px;
+            border-bottom: 1px solid #d0dde7;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        .btn {
+            display: inline-block;
+            background: #1e2b37;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            margin-top: 15px;
+            border: 2px solid #1e2b37;
+            transition: all 0.2s;
+        }
+        .btn:hover {
+            background: white;
+            color: #1e2b37;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            color: #5f6a7a;
+            font-size: 0.9rem;
+            border-top: 2px dashed #d0dde7;
+        }
+        .footer a {
+            color: #1e2b37;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        @media (max-width: 700px) {
+            header { padding: 20px; }
+            header h1 { font-size: 2rem; }
+            .main-content { padding: 20px; }
+            .project-grid { flex-direction: column; }
+        }
+    </style>
 </head>
 <body>
-<div class="paper">
+    <div class="container">
+        <header>
+            <h1>📁 Design Portfolio</h1>
+            <div class="back-link">
+                <a href="https://umeshg789.github.io/UmeshG789/">← Back to Resume</a>
+            </div>
+        </header>
 
-  <!-- ══ HEADER ══ -->
-  <div class="hd">
-    <div class="hd-top">
-      <div class="hd-left">
-        <div class="hd-name">Umesh Gohil</div>
-        <div class="hd-title">Static Equipment Design Engineer</div>
-        <div class="hd-exp">7+ Years of Professional Experience</div>
-      </div>
-      <div class="hd-right">
-        <ul class="hd-contact">
-          <li>📍 Ahmedabad, Gujarat, India</li>
-          <li>📞 <a href="tel:+919725543954">+91-9725543954</a></li>
-          <li>✉ <a href="mailto:gohilumesh78@gmail.com">gohilumesh78@gmail.com</a></li>
-          <li>🔗 <a href="https://linkedin.com/in/umeshg78/" target="_blank">linkedin.com/in/umeshg78</a></li>
-          <li>🌐 <a href="https://umeshg789.github.io" target="_blank">umeshg789.github.io</a></li>
-        </ul>
-      </div>
+        <div class="main-content">
+            <div class="intro">
+                <p>Below are sample pressure vessel design projects demonstrating my expertise in <strong>ASME Section VIII Division 1</strong>. All designs are hypothetical and for illustrative purposes only. Click the buttons to download detailed calculation reports.</p>
+            </div>
+
+            <!-- PROJECT 1: High‑Pressure Gas Suction Scrubber Nozzles -->
+            <div class="project">
+                <div class="project-title">🔹 Project 1: High‑Pressure Gas Suction Scrubber – Nozzle Reinforcement</div>
+                <div class="project-grid">
+                    <div class="project-specs">
+                        <h3>Design Basis</h3>
+                        <table>
+                            <tr><th>Parameter</th><th>Value</th></tr>
+                            <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Code</td><td style="border: 1px solid #bdc3c7; padding: 6px;">ASME Section VIII Division 1</td></tr>
+                            <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Design Pressure</td><td style="border: 1px solid #bdc3c7; padding: 6px;">8.5 MPa</td></tr>
+                            <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Design Temperature</td><td style="border: 1px solid #bdc3c7; padding: 6px;">160°C</td></tr>
+                            <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Material</td><td style="border: 1px solid #bdc3c7; padding: 6px;">SA‑537 Class 1 (shell), SA‑106B (nozzles)</td></tr>
+                            <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Shell ID / Thickness</td><td style="border: 1px solid #bdc3c7; padding: 6px;">1450 mm / 42 mm</td></tr>
+                            <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Nozzles</td><td style="border: 1px solid #bdc3c7; padding: 6px;">13 total (NPS 20 manway, NPS 10, 6, 4, 3, 2)</td></tr>
+                            <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Special Service</td><td style="border: 1px solid #bdc3c7; padding: 6px;">NACE H₂S (lethal), severe cyclic</td></tr>
+                        </table>
+                        <p><strong>Features:</strong> Area replacement (UG‑37), overlapping limits (UG‑42), external piping loads, PWHT, MDMT, impact testing. Every nozzle required reinforcing pads.</p>
+                    </div>
+                    <div class="project-sketch">
+                        <h3>PV Elite Model View</h3>
+                        <!-- Replace "scrubber-nozzles.png" with your actual image filename -->
+                        <img src="images/scrubber-nozzles.png" alt="PV Elite nozzle model" style="max-width:100%; border-radius:8px; border:1px solid #d0dde7;">
+                    </div>
+                </div>
+                <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 15px;">
+                    <a href="pdfs/Design Calculation Report_ High-Pressure Gas Suction Scrubber Nozzles (Division 1).pdf" class="btn" target="_blank">📄 Download Full Report (PDF)</a>
+                </div>
+                <p style="margin-top: 10px; font-style: italic; color: #5f6a7a;">Comprehensive nozzle reinforcement study – demonstrates ability to handle complex opening schedules under extreme conditions.</p>
+            </div>
+
+            <!-- PROJECT 2: High‑Pressure Hydrogenation Reactor Shell -->
+            <div class="project">
+                <div class="project-title">🔹 Project 2: High‑Pressure Hydrogenation Reactor Shell</div>
+                <div class="project-grid">
+                    <div class="project-specs">
+                        <h3>Design Basis</h3>
+                        <table>
+                            <tr><th>Parameter</th><th>Value</th></tr>
+                            <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Code</td><td style="border: 1px solid #bdc3c7; padding: 6px;">ASME Section VIII Division 1</td></tr>
+                            <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Design Pressure</td><td style="border: 1px solid #bdc3c7; padding: 6px;">18.0 MPa</td></tr>
+                            <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Design Temperature</td><td style="border: 1px solid #bdc3c7; padding: 6px;">450°C</td></tr>
+                            <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Material</td><td style="border: 1px solid #bdc3c7; padding: 6px;">SA‑387 Gr.22 Class 2 (2.25Cr‑1Mo)</td></tr>
+                            <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Inside Diameter</td><td style="border: 1px solid #bdc3c7; padding: 6px;">800 mm</td></tr>
+                            <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Shell Length</td><td style="border: 1px solid #bdc3c7; padding: 6px;">3200 mm</td></tr>
+                            <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Nominal Thickness</td><td style="border: 1px solid #bdc3c7; padding: 6px;">75 mm</td></tr>
+                        </table>
+                        <p><strong>Features:</strong> Full vacuum external pressure, creep‑fatigue consideration, mandatory PWHT/PFHT, impact testing required.</p>
+                    </div>
+                    <div class="project-sketch">
+                        <h3>PV Elite Model View</h3>
+                        <img src="images/reactor-shell.png" alt="PV Elite reactor shell" style="max-width:100%; border-radius:8px; border:1px solid #d0dde7;">
+                    </div>
+                </div>
+                <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 15px;">
+                    <a href="pdfs/Design Calculation Report_ High-Pressure Hydrogenation Reactor Shell (Division 1).pdf" class="btn" target="_blank">📄 Download Full Report (PDF)</a>
+                </div>
+                <p style="margin-top: 10px; font-style: italic; color: #5f6a7a;">Division 1 design of a high‑pressure hydrogenation reactor shell – includes internal/external pressure, MDMT, PWHT, and PFHT evaluations.</p>
+            </div>
+
+            <!-- PROJECT 3: Horizontal Pressure Vessel – Saddle Supports -->
+            <div class="project">
+                <div class="project-title">🔹 Project 3: Horizontal Pressure Vessel – Saddle Support &amp; Wear Plate Optimization</div>
+                <div class="project-grid">
+                    <div class="project-specs">
+                        <h3>Design Basis</h3>
+                        <table>
+                            <tr><th>Parameter</th><th>Value</th></tr>
+                            <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Code</td><td style="border: 1px solid #bdc3c7; padding: 6px;">ASME Section VIII Division 1</td></tr>
+                            <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Outside Diameter</td><td style="border: 1px solid #bdc3c7; padding: 6px;">2,500 mm</td></tr>
+                            <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Shell Thickness (corroded)</td><td style="border: 1px solid #bdc3c7; padding: 6px;">19 mm</td></tr>
+                            <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Tangent‑to‑Tangent Length</td><td style="border: 1px solid #bdc3c7; padding: 6px;">12,000 mm</td></tr>
+                            <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Operating Weight per Saddle</td><td style="border: 1px solid #bdc3c7; padding: 6px;">421,011 N</td></tr>
+                            <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Saddle Angle</td><td style="border: 1px solid #bdc3c7; padding: 6px;">120°</td></tr>
+                            <tr><td style="border: 1px solid #bdc3c7; padding: 6px;">Wear Plate</td><td style="border: 1px solid #bdc3c7; padding: 6px;">13 mm thick, 140° sweep</td></tr>
+                        </table>
+                        <p><strong>Features:</strong> Zick's analysis, longitudinal bending, tangential shear, circumferential horn stress, wear plate optimization.</p>
+                    </div>
+                    <div class="project-sketch">
+                        <h3>PV Elite Model View</h3>
+                        <img src="images/horizontal-vessel.png" alt="PV Elite horizontal vessel with saddles" style="max-width:100%; border-radius:8px; border:1px solid #d0dde7;">
+                    </div>
+                </div>
+                <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 15px;">
+                    <a href="pdfs/Design Calculation Report_ Horizontal Pressure Vessel (Division 1).pdf" class="btn" target="_blank">📄 Download Full Report (PDF)</a>
+                </div>
+                <p style="margin-top: 10px; font-style: italic; color: #5f6a7a;">Division 1 saddle support design using Zick's analysis – includes base plate sizing, web splitting force check, and wear plate specification.</p>
+            </div>
+
+            <div class="footer">
+                <p>© 2026 Umesh Gohil | <a href="https://umeshg789.github.io/UmeshG789/">Resume</a> | <a href="https://linkedin.com/in/umeshg78/">LinkedIn</a></p>
+            </div>
+        </div>
     </div>
-    <hr class="hd-divider">
-    <div class="hd-avail">
-      <span>🌍 Open to Remote Roles Globally</span>
-      <span>✈️ Relocation — With / Without Visa Sponsorship</span>
-      <span>💼 Freelance Available</span>
-    </div>
-  </div>
-
-  <!-- ══ BODY ══ -->
-  <div class="body">
-
-    <!-- SUMMARY -->
-    <div class="sec">
-      <div class="sec-title">Professional Summary</div>
-      <p class="summary">
-        Results-driven Static Equipment Design Engineer with <strong>7+ years</strong> of experience designing pressure vessels, heat exchangers, columns, and filtration/drying systems for oil &amp; gas, water treatment, chemical, and industrial filtration industries. Proficient in <strong>ASME Section VIII</strong> with hands-on software experience in <strong>PV Elite, Compress, and DIMy</strong>. Proven ability to adapt across international codes including <strong>AD 2000, EN 13445/PED, and AS 1210</strong>. Track record of direct collaboration with overseas clients across Germany, USA, Italy, France, and Australia. Actively seeking remote or global relocation roles; open to positions with or without visa sponsorship. Available for full-time remote and freelance engagements.
-      </p>
-    </div>
-
-    <!-- SKILLS -->
-    <div class="sec">
-      <div class="sec-title">Core Skills</div>
-      <table class="sk-table">
-        <tr>
-          <td class="sk-label">Software</td>
-          <td class="sk-val">
-            <em class="hi">PV Elite</em><em class="hi">Compress</em><em class="hi">DIMy</em>
-            <em>Autodesk Inventor</em><em>SolidWorks</em><em>Mechanical AutoCAD</em>
-            <em>Autodesk Vault</em><em>Oracle Agile PLM</em><em>SAP</em><em>MS Office</em>
-          </td>
-        </tr>
-        <tr>
-          <td class="sk-label">Codes &amp; Standards</td>
-          <td class="sk-val">
-            <em class="hi">ASME Section VIII (Div.1)</em><em class="hi">TEMA</em>
-            <em>ASME B31.3 / B16.5</em><em>EN 13445 / PED</em>
-            <em>AD 2000</em><em>AS 1210</em><em>ISO 9001</em><em>AWS / ISO Welding</em>
-          </td>
-        </tr>
-        <tr>
-          <td class="sk-label">Technical</td>
-          <td class="sk-val">
-            <em>Design Calculations</em><em>GD&amp;T</em><em>FEA Cross-validation</em>
-            <em>MDR Preparation</em><em>PLM / PDM Systems</em>
-            <em>P&amp;ID / PFD Interpretation</em><em>MR / TDS</em><em>DFM / DFA</em>
-          </td>
-        </tr>
-        <tr>
-          <td class="sk-label">Professional</td>
-          <td class="sk-val">
-            <em>Project Management</em><em>International Client Collaboration</em>
-            <em>Vendor Management</em><em>Remote Collaboration</em>
-            <em>Team Leadership</em><em>Technical Mentoring</em>
-          </td>
-        </tr>
-      </table>
-    </div>
-
-    <!-- EXPERIENCE -->
-    <div class="sec">
-      <div class="sec-title">Work Experience</div>
-
-      <!-- GMM Pfaudler -->
-      <div class="job">
-        <div class="job-hd">
-          <span class="job-title">Senior Engineer — Static Equipment Design</span>
-          <span class="job-date current">Feb 2025 – Present</span>
-        </div>
-        <div class="job-co">GMM Pfaudler &nbsp;·&nbsp; Karamsad, Anand, India</div>
-        <ul>
-          <li>Design 15+ pressure vessels, filtration and drying systems per ASME Section VIII annually, ensuring full compliance with client specifications and international codes.</li>
-          <li>Execute European code projects using DIMy for AD 2000 vessels under PED, demonstrating cross-code adaptability across ASME, European, and Australian standards.</li>
-          <li>Review AutoCAD/Inventor-based GA drawings across 10+ active projects — verify dimensions, materials, nozzle orientation/elevation, temperature, and pressure inputs.</li>
-          <li>Validate critical design parameters (thickness, MDMT, PWHT, MAWP, MAP, applied loads) using PV Elite for 20+ equipment items per project cycle.</li>
-          <li>Prepare and issue MR and TDS documents, ensuring zero procurement delays across multi-discipline project teams.</li>
-          <li>Conduct weekly remote design reviews with international licensors across 3+ time zones, maintaining project schedule adherence.</li>
-          <li>Mentor 3–4 junior engineers and drafters in GD&amp;T, welding symbols, and PLM workflows — reducing drawing revision cycles by ~25%.</li>
-          <li>Cross-check PV Elite results against external FEA to validate nozzle reinforcement, shell/head, and support design.</li>
-          <li>Prepare Manufacturer's Data Reports (MDR) per ASME format — consolidating material certifications, inspection records, and compliance documentation.</li>
-        </ul>
-      </div>
-
-      <!-- L&T -->
-      <div class="job">
-        <div class="job-hd">
-          <span class="job-title">Engineer — Static Equipment Design</span>
-          <span class="job-date">Jan 2022 – Feb 2025</span>
-        </div>
-        <div class="job-co">L&amp;T Technology Services Limited &nbsp;·&nbsp; Vadodara, India</div>
-        <ul>
-          <li>Designed pressure vessels, heat exchangers, and columns per ASME Section VIII and TEMA — handled 10+ projects over 3-year tenure.</li>
-          <li>Reviewed 100+ fabrication drawings and plate cutting layouts with zero ASME non-compliance incidents.</li>
-          <li>Executed PV Elite calculations for 30+ vessels over 3 years — thickness, nozzle reinforcement, and load case evaluations.</li>
-          <li>Managed 50+ design change orders (ECR, ECN, MCO) in Oracle Agile PLM — full revision traceability, zero data loss.</li>
-          <li>Maintained ISO 9001 compliance across all design activities, supporting 2+ technical audits with zero major non-conformance findings.</li>
-          <li>Utilized P&amp;IDs and PFDs as primary design inputs for static equipment across oil &amp; gas and chemical sector projects.</li>
-        </ul>
-      </div>
-
-      <!-- Aqseptence Permanent -->
-      <div class="job">
-        <div class="job-hd">
-          <span class="job-title">Design Engineer — Static Equipment &amp; Filtration Products</span>
-          <span class="job-date">Mar 2019 – Dec 2021</span>
-        </div>
-        <div class="job-co">Aqseptence Group (India) Pvt Ltd (Johnson Screens) &nbsp;·&nbsp; Sanand, India</div>
-        <ul>
-          <li>Led 4–5 drafters delivering fabrication drawings; direct technical collaboration with overseas clients across 5 markets — Germany, USA, Italy, France, Australia.</li>
-          <li>Designed products across 6+ industries: oil &amp; gas, water treatment, mining, filtration, SPM, and new product development.</li>
-          <li>Created 200+ 3D parts, 2D drawings, and BOMs using Autodesk Inventor and AutoCAD; managed 500+ part numbers in Autodesk Vault and SAP PLM.</li>
-          <li>Specialized in V-wire screen design for filtration and separation across mining and water treatment sectors.</li>
-          <li>Applied GD&amp;T and welding symbols per ISO/AWS across all drawings; resolved 10+ technical field issues at customer sites.</li>
-          <li>Selected and detailed pipes per ASME B31.3 and B16.5; performed engineering calculations for gears, bearings, shafts, and lifting structures.</li>
-        </ul>
-        <div class="ach-label">Key Achievements</div>
-        <ul class="ach">
-          <li>Modified single-side screen-cutting SPM to dual-side — lead time reduced by ~40–50%.</li>
-          <li>Redesigned screen machine base structure — ~15–20% capex cost reduction achieved.</li>
-          <li>GD&amp;T optimizations across 30+ drawings — reduced manufacturing cost and lead time.</li>
-          <li>Designed hydraulic cylinder-based welding fixture — improved weld quality, reduced rework.</li>
-          <li>Designed CAD storage rack system — raw material retrieval time reduced by ~20%.</li>
-        </ul>
-      </div>
-
-      <!-- Plantech -->
-      <div class="job">
-        <div class="job-hd">
-          <span class="job-title">Project &amp; Design Engineer</span>
-          <span class="job-date">Nov 2018 – Feb 2019</span>
-        </div>
-        <div class="job-co">Plantech Medical System Pvt Ltd &nbsp;·&nbsp; Ahmedabad, India</div>
-        <ul>
-          <li>Reverse-engineered 3+ imported medical equipment models to develop localized, cost-effective designs using SolidWorks and AutoCAD.</li>
-          <li>Sourced alternate vendor for custom/commercial items — product cost reduced by 10–15%.</li>
-          <li>Redesigned product using DFM &amp; DFA principles — assembly time reduced by ~20%, serviceability improved.</li>
-        </ul>
-      </div>
-
-      <!-- Aqseptence Contract -->
-      <div class="job">
-        <div class="job-hd">
-          <span class="job-title">Design Engineer (Contract)</span>
-          <span class="job-date">Jul 2018 – Oct 2018</span>
-        </div>
-        <div class="job-co">Aqseptence Group (India) Pvt Ltd (Johnson Screens) &nbsp;·&nbsp; Sanand, India</div>
-        <ul>
-          <li>Designed 1st, 2nd &amp; 3rd stage water processing equipment for industrial clients.</li>
-          <li>Built foundational proficiency in Autodesk Inventor, Autodesk Vault, and SAP PLM through active project delivery.</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- CERTIFICATIONS -->
-    <div class="sec">
-      <div class="sec-title">Certifications</div>
-      <div class="cert-grid">
-        <div class="cert-item feat">
-          <div class="cert-dot"></div>
-          <div>
-            <strong>Ansys — Stresses in Pressure Vessels</strong>
-            <span>Ansys &nbsp;·&nbsp; Nov 2025 &nbsp;·&nbsp; ⭐ Most Relevant</span>
-          </div>
-        </div>
-        <div class="cert-item">
-          <div class="cert-dot"></div>
-          <div>
-            <strong>Certified SolidWorks Associate (CSWA)</strong>
-            <span>Dassault Systèmes &nbsp;·&nbsp; Oct 2017</span>
-          </div>
-        </div>
-        <div class="cert-item">
-          <div class="cert-dot"></div>
-          <div>
-            <strong>Supply Chain Job Simulation</strong>
-            <span>GE Aerospace &nbsp;·&nbsp; Oct 2023</span>
-          </div>
-        </div>
-        <div class="cert-item">
-          <div class="cert-dot"></div>
-          <div>
-            <strong>CAE Professional in SolidWorks</strong>
-            <span>S.E.A &nbsp;·&nbsp; Feb 2018</span>
-          </div>
-        </div>
-        <div class="cert-item">
-          <div class="cert-dot"></div>
-          <div>
-            <strong>AI Tools Workshop</strong>
-            <span>Be10x &nbsp;·&nbsp; Nov 2025</span>
-          </div>
-        </div>
-        <div class="cert-item">
-          <div class="cert-dot"></div>
-          <div>
-            <strong>Generative AI Mastermind</strong>
-            <span>Outskill &nbsp;·&nbsp; 2025</span>
-          </div>
-        </div>
-        <div class="cert-item">
-          <div class="cert-dot"></div>
-          <div>
-            <strong>Business Opportunities — Digital Economy</strong>
-            <span>OpenSAP &nbsp;·&nbsp; Apr 2024</span>
-          </div>
-        </div>
-        <div class="cert-item">
-          <div class="cert-dot"></div>
-          <div>
-            <strong>Certificate of CAD Expert</strong>
-            <span>S.E.A &nbsp;·&nbsp; Oct 2017</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- EDUCATION -->
-    <div class="sec">
-      <div class="sec-title">Education</div>
-      <div class="edu-row">
-        <div>
-          <div class="edu-deg">B.E. in Mechanical Engineering</div>
-          <div class="edu-inst">L.J. Institute of Engineering &amp; Technology, Ahmedabad</div>
-        </div>
-        <div class="edu-meta">Jul 2013 – Jun 2017 &nbsp;|&nbsp; CGPA: 8.1 / 10</div>
-      </div>
-      <div class="edu-note">
-        🏆 <strong>34th rank nationally</strong> out of 400 teams — BAJA SAEINDIA 2017, Transmission Department
-      </div>
-    </div>
-
-    <!-- LANGUAGES -->
-    <div class="sec">
-      <div class="sec-title">Languages</div>
-      <div class="lang-row">
-        <span class="lang-pill"><strong>English</strong> — Professional Working Proficiency (B2/C1)</span>
-        <span class="lang-pill"><strong>Hindi</strong> — Fluent</span>
-        <span class="lang-pill"><strong>Gujarati</strong> — Native</span>
-      </div>
-    </div>
-
-    <!-- FOOTER BUTTONS -->
-    <div class="resume-footer">
-      <a href="portfolio.html" class="rf-btn primary">📂 View Portfolio</a>
-      <a href="learning.html" class="rf-btn">📘 Learning Hub</a>
-      <a href="pdfs/Umesh_Gohil_Resume.pdf" class="rf-btn" target="_blank">⬇ Download PDF</a>
-    </div>
-
-    <p class="print-note">Use Ctrl+P to print or save as PDF &nbsp;·&nbsp; umeshg789.github.io</p>
-
-  </div><!-- /body -->
-</div><!-- /paper -->
 </body>
 </html>
