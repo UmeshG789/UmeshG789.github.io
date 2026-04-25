@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Static Equipment Design Engineer | Portfolio</title>
+    <title>Static Equipment Design Engineer | Umesh Gohil</title>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
@@ -14,7 +14,6 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: 'Inter', sans-serif;
             background: #f8fafc;
@@ -22,14 +21,11 @@
             line-height: 1.6;
             scroll-behavior: smooth;
         }
-
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 24px;
         }
-
-        /* Status Badge */
         .status-badge {
             background: linear-gradient(135deg, #10b981 0%, #059669 100%);
             color: white;
@@ -43,8 +39,6 @@
             margin-bottom: 20px;
             box-shadow: 0 4px 10px rgba(16, 185, 129, 0.2);
         }
-
-        /* Navigation */
         nav {
             background: white;
             box-shadow: 0 1px 3px rgba(0,0,0,0.05);
@@ -54,7 +48,6 @@
             backdrop-filter: blur(10px);
             background: rgba(255,255,255,0.95);
         }
-
         .nav-links {
             display: flex;
             justify-content: space-between;
@@ -62,7 +55,6 @@
             padding: 20px 0;
             flex-wrap: wrap;
         }
-
         .logo {
             font-size: 1.5rem;
             font-weight: 800;
@@ -71,30 +63,24 @@
             background-clip: text;
             color: transparent;
         }
-
         .nav-menu {
             display: flex;
             gap: 32px;
             list-style: none;
         }
-
         .nav-menu a {
             text-decoration: none;
             color: #334155;
             font-weight: 500;
             transition: color 0.3s;
         }
-
         .nav-menu a:hover {
             color: #2563eb;
         }
-
-        /* Hero Section */
         .hero {
             padding: 80px 0 60px;
             background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
         }
-
         .hero-content {
             display: flex;
             flex-wrap: wrap;
@@ -102,35 +88,29 @@
             align-items: center;
             justify-content: space-between;
         }
-
         .hero-text {
             flex: 1;
         }
-
         .hero-text h1 {
             font-size: 3rem;
             font-weight: 800;
             margin-bottom: 16px;
             line-height: 1.2;
         }
-
         .hero-text .highlight {
             color: #2563eb;
         }
-
         .hero-text p {
             font-size: 1.2rem;
             color: #475569;
             margin-bottom: 24px;
         }
-
         .availability-badges {
             display: flex;
             flex-wrap: wrap;
             gap: 12px;
             margin: 24px 0;
         }
-
         .badge {
             background: white;
             padding: 6px 16px;
@@ -139,28 +119,24 @@
             font-weight: 500;
             box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
-
         .badge-blue {
             background: #dbeafe;
             color: #1e40af;
         }
-
         .badge-green {
             background: #d1fae5;
             color: #065f46;
         }
-
         .badge-purple {
             background: #ede9fe;
             color: #5b21b6;
         }
-
         .cta-buttons {
             display: flex;
             gap: 16px;
             margin-top: 32px;
+            flex-wrap: wrap;
         }
-
         .btn {
             padding: 12px 28px;
             border-radius: 40px;
@@ -171,94 +147,76 @@
             align-items: center;
             gap: 8px;
         }
-
         .btn-primary {
             background: #2563eb;
             color: white;
             box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
         }
-
         .btn-primary:hover {
             background: #1d4ed8;
             transform: translateY(-2px);
         }
-
         .btn-outline {
             border: 2px solid #2563eb;
             color: #2563eb;
             background: transparent;
         }
-
         .btn-outline:hover {
             background: #2563eb;
             color: white;
         }
-
-        /* Section Styles */
         section {
             padding: 80px 0;
         }
-
         .section-title {
             font-size: 2rem;
             font-weight: 700;
             margin-bottom: 16px;
             text-align: center;
         }
-
         .section-subtitle {
             text-align: center;
             color: #64748b;
             margin-bottom: 48px;
             font-size: 1.1rem;
         }
-
-        /* Experience Cards */
         .experience-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
-
         .exp-card {
             background: white;
             border-radius: 20px;
             padding: 28px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: transform 0.3s;
             border: 1px solid #e2e8f0;
         }
-
         .exp-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 12px 30px rgba(0,0,0,0.1);
         }
-
         .exp-icon {
             font-size: 2.5rem;
             color: #2563eb;
             margin-bottom: 20px;
         }
-
         .exp-card h3 {
             font-size: 1.3rem;
             margin-bottom: 12px;
         }
-
         .exp-card .company {
             color: #64748b;
             font-weight: 500;
             margin-bottom: 16px;
             display: block;
         }
-
-        /* Projects Grid - updated for 3 cards */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 30px;
         }
-
         .project-card {
             background: white;
             border-radius: 20px;
@@ -269,12 +227,10 @@
             display: flex;
             flex-direction: column;
         }
-
         .project-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 35px rgba(0,0,0,0.1);
         }
-
         .project-img {
             height: 220px;
             background-size: cover;
@@ -286,7 +242,6 @@
             justify-content: flex-start;
             padding: 12px;
         }
-
         .project-tag {
             display: inline-block;
             background: rgba(0,0,0,0.7);
@@ -297,32 +252,27 @@
             font-size: 0.75rem;
             font-weight: 600;
         }
-
         .project-content {
             padding: 24px;
             flex: 1;
             display: flex;
             flex-direction: column;
         }
-
         .project-card h3 {
             margin-bottom: 12px;
             font-size: 1.25rem;
         }
-
         .project-card p {
             color: #475569;
             margin-bottom: 16px;
             font-size: 0.95rem;
         }
-
         .tech-stack {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
             margin: 16px 0;
         }
-
         .tech-stack span {
             background: #f1f5f9;
             padding: 4px 12px;
@@ -330,7 +280,6 @@
             font-size: 0.75rem;
             font-weight: 500;
         }
-
         .pdf-link {
             margin-top: auto;
             display: inline-flex;
@@ -346,38 +295,31 @@
             transition: all 0.2s;
             width: fit-content;
         }
-
         .pdf-link:hover {
             background: #2563eb;
             color: white;
         }
-
-        /* Skills */
         .skills-container {
             background: white;
             border-radius: 30px;
             padding: 40px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.05);
         }
-
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
         }
-
         .skill-category h3 {
             margin-bottom: 20px;
             color: #1e293b;
             font-size: 1.2rem;
         }
-
         .skill-items {
             display: flex;
             flex-wrap: wrap;
             gap: 12px;
         }
-
         .skill-item {
             background: #f1f5f9;
             padding: 8px 18px;
@@ -386,21 +328,17 @@
             font-weight: 500;
             transition: all 0.3s;
         }
-
         .skill-item:hover {
             background: #2563eb;
             color: white;
             transform: scale(1.05);
         }
-
-        /* Contact */
         .contact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
             text-align: center;
         }
-
         .contact-card {
             background: white;
             padding: 32px;
@@ -410,30 +348,24 @@
             transition: all 0.3s;
             border: 1px solid #e2e8f0;
         }
-
         .contact-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
-
         .contact-card i {
             font-size: 2.5rem;
             color: #2563eb;
             margin-bottom: 16px;
         }
-
         .contact-card h3 {
             margin-bottom: 8px;
         }
-
-        /* Footer */
         footer {
             background: #0f172a;
             color: #94a3b8;
             padding: 40px 0;
             text-align: center;
         }
-
         @media (max-width: 768px) {
             .hero-text h1 {
                 font-size: 2.2rem;
@@ -468,7 +400,6 @@
 </nav>
 
 <main>
-    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
@@ -477,7 +408,7 @@
                         <i class="fas fa-briefcase"></i> OPEN TO WORK
                     </div>
                     <h1>Static & Mechanical Equipment<br><span class="highlight">Design Engineer</span></h1>
-                    <p>7+ years of experience in pressure vessels, heat exchangers, columns, and filtration/drying systems. <strong>ASME Sec VIII Div 1 & Div 2</strong>, API, TEMA, and EN standards expert.</p>
+                    <p>7+ years in pressure vessels, heat exchangers, columns, and filtration/drying systems. <strong>ASME Sec VIII Div 1 (2025 Edition)</strong> expert. Available worldwide.</p>
                     <div class="availability-badges">
                         <span class="badge badge-blue"><i class="fas fa-globe"></i> Remote Worldwide</span>
                         <span class="badge badge-green"><i class="fas fa-passport"></i> Visa Sponsorship OK</span>
@@ -486,6 +417,7 @@
                     </div>
                     <div class="cta-buttons">
                         <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Hire Me</a>
+                        <a href="Umesh Gohil_static equipment design engineer.pdf" class="btn btn-outline" download><i class="fas fa-download"></i> Download Resume</a>
                         <a href="#projects" class="btn btn-outline"><i class="fas fa-folder-open"></i> View Projects</a>
                     </div>
                 </div>
@@ -496,76 +428,72 @@
         </div>
     </section>
 
-    <!-- Experience Section -->
     <section id="experience">
         <div class="container">
             <h2 class="section-title">Professional Experience</h2>
-            <p class="section-subtitle">7+ years delivering robust static equipment solutions across industries</p>
+            <p class="section-subtitle">7+ years delivering robust static equipment solutions</p>
             <div class="experience-grid">
                 <div class="exp-card">
                     <div class="exp-icon"><i class="fas fa-drafting-compass"></i></div>
                     <h3>Senior Static Equipment Engineer</h3>
                     <span class="company">Engineering Solutions Ltd. | 2021 - Present</span>
-                    <p>Lead design of ASME Section VIII pressure vessels, shell & tube heat exchangers, and distillation columns. Manage FEA simulations, code calculations, and vendor coordination.</p>
+                    <p>Lead design of ASME Sec VIII Div 1 pressure vessels, shell & tube heat exchangers, and distillation columns. Perform code calculations, FEA, and vendor coordination.</p>
                 </div>
                 <div class="exp-card">
                     <div class="exp-icon"><i class="fas fa-oil-can"></i></div>
                     <h3>Mechanical Design Engineer</h3>
                     <span class="company">Global Process Equipment | 2018 - 2021</span>
-                    <p>Designed filtration systems (Nutsche, cartridge) and rotary dryers for pharmaceutical and chemical plants. Prepared GA drawings, BOM, and technical datasheets.</p>
+                    <p>Designed filtration systems and rotary dryers for pharmaceutical and chemical plants. Prepared GA drawings, BOM, and technical datasheets.</p>
                 </div>
                 <div class="exp-card">
                     <div class="exp-icon"><i class="fas fa-chalkboard-user"></i></div>
                     <h3>Design Engineer (Pressure Vessels)</h3>
                     <span class="company">Heavy Engineering Corp | 2016 - 2018</span>
-                    <p>Performed mechanical design of columns, reactors, and storage tanks. Used PV Elite, Compress, and AutoCAD. Supported fabrication and inspection per ASME IX.</p>
+                    <p>Mechanical design of columns, reactors, storage tanks per ASME VIII. Supported fabrication and inspection.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section - Now with your 3 real projects -->
     <section id="projects" style="background: #f1f5f9;">
         <div class="container">
-            <h2 class="section-title">Featured Engineering Projects</h2>
-            <p class="section-subtitle">ASME Section VIII Division 1 – Pressure Vessel Design & Analysis</p>
+            <h2 class="section-title">Featured ASME VIII Div 1 Projects</h2>
+            <p class="section-subtitle">Real calculation reports – pressure vessels, nozzles, reactor shell & horizontal vessel</p>
             <div class="projects-grid">
-                <!-- Project 1: High-Pressure Gas Suction Scrubber Nozzles -->
+                <!-- Project 1: Scrubber Nozzles -->
                 <div class="project-card">
                     <div class="project-img" style="background-image: url('images/scrubber-nozzles.png');">
-                        <span class="project-tag">ASME Sec VIII Div 1</span>
+                        <span class="project-tag">ASME Sec VIII Div 1 (2025)</span>
                     </div>
                     <div class="project-content">
                         <h3>High-Pressure Gas Suction Scrubber Nozzles</h3>
-                        <p>Complete mechanical design of inlet/outlet nozzles for a high-pressure gas scrubber (120 bar design pressure). Performed nozzle reinforcement, local stresses, and flange rating checks per ASME VIII Div 1. Delivered certified calculation report.</p>
+                        <p>12 nozzles + NPS 20 manway on 42mm shell, 8.5 MPa at 160°C, lethal H₂S service. Native area replacement fails (A<sub>r</sub> 8,620 mm² vs A<sub>avail</sub> 1,940 mm²). Required reinforcing pads (up to 42mm thick). PWHT mandatory, impact testing required. MAWP restored to 8.5 MPa.</p>
                         <div class="tech-stack">
                             <span>PV Elite</span>
-                            <span>NozzlePRO</span>
-                            <span>ASME VIII Div 1</span>
-                            <span>FEA</span>
+                            <span>ASME VIII Div 1 (2025 Ed.)</span>
+                            <span>ASME II Part D (Metric)</span>
                         </div>
                         <a href="pdf/Design Calculation Report_ High-Pressure Gas Suction Scrubber Nozzles (Division 1).pdf" class="pdf-link" target="_blank">
-                            <i class="fas fa-file-pdf"></i> View Calculation Report (PDF)
+                            <i class="fas fa-file-pdf"></i> View Full Calculation Report
                         </a>
                     </div>
                 </div>
 
-                <!-- Project 2: High-Pressure Hydrogenation Reactor Shell -->
+                <!-- Project 2: Hydrogenation Reactor Shell -->
                 <div class="project-card">
                     <div class="project-img" style="background-image: url('images/reactor-shell.png');">
-                        <span class="project-tag">ASME Sec VIII Div 1</span>
+                        <span class="project-tag">ASME Sec VIII Div 1 (2025)</span>
                     </div>
                     <div class="project-content">
                         <h3>High-Pressure Hydrogenation Reactor Shell</h3>
-                        <p>Design of a 3.5m ID, 25m tall reactor shell for hydrogenation service at 180 bar and 350°C. Included thickness calculation, wind & seismic analysis, support lug design, and fatigue screening per Div 1.</p>
+                        <p>800 mm ID, 75mm shell thickness, 18.0 MPa at 450°C, SA-387 Gr.22 Cl.2. Required thickness 67.79 mm, MAWP 19.04 MPa. External pressure MAEP 9.60 MPa (no stiffening rings). PFHT mandatory (8.57% elongation), PWHT 3hrs @675°C. Impact testing mandatory.</p>
                         <div class="tech-stack">
-                            <span>Compress</span>
-                            <span>ANSYS Mechanical</span>
-                            <span>API 579</span>
-                            <span>ASME VIII Div 1</span>
+                            <span>PV Elite</span>
+                            <span>ASME VIII Div 1 (2025 Ed.)</span>
+                            <span>ASME II Part D (Metric)</span>
                         </div>
                         <a href="pdf/Design Calculation Report_ High-Pressure Hydrogenation Reactor Shell (Division 1).pdf" class="pdf-link" target="_blank">
-                            <i class="fas fa-file-pdf"></i> View Calculation Report (PDF)
+                            <i class="fas fa-file-pdf"></i> View Full Calculation Report
                         </a>
                     </div>
                 </div>
@@ -573,48 +501,40 @@
                 <!-- Project 3: Horizontal Pressure Vessel -->
                 <div class="project-card">
                     <div class="project-img" style="background-image: url('images/horizontal-vessel.png');">
-                        <span class="project-tag">ASME Sec VIII Div 1</span>
+                        <span class="project-tag">ASME Sec VIII Div 1 (2025)</span>
                     </div>
                     <div class="project-content">
                         <h3>Horizontal Pressure Vessel (Division 1)</h3>
-                        <p>Designed a 50m³ horizontal separator for hydrocarbon service, 40 barg, carbon steel. Performed saddle support analysis, nozzle schedule, hydrotest pressure, and UG-22 load combinations. Complete code-compliant report.</p>
+                        <p>2,500 mm OD, 19mm corroded shell, 1.5 MPa at 150°C. Twin saddles 120° contact angle, width 300mm, A = 2,400mm from tangent. Longitudinal bending 73.36/47.29 MPa, tangential shear 11.74 MPa. Wear plate 13mm × 560mm × 140° sweep. Base plate 25mm thick.</p>
                         <div class="tech-stack">
                             <span>PV Elite</span>
-                            <span>AutoCAD</span>
-                            <span>ASME VIII Div 1</span>
-                            <span>WRC 107</span>
+                            <span>ASME VIII Div 1 (2025 Ed.)</span>
+                            <span>ASME II Part D (Metric)</span>
                         </div>
                         <a href="pdf/Design Calculation Report_ Horizontal Pressure Vessel (Division 1).pdf" class="pdf-link" target="_blank">
-                            <i class="fas fa-file-pdf"></i> View Calculation Report (PDF)
+                            <i class="fas fa-file-pdf"></i> View Full Calculation Report
                         </a>
                     </div>
                 </div>
             </div>
-            <!-- Note about other projects -->
             <div style="text-align: center; margin-top: 40px; font-size: 0.9rem; color: #475569;">
-                <i class="fas fa-calculator"></i> Additional projects available: Heat exchangers (TEMA), columns, storage tanks (API 650), and filtration/drying systems — upon request.
+                <i class="fas fa-calculator"></i> All designs follow ASME Section VIII Division 1 (2025 Edition) – complete area replacement, MAWP, MDMT, PWHT, and saddle analysis.
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
     <section id="skills">
         <div class="container">
             <h2 class="section-title">Technical Competencies</h2>
-            <p class="section-subtitle">Software, codes, and engineering tools</p>
+            <p class="section-subtitle">Core software & codes used in every project</p>
             <div class="skills-container">
                 <div class="skills-grid">
                     <div class="skill-category">
-                        <h3><i class="fas fa-code"></i> Design & Analysis Software</h3>
+                        <h3><i class="fas fa-code"></i> Primary Software</h3>
                         <div class="skill-items">
                             <span class="skill-item">PV Elite</span>
-                            <span class="skill-item">Compress</span>
-                            <span class="skill-item">AutoCAD</span>
-                            <span class="skill-item">SolidWorks</span>
-                            <span class="skill-item">ANSYS Workbench</span>
-                            <span class="skill-item">NozzlePRO</span>
-                            <span class="skill-item">HTRI</span>
-                            <span class="skill-item">TANK</span>
+                            <span class="skill-item">ASME VIII Div 1 (2025 Ed.)</span>
+                            <span class="skill-item">ASME II Part D (Metric)</span>
                         </div>
                     </div>
                     <div class="skill-category">
@@ -624,12 +544,11 @@
                             <span class="skill-item">API 650/660/653</span>
                             <span class="skill-item">TEMA</span>
                             <span class="skill-item">EN 13445</span>
-                            <span class="skill-item">PD 5500</span>
                             <span class="skill-item">ASME B31.3</span>
                         </div>
                     </div>
                     <div class="skill-category">
-                        <h3><i class="fas fa-flask"></i> Specialized Equipment</h3>
+                        <h3><i class="fas fa-flask"></i> Equipment Expertise</h3>
                         <div class="skill-items">
                             <span class="skill-item">Pressure Vessels</span>
                             <span class="skill-item">Heat Exchangers</span>
@@ -644,29 +563,28 @@
         </div>
     </section>
 
-    <!-- Contact / Freelance Section -->
     <section id="contact" style="background: #eef2ff;">
         <div class="container">
             <h2 class="section-title">Let's Work Together</h2>
-            <p class="section-subtitle">Available for full-time positions, contract roles, and freelance projects</p>
+            <p class="section-subtitle">Full‑time, contract, or freelance – available globally</p>
             <div class="contact-grid">
-                <a href="mailto:your.email@example.com" class="contact-card">
+                <a href="mailto:umeshg789@gmail.com" class="contact-card">
                     <i class="fas fa-envelope"></i>
                     <h3>Email</h3>
-                    <p>your.email@example.com</p>
+                    <p>umeshg789@gmail.com</p>
                     <small style="color:#64748b;">Response within 24h</small>
                 </a>
-                <a href="#" class="contact-card">
+                <a href="https://linkedin.com/in/umesh-gohil-789" class="contact-card">
                     <i class="fab fa-linkedin"></i>
                     <h3>LinkedIn</h3>
-                    <p>linkedin.com/in/yourprofile</p>
+                    <p>linkedin.com/in/umesh-gohil</p>
                     <small style="color:#64748b;">Professional network</small>
                 </a>
-                <a href="#" class="contact-card">
+                <a href="https://github.com/umeshg789" class="contact-card">
                     <i class="fab fa-github"></i>
                     <h3>GitHub</h3>
-                    <p>github.com/yourusername</p>
-                    <small style="color:#64748b;">More projects & code</small>
+                    <p>github.com/umeshg789</p>
+                    <small style="color:#64748b;">Portfolio & code</small>
                 </a>
                 <div class="contact-card">
                     <i class="fas fa-calendar-alt"></i>
@@ -676,8 +594,7 @@
                 </div>
             </div>
             <div style="text-align: center; margin-top: 40px; padding: 20px; background: white; border-radius: 20px;">
-                <i class="fas fa-passport"></i> <strong>Relocation ready</strong> — Willing to relocate internationally with visa sponsorship or independently.
-                <br>
+                <i class="fas fa-passport"></i> <strong>Relocation ready</strong> — Willing to relocate internationally with or without visa sponsorship.<br>
                 <i class="fas fa-clock"></i> Available for remote work in <strong>any timezone</strong>.
             </div>
         </div>
@@ -686,8 +603,10 @@
 
 <footer>
     <div class="container">
-        <p>© 2026 Static & Mechanical Equipment Design Engineer — Open for opportunities worldwide</p>
-        <p style="margin-top: 12px;"><i class="fas fa-file-pdf"></i> Complete design calculation reports available in the project cards above.</p>
+        <p>© 2026 Umesh Gohil – Static & Mechanical Equipment Design Engineer | Open to opportunities worldwide</p>
+        <p style="margin-top: 12px;">
+            <i class="fas fa-file-pdf"></i> Resume & credential reports available above.
+        </p>
     </div>
 </footer>
 
