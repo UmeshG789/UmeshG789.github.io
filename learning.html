@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-/* ========== COPY YOUR FULL CSS FROM INDEX.HTML HERE ========== */
+/* Copy your full CSS from index.html here (same as before) */
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Inter',sans-serif;background:#f8fafc;color:#0f172a;line-height:1.6}
 .container{max-width:1200px;margin:0 auto;padding:0 24px}
@@ -22,12 +22,15 @@ nav{background:rgba(255,255,255,0.95);box-shadow:0 1px 3px rgba(0,0,0,0.05);posi
 .hamburger span{width:24px;height:2px;background:#334155}
 .mobile-menu{display:none;flex-direction:column;background:white;border-top:1px solid #e2e8f0}
 .mobile-menu.open{display:flex}
-.mobile-menu a{padding:14px 24px;border-bottom:1px solid #f1f5f9;text-decoration:none;color:#334155}
+.mobile-menu a{padding:14px 24px;text-decoration:none;color:#334155;border-bottom:1px solid #f1f5f9}
 .hero{padding:60px 0 40px;background:linear-gradient(135deg,#f1f5f9 0%,#e2e8f0 100%)}
 .hero-content{text-align:center}
 .hero-text h1{font-size:2.5rem;margin-bottom:16px}
 .hero-text .highlight{color:#2563eb}
 .hero-text p{font-size:1.1rem;color:#475569;max-width:800px;margin:0 auto 20px}
+.back-home{margin-top:20px}
+.back-home a{background:white;padding:8px 20px;border-radius:40px;text-decoration:none;color:#2563eb;font-weight:600;border:1px solid #e2e8f0;display:inline-block}
+.back-home a:hover{background:#2563eb;color:white}
 .badge-blue{background:#dbeafe;color:#1e40af;padding:5px 14px;border-radius:30px;display:inline-block}
 .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px;margin:40px 0}
 .project-card{background:white;border-radius:20px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,0.08);border:1px solid #e2e8f0;transition:transform 0.3s}
@@ -37,7 +40,8 @@ nav{background:rgba(255,255,255,0.95);box-shadow:0 1px 3px rgba(0,0,0,0.05);posi
 .project-content{padding:24px}
 .project-content h3{font-size:1.25rem;margin-bottom:12px}
 .project-content p{color:#475569;margin-bottom:16px}
-.article-placeholder{background:#f8fafc;border-radius:12px;padding:12px;margin:12px 0;font-size:0.85rem;color:#64748b}
+.topic-list{margin:12px 0 16px 20px;font-size:0.85rem;color:#475569}
+.topic-list li{margin-bottom:4px}
 .pdf-link{display:inline-flex;align-items:center;gap:8px;background:#2563eb10;padding:8px 14px;border-radius:30px;text-decoration:none;color:#2563eb;font-weight:600}
 .pdf-link:hover{background:#2563eb;color:white}
 footer{background:#0f172a;color:#94a3b8;padding:36px 0;text-align:center}
@@ -91,6 +95,9 @@ footer a{color:#94a3b8;text-decoration:none;margin:0 10px}
           <div class="availability-badges" style="justify-content:center; margin-top:20px;">
             <span class="badge badge-blue"><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/umeshg78/" target="_blank" style="color:#1e40af;">Connect on LinkedIn</a></span>
           </div>
+          <div class="back-home">
+            <a href="index.html"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+          </div>
         </div>
       </div>
     </div>
@@ -104,7 +111,12 @@ footer a{color:#94a3b8;text-decoration:none;margin:0 10px}
         <div class="project-content">
           <h3>🔧 Supports & Fundamentals</h3>
           <p>Load paths, anchor bolts, base rings, wind/seismic considerations — everything you need to confidently design vessel supports.</p>
-          <div class="article-placeholder"><i class="fas fa-file-alt"></i> Coming soon: Case study on saddle support optimization.</div>
+          <ul class="topic-list">
+            <li>Types of saddles, lugs, and skirts</li>
+            <li>Anchor bolt design and base plate sizing</li>
+            <li>Wind vs seismic load calculations (ASCE 7)</li>
+            <li>Practical Zick’s analysis examples</li>
+          </ul>
           <a href="learning-supports.html" class="pdf-link"><i class="fas fa-arrow-right"></i> Explore Guides →</a>
         </div>
       </div>
@@ -115,7 +127,12 @@ footer a{color:#94a3b8;text-decoration:none;margin:0 10px}
         <div class="project-content">
           <h3>📐 Pressure Vessel Design</h3>
           <p>ASME VIII Div 1 & 2, EN standards, design calculations, MDMT, MAWP, nozzle reinforcement – explained with real examples.</p>
-          <div class="article-placeholder"><i class="fas fa-file-alt"></i> Coming soon: Step‑by‑step nozzle reinforcement calculation.</div>
+          <ul class="topic-list">
+            <li>Step‑by‑step shell & head thickness calculation</li>
+            <li>Nozzle reinforcement (UG‑36 to UG‑45)</li>
+            <li>MAWP, MAP, MDMT determination</li>
+            <li>Comparison between Div 1 and Div 2 rules</li>
+          </ul>
           <a href="learning-design.html" class="pdf-link"><i class="fas fa-arrow-right"></i> Explore Guides →</a>
         </div>
       </div>
@@ -126,7 +143,12 @@ footer a{color:#94a3b8;text-decoration:none;margin:0 10px}
         <div class="project-content">
           <h3>🔥 Heat Exchangers</h3>
           <p>TEMA standards, mechanical design of shell & tube exchangers, tubesheet calculations, baffles, and failure modes.</p>
-          <div class="article-placeholder"><i class="fas fa-file-alt"></i> Coming soon: TEMA class R vs B – selection guide.</div>
+          <ul class="topic-list">
+            <li>TEMA class R, C, B – selection guide</li>
+            <li>Tubesheet thickness calculation (UMC & TEMA)</li>
+            <li>Baffle spacing and vibration analysis</li>
+            <li>Gasket selection and bolt torque</li>
+          </ul>
           <a href="learning-hex.html" class="pdf-link"><i class="fas fa-arrow-right"></i> Explore Guides →</a>
         </div>
       </div>
@@ -137,7 +159,12 @@ footer a{color:#94a3b8;text-decoration:none;margin:0 10px}
         <div class="project-content">
           <h3>🏭 Columns & Reactors</h3>
           <p>Tall vertical vessels, internals, wind load analysis, skirt design, and special considerations for reactors.</p>
-          <div class="article-placeholder"><i class="fas fa-file-alt"></i> Coming soon: Wind vs seismic – which governs?</div>
+          <ul class="topic-list">
+            <li>Wind load distribution along height (ASCE 7)</li>
+            <li>Skirt design – thickness, anchor chairs, thermal stress</li>
+            <li>Internal trays and packing supports</li>
+            <li>Lifting lug and tailing lug design</li>
+          </ul>
           <a href="learning-columns.html" class="pdf-link"><i class="fas fa-arrow-right"></i> Explore Guides →</a>
         </div>
       </div>
@@ -148,7 +175,12 @@ footer a{color:#94a3b8;text-decoration:none;margin:0 10px}
         <div class="project-content">
           <h3>🧪 Materials & Corrosion</h3>
           <p>Material selection, corrosion allowances, cladding, heat treatment, and failure mechanisms.</p>
-          <div class="article-placeholder"><i class="fas fa-file-alt"></i> Coming soon: H₂S service – material & NACE requirements.</div>
+          <ul class="topic-list">
+            <li>Selection of carbon steel, low alloy, and stainless steels</li>
+            <li>Corrosion allowances and damage mechanisms</li>
+            <li>Cladding and weld overlay</li>
+            <li>NACE MR0175 for sour service</li>
+          </ul>
           <a href="learning-materials.html" class="pdf-link"><i class="fas fa-arrow-right"></i> Explore Guides →</a>
         </div>
       </div>
@@ -159,7 +191,12 @@ footer a{color:#94a3b8;text-decoration:none;margin:0 10px}
         <div class="project-content">
           <h3>🔨 Fabrication & Inspection</h3>
           <p>Welding, NDT, tolerances, PWHT, shop vs field fabrication, and quality control issues.</p>
-          <div class="article-placeholder"><i class="fas fa-file-alt"></i> Coming soon: Common PWHT mistakes and how to avoid them.</div>
+          <ul class="topic-list">
+            <li>Common welding defects and prevention</li>
+            <li>NDT methods (RT, UT, MT, PT) – when to use</li>
+            <li>PWHT parameters and hold time calculation</li>
+            <li>Shop inspection checklist</li>
+          </ul>
           <a href="learning-fabrication.html" class="pdf-link"><i class="fas fa-arrow-right"></i> Explore Guides →</a>
         </div>
       </div>
@@ -170,7 +207,12 @@ footer a{color:#94a3b8;text-decoration:none;margin:0 10px}
         <div class="project-content">
           <h3>💻 Software</h3>
           <p>PV Elite tips, HTRI, Compress – how to validate software outputs with hand calculations.</p>
-          <div class="article-placeholder"><i class="fas fa-file-alt"></i> Coming soon: PV Elite – setting up your first model.</div>
+          <ul class="topic-list">
+            <li>PV Elite – setting up your first model</li>
+            <li>Interpreting warning messages</li>
+            <li>Cross‑checking FEA with hand calculations</li>
+            <li>Exporting calculation reports</li>
+          </ul>
           <a href="learning-software.html" class="pdf-link"><i class="fas fa-arrow-right"></i> Explore Guides →</a>
         </div>
       </div>
@@ -181,7 +223,12 @@ footer a{color:#94a3b8;text-decoration:none;margin:0 10px}
         <div class="project-content">
           <h3>🔍 Scenarios & Troubleshooting</h3>
           <p>Real‑world problems, failure analysis, and interview‑style case studies.</p>
-          <div class="article-placeholder"><i class="fas fa-file-alt"></i> Coming soon: Fatigue failure in nozzle welds – root cause analysis.</div>
+          <ul class="topic-list">
+            <li>Fatigue failure in nozzle welds – root cause</li>
+            <li>Vacuum collapse of a thin shell – how to fix</li>
+            <li>Over‑pressurization scenarios and relief sizing</li>
+            <li>Common PV Elite input errors</li>
+          </ul>
           <a href="learning-scenarios.html" class="pdf-link"><i class="fas fa-arrow-right"></i> Explore Guides →</a>
         </div>
       </div>
@@ -192,7 +239,7 @@ footer a{color:#94a3b8;text-decoration:none;margin:0 10px}
 <footer>
   <div class="container">
     <p>© 2026 Umesh Gohil – Static Equipment Design Engineer</p>
-    <p><a href="index.html">Resume</a> | <a href="https://linkedin.com/in/umeshg78/">LinkedIn</a> | <a href="https://github.com/UmeshG789">GitHub</a></p>
+    <p><a href="index.html">Portfolio</a> | <a href="https://linkedin.com/in/umeshg78/">LinkedIn</a> | <a href="https://github.com/UmeshG789">GitHub</a></p>
   </div>
 </footer>
 
