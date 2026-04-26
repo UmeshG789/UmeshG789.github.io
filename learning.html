@@ -9,261 +9,95 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #f8fafc;
-            color: #0f172a;
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-        nav {
-            background: white;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            backdrop-filter: blur(10px);
-            background: rgba(255,255,255,0.95);
-        }
-        .nav-links {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-            flex-wrap: wrap;
-        }
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #2563eb, #1e40af);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        .nav-menu {
-            display: flex;
-            gap: 32px;
-            list-style: none;
-        }
-        .nav-menu a {
-            text-decoration: none;
-            color: #334155;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        .nav-menu a:hover {
-            color: #2563eb;
-        }
-        .hero-section {
-            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
-            padding: 60px 0;
-            border-radius: 0 0 30px 30px;
-            margin-bottom: 40px;
-        }
-        .hero-section h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 12px;
-        }
-        .hero-section .subtitle {
-            font-size: 1.2rem;
-            color: #475569;
-            margin-bottom: 20px;
-        }
-        .back-link {
-            display: inline-block;
-            margin-top: 16px;
-        }
-        .back-link a {
-            color: #2563eb;
-            text-decoration: none;
-            font-weight: 600;
-            border-bottom: 1px dotted #2563eb;
-        }
-        .back-link a:hover {
-            color: #1e40af;
-        }
-        .intro {
-            background: #eef2ff;
-            padding: 24px;
-            border-radius: 20px;
-            margin-bottom: 40px;
-            font-size: 1rem;
-            border: 1px solid #e2e8f0;
-        }
-        .section-title {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 24px;
-        }
-        .category-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-            margin: 30px 0;
-        }
-        .category-card {
-            background: white;
-            border-radius: 20px;
-            padding: 24px;
-            border-left: 5px solid #2563eb;
-            transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            border: 1px solid #e2e8f0;
-        }
-        .category-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.1);
-        }
-        .category-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 12px;
-            color: #1e293b;
-        }
-        .category-card p {
-            color: #475569;
-            margin-bottom: 20px;
-            font-size: 0.95rem;
-        }
-        .category-card a {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: #2563eb;
-            color: white;
-            padding: 8px 18px;
-            text-decoration: none;
-            border-radius: 40px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: background 0.2s;
-        }
-        .category-card a:hover {
-            background: #1d4ed8;
-        }
-        footer {
-            background: #0f172a;
-            color: #94a3b8;
-            padding: 40px 0;
-            text-align: center;
-            margin-top: 60px;
-        }
-        footer a {
-            color: #94a3b8;
-            text-decoration: none;
-            border-bottom: 1px dotted #475569;
-        }
-        footer a:hover {
-            color: white;
-        }
-        @media (max-width: 768px) {
-            .hero-section h1 {
-                font-size: 1.8rem;
-            }
-            .nav-menu {
-                gap: 20px;
-            }
-            .category-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+        /* ================================================
+           Copy ALL CSS from your main index.html file here.
+           ================================================ */
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Inter',sans-serif;background:#f8fafc;color:#0f172a;line-height:1.6;scroll-behavior:smooth}
+        .container{max-width:1200px;margin:0 auto;padding:0 24px}
+        nav{background:rgba(255,255,255,0.95);box-shadow:0 1px 3px rgba(0,0,0,0.05);position:sticky;top:0;z-index:100;backdrop-filter:blur(10px)}
+        /* ... (rest of your index.html CSS) ... */
     </style>
 </head>
 <body>
-    <nav>
-        <div class="container">
-            <div class="nav-links">
-                <div class="logo">Static Equipment Design</div>
-                <ul class="nav-menu">
-                    <li><a href="index.html#home">Home</a></li>
-                    <li><a href="index.html#experience">Experience</a></li>
-                    <li><a href="index.html#projects">Projects</a></li>
-                    <li><a href="index.html#skills">Skills</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
-                    <li><a href="learning.html" style="color:#2563eb; font-weight:600;">Learning Hub</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <div class="hero-section">
-        <div class="container">
-            <h1>📘 Pressure Vessel Learning Hub</h1>
-            <div class="subtitle">by Umesh Gohil – Static Equipment Design Engineer</div>
-            <div class="back-link">
-                <a href="index.html"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
-            </div>
-        </div>
-    </div>
-
+<nav>
     <div class="container">
-        <div class="intro">
-            <i class="fas fa-graduation-cap" style="color:#2563eb; margin-right:10px;"></i> 
-            Welcome to my learning series. Here I share practical knowledge about pressure vessel design, ASME codes, and engineering fundamentals – exactly as I use them in my daily work. Select a category below to dive into specific topics.
-            <div style="margin-top: 12px;">
-                <i class="fab fa-linkedin"></i> Connect on <a href="https://linkedin.com/in/umeshg78/" target="_blank" style="color:#2563eb;">LinkedIn</a> for discussions and updates.
-            </div>
-        </div>
-
-        <h2 class="section-title">📚 Knowledge Categories</h2>
-
-        <div class="category-grid">
-            <div class="category-card">
-                <h3>🔧 Supports & Fundamentals</h3>
-                <p>Types of supports, load paths, anchor bolts, base rings, wind/seismic considerations, and practical problems. Foundation knowledge for static equipment.</p>
-                <a href="#">Explore →</a>
-            </div>
-            <div class="category-card">
-                <h3>📐 Pressure Vessel Design</h3>
-                <p>ASME VIII Div 1 & 2, EN standards, design calculations, MDMT, MAWP, nozzle reinforcement, and code rules explained with examples.</p>
-                <a href="#">Explore →</a>
-            </div>
-            <div class="category-card">
-                <h3>🔥 Heat Exchangers</h3>
-                <p>TEMA standards, mechanical design of shell & tube exchangers, tubesheet calculations, baffles, and common failure modes.</p>
-                <a href="#">Explore →</a>
-            </div>
-            <div class="category-card">
-                <h3>🏭 Columns & Reactors</h3>
-                <p>Tall vertical vessels, internals, wind load analysis, skirt design, and special considerations for reactors.</p>
-                <a href="#">Explore →</a>
-            </div>
-            <div class="category-card">
-                <h3>🧪 Materials & Corrosion</h3>
-                <p>Material selection, corrosion allowances, cladding, heat treatment, and failure mechanisms.</p>
-                <a href="#">Explore →</a>
-            </div>
-            <div class="category-card">
-                <h3>🔨 Fabrication & Inspection</h3>
-                <p>Welding, NDT, tolerances, PWHT, shop vs field fabrication, and practical quality control issues.</p>
-                <a href="#">Explore →</a>
-            </div>
-            <div class="category-card">
-                <h3>💻 Software</h3>
-                <p>PV Elite tips, HTRI, Compress, and how to validate software outputs with hand calculations.</p>
-                <a href="#">Explore →</a>
-            </div>
-            <div class="category-card">
-                <h3>🔍 Scenarios & Troubleshooting</h3>
-                <p>Real-world problems, failure analysis, and interview-style case studies.</p>
-                <a href="#">Explore →</a>
+        <div class="nav-links">
+            <a href="index.html" class="logo">Umesh Gohil</a>
+            <ul class="nav-menu">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#education">Education</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="learning.html" id="current-page" style="color:#2563eb;font-weight:600;">Learning Hub</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
             </div>
         </div>
     </div>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html#home" onclick="closeMenu()">Home</a>
+        <a href="index.html#projects" onclick="closeMenu()">Projects</a>
+        <a href="index.html#experience" onclick="closeMenu()">Experience</a>
+        <a href="index.html#skills" onclick="closeMenu()">Skills</a>
+        <a href="index.html#education" onclick="closeMenu()">Education</a>
+        <a href="index.html#contact" onclick="closeMenu()">Contact</a>
+        <a href="learning.html" style="color:#2563eb;font-weight:600;">Learning Hub</a>
+    </div>
+</nav>
 
-    <footer>
+<main>
+    <section id="learning-hero" class="hero" style="padding: 60px 0 40px;">
         <div class="container">
-            <p>© 2026 Umesh Gohil – Static & Mechanical Equipment Design Engineer | <a href="index.html">Portfolio</a> | <a href="https://linkedin.com/in/umeshg78/">LinkedIn</a></p>
+            <div class="hero-content" style="justify-content: center; text-align: center;">
+                <div class="hero-text" style="text-align: center;">
+                    <h1>📘 <span class="highlight">Pressure Vessel Learning Hub</span></h1>
+                    <p style="font-size: 1.2rem;">As a practicing engineer, I document my design reviews, code interpretations, and PV Elite config tips here. This is where I share the knowledge I use every day.</p>
+                     <div class="availability-badges" style="justify-content: center;">
+                        <span class="badge badge-blue"><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/umeshg78/" target="_blank" style="color:#1e40af;">Connect on LinkedIn</a></span>
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer>
+    </section>
+
+    <section id="learning-content" style="padding: 40px 0 80px;">
+        <div class="container">
+            <div class="projects-grid">
+                <!-- Loop through your 8 categories -->
+                <div class="project-card">
+                    <div class="project-img" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-tools" style="font-size: 3rem; color: white;"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>🔧 Supports & Fundamentals</h3>
+                        <p>Load paths, anchor bolts, base rings, wind/seismic considerations — everything you need to confidently design vessel supports.</p>
+                        <div class="article-placeholder" style="background:#f8fafc; border-radius:12px; padding:12px; margin:12px 0;">
+                            <i class="fas fa-file-alt" style="margin-right:8px;"></i> Coming soon: Case study on saddle support optimization.
+                        </div>
+                        <a href="#" class="pdf-link" style="margin-top: auto;"><i class="fas fa-arrow-right"></i> Explore Guides →</a>
+                    </div>
+                </div>
+                <!-- Repeat for each category, adjusting the icon and title. -->
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2026 Umesh Gohil – Static Equipment Design Engineer | <a href="index.html">Resume</a> | <a href="https://linkedin.com/in/umeshg78/">LinkedIn</a></p>
+    </div>
+</footer>
+
+<script>
+    // Copy all JavaScript functions from index.html here (toggleMenu, closeMenu, etc.)
+    function toggleMenu(){document.getElementById('hamburger').classList.toggle('open');document.getElementById('mobileMenu').classList.toggle('open');}
+    function closeMenu(){document.getElementById('hamburger').classList.remove('open');document.getElementById('mobileMenu').classList.remove('open');}
+</script>
 </body>
 </html>
