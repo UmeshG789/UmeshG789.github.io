@@ -26,19 +26,6 @@
             margin: 0 auto;
             padding: 0 24px;
         }
-        .status-badge {
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-            color: white;
-            padding: 8px 20px;
-            border-radius: 40px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 10px rgba(16, 185, 129, 0.2);
-        }
         nav {
             background: white;
             box-shadow: 0 1px 3px rgba(0,0,0,0.05);
@@ -180,41 +167,10 @@
             margin-bottom: 48px;
             font-size: 1.1rem;
         }
-        .experience-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        .exp-card {
-            background: white;
-            border-radius: 20px;
-            padding: 28px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
-            border: 1px solid #e2e8f0;
-        }
-        .exp-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-        }
-        .exp-icon {
-            font-size: 2.5rem;
-            color: #2563eb;
-            margin-bottom: 20px;
-        }
-        .exp-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 12px;
-        }
-        .exp-card .company {
-            color: #64748b;
-            font-weight: 500;
-            margin-bottom: 16px;
-            display: block;
-        }
+        /* Projects (now above experience) */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
             gap: 30px;
         }
         .project-card {
@@ -262,10 +218,34 @@
             margin-bottom: 12px;
             font-size: 1.25rem;
         }
-        .project-card p {
+        .param-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 0.85rem;
+            background: #f8fafc;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .param-table td {
+            padding: 8px 10px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .param-table td:first-child {
+            font-weight: 600;
+            width: 40%;
+            color: #1e293b;
+        }
+        .param-table td:last-child {
             color: #475569;
-            margin-bottom: 16px;
-            font-size: 0.95rem;
+        }
+        .project-bullets {
+            margin: 12px 0 16px 20px;
+            color: #475569;
+            font-size: 0.9rem;
+        }
+        .project-bullets li {
+            margin-bottom: 6px;
         }
         .tech-stack {
             display: flex;
@@ -298,6 +278,48 @@
         .pdf-link:hover {
             background: #2563eb;
             color: white;
+        }
+        /* Experience cards with bullet lists */
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        .exp-card {
+            background: white;
+            border-radius: 20px;
+            padding: 28px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            border: 1px solid #e2e8f0;
+        }
+        .exp-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+        }
+        .exp-icon {
+            font-size: 2.5rem;
+            color: #2563eb;
+            margin-bottom: 20px;
+        }
+        .exp-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 6px;
+        }
+        .exp-card .company {
+            color: #64748b;
+            font-weight: 500;
+            margin-bottom: 16px;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .exp-card ul {
+            margin-left: 20px;
+            color: #475569;
+            font-size: 0.9rem;
+        }
+        .exp-card li {
+            margin-bottom: 8px;
         }
         .skills-container {
             background: white;
@@ -390,8 +412,8 @@
             <div class="logo">Static Equipment Design</div>
             <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="learning.html" style="color:#2563eb; font-weight:600;">Learning Hub</a></li>
@@ -405,11 +427,8 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <div class="status-badge">
-                        <i class="fas fa-briefcase"></i> OPEN TO WORK
-                    </div>
                     <h1>Umesh Gohil<br><span class="highlight">Static & Mechanical Equipment Design Engineer</span></h1>
-                    <p>7+ years of experience designing pressure vessels, heat exchangers, columns, and filtration/drying systems, Proficient in ASME Section VIII with hands-on software experience in PV Elite, Compress, and DIMy.</p>
+                    <p>7+ years of experience designing pressure vessels, heat exchangers, columns, and filtration/drying systems. Proficient in ASME Section VIII with hands-on software experience in PV Elite, Compress, and DIMy.</p>
                     <div class="availability-badges">
                         <span class="badge badge-blue"><i class="fas fa-globe"></i> Remote Worldwide</span>
                         <span class="badge badge-green"><i class="fas fa-passport"></i> Visa Sponsorship OK</span>
@@ -426,54 +445,11 @@
         </div>
     </section>
 
-    <section id="experience">
-        <div class="container">
-            <h2 class="section-title">Professional Experience</h2>
-            <p class="section-subtitle">7+ years delivering robust static equipment solutions</p>
-            <div class="experience-grid">
-                <!-- 1. GMM Pfaudler (Feb 2025 – Present) -->
-                <div class="exp-card">
-                    <div class="exp-icon"><i class="fas fa-drafting-compass"></i></div>
-                    <h3>Senior Engineer – Static Equipment Design</h3>
-                    <span class="company">GMM Pfaudler, Karamsad, Anand, India | Feb 2025 – Present</span>
-                    <p>Design 15+ pressure vessels, filtration and drying systems per ASME Sec VIII Div 1 annually. Execute European code projects (AD 2000 / PED) using DIMy. Review GA drawings (AutoCAD/Inventor), validate critical parameters (thickness, MDMT, PWHT, MAWP, MAP) in PV Elite. Prepare Material Requisitions (MR/TDS), conduct remote design reviews with international licensors, mentor 3-4 junior engineers, and cross-check FEA results.</p>
-                </div>
-                <!-- 2. L&T Technology Services (Jan 2022 – Feb 2025) -->
-                <div class="exp-card">
-                    <div class="exp-icon"><i class="fas fa-oil-can"></i></div>
-                    <h3>Engineer – Static Equipment Design</h3>
-                    <span class="company">L&T Technology Services Limited, Vadodara, India | Jan 2022 – Feb 2025</span>
-                    <p>Designed pressure vessels, heat exchangers, and columns per ASME VIII & TEMA. Reviewed 100+ fabrication drawings, executed thickness/nozzle calculations in PV Elite for 30+ vessels, managed 50+ design change orders in Oracle Agile PLM, coordinated with vendors, and maintained ISO 9001 compliance.</p>
-                </div>
-                <!-- 3. Aqseptence Group (permanent) (Mar 2019 – Dec 2021) -->
-                <div class="exp-card">
-                    <div class="exp-icon"><i class="fas fa-chalkboard-user"></i></div>
-                    <h3>Design Engineer – Static Equipment & Filtration Products</h3>
-                    <span class="company">Aqseptence Group (Johnson Screens), Sanand, India | Mar 2019 – Dec 2021</span>
-                    <p>Led a team of 4-5 drafters, collaborated directly with clients in Germany, USA, Italy, France, Australia. Designed mechanical products across oil & gas, water treatment, mining, filtration. Created 200+ components in Inventor/AutoCAD, specialized in V‑wire screen design, managed 500+ part numbers in Vault & SAP PLM, applied GD&T/welding symbols per ISO/AWS.</p>
-                </div>
-                <!-- 4. Plantech Medical System (Nov 2018 – Feb 2019) -->
-                <div class="exp-card">
-                    <div class="exp-icon"><i class="fas fa-microscope"></i></div>
-                    <h3>Project & Design Engineer</h3>
-                    <span class="company">Plantech Medical System Pvt Ltd, Ahmedabad, India | Nov 2018 – Feb 2019</span>
-                    <p>Reverse‑engineered 3+ imported medical equipment models using SolidWorks & AutoCAD. Managed inventory of 100+ SKUs, sourced alternate vendors reducing cost by 10‑15%, redesigned existing product applying DFM/DFA principles to reduce assembly time by ~20% and improve serviceability.</p>
-                </div>
-                <!-- 5. Aqseptence Group (contract) (Jul 2018 – Oct 2018) -->
-                <div class="exp-card">
-                    <div class="exp-icon"><i class="fas fa-briefcase"></i></div>
-                    <h3>Design Engineer (Contract)</h3>
-                    <span class="company">Aqseptence Group (Johnson Screens), Sanand, India | Jul 2018 – Oct 2018</span>
-                    <p>Contributed to design of 1st, 2nd, and 3rd stage water processing equipment for industrial clients. Reviewed client data sheets and prepared 3D models and manufacturing drawings using Autodesk Inventor. Built foundational proficiency in Autodesk Vault and SAP PLM through active project delivery.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    <!-- PROJECTS SECTION (now first) -->
     <section id="projects" style="background: #f1f5f9;">
         <div class="container">
             <h2 class="section-title">Featured ASME VIII Div 1 Projects</h2>
-            <p class="section-subtitle">Real calculation reports – pressure vessels, nozzles, reactor shell & horizontal vessel</p>
+            <p class="section-subtitle">Complete design calculation reports – with key parameters and results</p>
             <div class="projects-grid">
                 <!-- Project 1: Scrubber Nozzles -->
                 <div class="project-card">
@@ -482,7 +458,20 @@
                     </div>
                     <div class="project-content">
                         <h3>High-Pressure Gas Suction Scrubber Nozzles</h3>
-                        <p>12 nozzles + NPS 20 manway on 42mm shell, 8.5 MPa at 160°C, lethal H₂S service. Native area replacement fails (A<sub>r</sub> 8,620 mm² vs A<sub>avail</sub> 1,940 mm²). Required reinforcing pads (up to 42mm thick). PWHT mandatory, impact testing required. MAWP restored to 8.5 MPa.</p>
+                        <table class="param-table">
+                            <tr><td>Design Pressure</td><td>8.5 MPa (85 bar)</td></tr>
+                            <tr><td>Design Temperature</td><td>160°C</td></tr>
+                            <tr><td>Shell Thickness (corroded)</td><td>38.8 mm</td></tr>
+                            <tr><td>Required Area (A<sub>r</sub>)</td><td>8,620 mm²</td></tr>
+                            <tr><td>Native Available Area (A<sub>avail</sub>)</td><td>1,940 mm² → FAIL</td></tr>
+                            <tr><td>Reinforcing Pad</td><td>42 mm thick, OD 550 mm</td></tr>
+                            <tr><td>Restored MAWP</td><td>8.5 MPa</td></tr>
+                        </table>
+                        <ul class="project-bullets">
+                            <li>12 nozzles + NPS 20 manway on 42mm shell, lethal H₂S service</li>
+                            <li>PWHT mandatory (100 min @595°C), impact testing required</li>
+                            <li>Fails UG‑36(c)(3) exemption – full area replacement calculated per UG‑37</li>
+                        </ul>
                         <div class="tech-stack">
                             <span>PV Elite</span>
                             <span>ASME VIII Div 1 (2025 Ed.)</span>
@@ -493,6 +482,7 @@
                         </a>
                     </div>
                 </div>
+
                 <!-- Project 2: Hydrogenation Reactor Shell -->
                 <div class="project-card">
                     <div class="project-img" style="background-image: url('images/reactor-shell.png');">
@@ -500,7 +490,21 @@
                     </div>
                     <div class="project-content">
                         <h3>High-Pressure Hydrogenation Reactor Shell</h3>
-                        <p>800 mm ID, 75mm shell thickness, 18.0 MPa at 450°C, SA-387 Gr.22 Cl.2. Required thickness 67.79 mm, MAWP 19.04 MPa. External pressure MAEP 9.60 MPa (no stiffening rings). PFHT mandatory (8.57% elongation), PWHT 3hrs @675°C. Impact testing mandatory.</p>
+                        <table class="param-table">
+                            <tr><td>Inside Diameter</td><td>800 mm</td></tr>
+                            <tr><td>Design Pressure</td><td>18.0 MPa (180 bar)</td></tr>
+                            <tr><td>Design Temperature</td><td>450°C</td></tr>
+                            <tr><td>Material</td><td>SA‑387 Gr.22 Cl.2</td></tr>
+                            <tr><td>Required Thickness (corroded)</td><td>67.79 mm</td></tr>
+                            <tr><td>Selected Nominal Thickness</td><td>75 mm (shell) / 70 mm (heads)</td></tr>
+                            <tr><td>MAWP (shell governs)</td><td>19.04 MPa</td></tr>
+                            <tr><td>MAEP (external pressure)</td><td>9.60 MPa (no stiffening rings)</td></tr>
+                        </table>
+                        <ul class="project-bullets">
+                            <li>PFHT mandatory (8.57% elongation), PWHT 3 hrs @675°C</li>
+                            <li>Charpy impact testing mandatory per UCS‑66</li>
+                            <li>100% volumetric NDE (E=1.0) due to lethal/cyclic service</li>
+                        </ul>
                         <div class="tech-stack">
                             <span>PV Elite</span>
                             <span>ASME VIII Div 1 (2025 Ed.)</span>
@@ -511,6 +515,7 @@
                         </a>
                     </div>
                 </div>
+
                 <!-- Project 3: Horizontal Pressure Vessel -->
                 <div class="project-card">
                     <div class="project-img" style="background-image: url('images/horizontal-vessel.png');">
@@ -518,7 +523,21 @@
                     </div>
                     <div class="project-content">
                         <h3>Horizontal Pressure Vessel (Division 1)</h3>
-                        <p>2,500 mm OD, 19mm corroded shell, 1.5 MPa at 150°C. Twin saddles 120° contact angle, width 300mm, A = 2,400mm from tangent. Longitudinal bending 73.36/47.29 MPa, tangential shear 11.74 MPa. Wear plate 13mm × 560mm × 140° sweep. Base plate 25mm thick.</p>
+                        <table class="param-table">
+                            <tr><td>Outside Diameter</td><td>2,500 mm</td></tr>
+                            <tr><td>Design Pressure</td><td>1.5 MPa (15 bar)</td></tr>
+                            <tr><td>Corroded Shell Thickness</td><td>19 mm</td></tr>
+                            <tr><td>Saddle Contact Angle</td><td>120°</td></tr>
+                            <tr><td>Saddle Width (b)</td><td>300 mm</td></tr>
+                            <tr><td>Distance from Tangent (A)</td><td>2,400 mm</td></tr>
+                            <tr><td>Longitudinal Bending (saddle)</td><td>73.36 MPa (allowable 138 MPa)</td></tr>
+                            <tr><td>Wear Plate</td><td>13 mm × 560 mm × 140° sweep</td></tr>
+                        </table>
+                        <ul class="project-bullets">
+                            <li>Zick’s analysis – no stiffening rings required</li>
+                            <li>Base plate 25 mm thick, bearing pressure 0.638 MPa (safe)</li>
+                            <li>Full vacuum external pressure design (MAEP 7.52 MPa > 0.103 MPa)</li>
+                        </ul>
                         <div class="tech-stack">
                             <span>PV Elite</span>
                             <span>ASME VIII Div 1 (2025 Ed.)</span>
@@ -536,10 +555,80 @@
         </div>
     </section>
 
+    <!-- EXPERIENCE SECTION (now after projects) with bullet points -->
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <p class="section-subtitle">7+ years delivering robust static equipment solutions</p>
+            <div class="experience-grid">
+                <!-- 1. GMM Pfaudler -->
+                <div class="exp-card">
+                    <div class="exp-icon"><i class="fas fa-drafting-compass"></i></div>
+                    <h3>Senior Engineer – Static Equipment Design</h3>
+                    <span class="company">GMM Pfaudler, Karamsad, Anand, India | Feb 2025 – Present</span>
+                    <ul>
+                        <li>Design 15+ pressure vessels, filtration and drying systems per ASME Sec VIII Div 1 annually.</li>
+                        <li>Execute European code projects (AD 2000 / PED) using DIMy.</li>
+                        <li>Review GA drawings (AutoCAD/Inventor), validate critical parameters (thickness, MDMT, PWHT, MAWP, MAP) in PV Elite.</li>
+                        <li>Prepare Material Requisitions (MR/TDS), conduct remote design reviews with international licensors.</li>
+                        <li>Mentor 3‑4 junior engineers and cross‑check FEA results.</li>
+                    </ul>
+                </div>
+                <!-- 2. L&T Technology Services -->
+                <div class="exp-card">
+                    <div class="exp-icon"><i class="fas fa-oil-can"></i></div>
+                    <h3>Engineer – Static Equipment Design</h3>
+                    <span class="company">L&T Technology Services Limited, Vadodara, India | Jan 2022 – Feb 2025</span>
+                    <ul>
+                        <li>Designed pressure vessels, heat exchangers, and columns per ASME VIII & TEMA.</li>
+                        <li>Reviewed 100+ fabrication drawings, executed thickness/nozzle calculations in PV Elite for 30+ vessels.</li>
+                        <li>Managed 50+ design change orders in Oracle Agile PLM.</li>
+                        <li>Coordinated with vendors and maintained ISO 9001 compliance.</li>
+                    </ul>
+                </div>
+                <!-- 3. Aqseptence Group (permanent) -->
+                <div class="exp-card">
+                    <div class="exp-icon"><i class="fas fa-chalkboard-user"></i></div>
+                    <h3>Design Engineer – Static Equipment & Filtration Products</h3>
+                    <span class="company">Aqseptence Group (Johnson Screens), Sanand, India | Mar 2019 – Dec 2021</span>
+                    <ul>
+                        <li>Led a team of 4‑5 drafters, collaborated directly with clients in Germany, USA, Italy, France, Australia.</li>
+                        <li>Designed mechanical products across oil & gas, water treatment, mining, filtration.</li>
+                        <li>Created 200+ components in Inventor/AutoCAD, specialized in V‑wire screen design.</li>
+                        <li>Managed 500+ part numbers in Vault & SAP PLM, applied GD&T/welding symbols per ISO/AWS.</li>
+                    </ul>
+                </div>
+                <!-- 4. Plantech Medical System -->
+                <div class="exp-card">
+                    <div class="exp-icon"><i class="fas fa-microscope"></i></div>
+                    <h3>Project & Design Engineer</h3>
+                    <span class="company">Plantech Medical System Pvt Ltd, Ahmedabad, India | Nov 2018 – Feb 2019</span>
+                    <ul>
+                        <li>Reverse‑engineered 3+ imported medical equipment models using SolidWorks & AutoCAD.</li>
+                        <li>Managed inventory of 100+ SKUs, sourced alternate vendors reducing cost by 10‑15%.</li>
+                        <li>Redesigned product applying DFM/DFA principles – reduced assembly time by ~20%.</li>
+                    </ul>
+                </div>
+                <!-- 5. Aqseptence Group (contract) -->
+                <div class="exp-card">
+                    <div class="exp-icon"><i class="fas fa-briefcase"></i></div>
+                    <h3>Design Engineer (Contract)</h3>
+                    <span class="company">Aqseptence Group (Johnson Screens), Sanand, India | Jul 2018 – Oct 2018</span>
+                    <ul>
+                        <li>Contributed to design of 1st, 2nd, and 3rd stage water processing equipment.</li>
+                        <li>Reviewed client data sheets, prepared 3D models and manufacturing drawings using Autodesk Inventor.</li>
+                        <li>Built foundational proficiency in Autodesk Vault and SAP PLM.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION (unchanged) -->
     <section id="skills">
         <div class="container">
             <h2 class="section-title">Technical Competencies</h2>
-            <p class="section-subtitle">Core software & codes used in every project</p>
+            <p class="section-subtitle">Core software, codes & professional expertise</p>
             <div class="skills-container">
                 <div class="skills-grid">
                     <div class="skill-category">
@@ -595,6 +684,7 @@
         </div>
     </section>
 
+    <!-- CONTACT SECTION (unchanged) -->
     <section id="contact" style="background: #eef2ff;">
         <div class="container">
             <h2 class="section-title">Let's Work Together</h2>
