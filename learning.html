@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-/* Same CSS as your main portfolio (copy from index.html) – kept brief here */
+/* Same CSS as your main portfolio (kept minimal here) */
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Inter',sans-serif;background:#f8fafc;color:#0f172a;line-height:1.6}
 .container{max-width:1200px;margin:0 auto;padding:0 24px}
@@ -32,17 +32,15 @@ nav{background:rgba(255,255,255,0.95);box-shadow:0 1px 3px rgba(0,0,0,0.05);posi
 .back-home a{background:white;padding:8px 20px;border-radius:40px;text-decoration:none;color:#2563eb;font-weight:600;border:1px solid #e2e8f0;display:inline-block}
 .back-home a:hover{background:#2563eb;color:white}
 .badge-blue{background:#dbeafe;color:#1e40af;padding:5px 14px;border-radius:30px;display:inline-block}
-.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px;margin:40px 0}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;margin:40px 0}
 .project-card{background:white;border-radius:20px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,0.08);border:1px solid #e2e8f0;transition:transform 0.3s}
 .project-card:hover{transform:translateY(-5px)}
-.project-img{height:160px;background:linear-gradient(135deg,#667eea,#764ba2);display:flex;align-items:center;justify-content:center}
-.project-img i{font-size:3rem;color:white}
-.project-content{padding:24px}
-.project-content h3{font-size:1.25rem;margin-bottom:12px}
-.project-content p{color:#475569;margin-bottom:16px}
-.topic-list{margin:12px 0 16px 20px;font-size:0.85rem;color:#475569}
-.topic-list li{margin-bottom:6px}
-.pdf-link{display:inline-flex;align-items:center;gap:8px;background:#2563eb10;padding:8px 14px;border-radius:30px;text-decoration:none;color:#2563eb;font-weight:600}
+.project-img{height:140px;background:linear-gradient(135deg,#667eea,#764ba2);display:flex;align-items:center;justify-content:center}
+.project-img i{font-size:2.5rem;color:white}
+.project-content{padding:22px}
+.project-content h3{font-size:1.2rem;margin-bottom:10px}
+.project-content p{color:#475569;margin-bottom:16px;font-size:0.9rem}
+.pdf-link{display:inline-flex;align-items:center;gap:8px;background:#2563eb10;padding:8px 14px;border-radius:30px;text-decoration:none;color:#2563eb;font-weight:600;font-size:0.85rem}
 .pdf-link:hover{background:#2563eb;color:white}
 footer{background:#0f172a;color:#94a3b8;padding:36px 0;text-align:center}
 footer a{color:#94a3b8;text-decoration:none;margin:0 10px}
@@ -92,8 +90,8 @@ footer a{color:#94a3b8;text-decoration:none;margin:0 10px}
         <div class="hero-text">
           <h1>📘 <span class="highlight">Pressure Vessel Learning Hub</span></h1>
           <p>As a practicing engineer, I document my design reviews, code interpretations, and PV Elite config tips here. This is where I share the knowledge I use every day.</p>
-          <div class="availability-badges" style="justify-content:center; margin-top:20px;">
-            <span class="badge badge-blue"><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/umeshg78/" target="_blank" style="color:#1e40af;">Connect on LinkedIn</a></span>
+          <div style="justify-content:center; margin-top:20px;">
+            <span class="badge-blue"><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/umeshg78/" target="_blank" style="color:#1e40af;">Connect on LinkedIn</a></span>
           </div>
           <div class="back-home">
             <a href="index.html"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
@@ -111,10 +109,7 @@ footer a{color:#94a3b8;text-decoration:none;margin:0 10px}
         <div class="project-img"><i class="fas fa-tools"></i></div>
         <div class="project-content">
           <h3>🔧 Supports & Fundamentals</h3>
-          <p>Load paths, anchor bolts, base rings, wind/seismic considerations — everything you need to confidently design vessel supports.</p>
-          <ul class="topic-list">
-            <li>✨ We will cover all the details regarding vessel supports – from saddle design to anchor bolt calculations.</li>
-          </ul>
+          <p>We will cover all the details regarding vessel supports – from saddle design to anchor bolt calculations.</p>
           <a href="learning-supports.html" class="pdf-link"><i class="fas fa-arrow-right"></i> Explore Guides →</a>
         </div>
       </div>
@@ -124,10 +119,7 @@ footer a{color:#94a3b8;text-decoration:none;margin:0 10px}
         <div class="project-img"><i class="fas fa-drafting-compass"></i></div>
         <div class="project-content">
           <h3>📐 Pressure Vessel Design</h3>
-          <p>ASME VIII Div 1 & 2, EN standards, design calculations, MDMT, MAWP, nozzle reinforcement – explained with real examples.</p>
-          <ul class="topic-list">
-            <li>✨ Complete walkthrough of pressure vessel design – from code rules to practical examples.</li>
-          </ul>
+          <p>Complete walkthrough of pressure vessel design – from ASME code rules to practical design examples.</p>
           <a href="learning-design.html" class="pdf-link"><i class="fas fa-arrow-right"></i> Explore Guides →</a>
         </div>
       </div>
@@ -137,10 +129,7 @@ footer a{color:#94a3b8;text-decoration:none;margin:0 10px}
         <div class="project-img"><i class="fas fa-fire"></i></div>
         <div class="project-content">
           <h3>🔥 Heat Exchangers</h3>
-          <p>TEMA standards, mechanical design of shell & tube exchangers, tubesheet calculations, baffles, and failure modes.</p>
-          <ul class="topic-list">
-            <li>✨ Learn shell & tube heat exchanger design – TEMA class selection, tubesheet, and baffle optimisation.</li>
-          </ul>
+          <p>Learn shell & tube heat exchanger design – TEMA class selection, tubesheet, and baffle optimisation.</p>
           <a href="learning-hex.html" class="pdf-link"><i class="fas fa-arrow-right"></i> Explore Guides →</a>
         </div>
       </div>
@@ -150,10 +139,7 @@ footer a{color:#94a3b8;text-decoration:none;margin:0 10px}
         <div class="project-img"><i class="fas fa-industry"></i></div>
         <div class="project-content">
           <h3>🏭 Columns & Reactors</h3>
-          <p>Tall vertical vessels, internals, wind load analysis, skirt design, and special considerations for reactors.</p>
-          <ul class="topic-list">
-            <li>✨ Everything about tall columns – wind/seismic analysis, skirt design, and internal supports.</li>
-          </ul>
+          <p>Everything about tall columns – wind/seismic analysis, skirt design, and internal supports.</p>
           <a href="learning-columns.html" class="pdf-link"><i class="fas fa-arrow-right"></i> Explore Guides →</a>
         </div>
       </div>
@@ -163,10 +149,7 @@ footer a{color:#94a3b8;text-decoration:none;margin:0 10px}
         <div class="project-img"><i class="fas fa-flask"></i></div>
         <div class="project-content">
           <h3>🧪 Materials & Corrosion</h3>
-          <p>Material selection, corrosion allowances, cladding, heat treatment, and failure mechanisms.</p>
-          <ul class="topic-list">
-            <li>✨ Understand material behaviour, corrosion damage, and how to select the right alloy.</li>
-          </ul>
+          <p>Understand material behaviour, corrosion damage, and how to select the right alloy.</p>
           <a href="learning-materials.html" class="pdf-link"><i class="fas fa-arrow-right"></i> Explore Guides →</a>
         </div>
       </div>
@@ -176,10 +159,7 @@ footer a{color:#94a3b8;text-decoration:none;margin:0 10px}
         <div class="project-img"><i class="fas fa-wrench"></i></div>
         <div class="project-content">
           <h3>🔨 Fabrication & Inspection</h3>
-          <p>Welding, NDT, tolerances, PWHT, shop vs field fabrication, and quality control issues.</p>
-          <ul class="topic-list">
-            <li>✨ Practical insights into welding, NDT, and shop inspection – what really matters.</li>
-          </ul>
+          <p>Practical insights into welding, NDT, and shop inspection – what really matters.</p>
           <a href="learning-fabrication.html" class="pdf-link"><i class="fas fa-arrow-right"></i> Explore Guides →</a>
         </div>
       </div>
@@ -189,10 +169,7 @@ footer a{color:#94a3b8;text-decoration:none;margin:0 10px}
         <div class="project-img"><i class="fas fa-laptop-code"></i></div>
         <div class="project-content">
           <h3>💻 Software</h3>
-          <p>PV Elite tips, HTRI, Compress – how to validate software outputs with hand calculations.</p>
-          <ul class="topic-list">
-            <li>✨ Mastering PV Elite and cross‑checking FEA results – tips from daily practice.</li>
-          </ul>
+          <p>Mastering PV Elite and cross‑checking FEA results – tips from daily practice.</p>
           <a href="learning-software.html" class="pdf-link"><i class="fas fa-arrow-right"></i> Explore Guides →</a>
         </div>
       </div>
@@ -202,10 +179,7 @@ footer a{color:#94a3b8;text-decoration:none;margin:0 10px}
         <div class="project-img"><i class="fas fa-search"></i></div>
         <div class="project-content">
           <h3>🔍 Scenarios & Troubleshooting</h3>
-          <p>Real‑world problems, failure analysis, and interview‑style case studies.</p>
-          <ul class="topic-list">
-            <li>✨ Real case studies – from nozzle fatigue to vacuum collapse and code interpretation puzzles.</li>
-          </ul>
+          <p>Real case studies – from nozzle fatigue to vacuum collapse and code interpretation puzzles.</p>
           <a href="learning-scenarios.html" class="pdf-link"><i class="fas fa-arrow-right"></i> Explore Guides →</a>
         </div>
       </div>
