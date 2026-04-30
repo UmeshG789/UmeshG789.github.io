@@ -15,76 +15,50 @@ nav{background:rgba(255,255,255,0.95);box-shadow:0 1px 3px rgba(0,0,0,0.05);posi
 .nav-links{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
 .logo{font-size:1.4rem;font-weight:800;background:linear-gradient(135deg,#2563eb,#1e40af);-webkit-background-clip:text;background-clip:text;color:transparent;text-decoration:none}
 .nav-menu{display:flex;gap:28px;list-style:none}
-.nav-menu a{text-decoration:none;color:#334155;font-weight:500;transition:color 0.3s}
+.nav-menu a{text-decoration:none;color:#334155;font-weight:500;font-size:0.92rem;transition:color 0.3s}
 .nav-menu a:hover{color:#2563eb}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer}
-.hamburger span{width:24px;height:2px;background:#334155;transition:0.3s}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:24px;height:2px;background:#334155;border-radius:2px;transition:0.3s}
 .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
 .hamburger.open span:nth-child(2){opacity:0}
 .hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
 .mobile-menu{display:none;flex-direction:column;background:white;border-top:1px solid #e2e8f0}
 .mobile-menu.open{display:flex}
 .mobile-menu a{padding:14px 24px;color:#334155;text-decoration:none;border-bottom:1px solid #f1f5f9}
-.hero{padding:60px 0 40px;background:linear-gradient(135deg,#f1f5f9 0%,#e2e8f0 100%)}
-.hero-content{text-align:center}
-.hero-text h1{font-size:2rem;margin-bottom:16px}
-.hero-text .highlight{color:#2563eb}
-.hero-text p{font-size:1rem;color:#475569;max-width:700px;margin:0 auto}
-.back-links{margin-top:24px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
-.back-links a{background:white;padding:8px 20px;border-radius:40px;text-decoration:none;color:#2563eb;font-weight:600;border:1px solid #e2e8f0;display:inline-flex;align-items:center;gap:6px}
+.mobile-menu a:hover{background:#f8fafc;color:#2563eb}
+.hero-small{padding:60px 0 40px;background:linear-gradient(135deg,#f1f5f9 0%,#e2e8f0 100%);text-align:center}
+.hero-small h1{font-size:2.2rem;font-weight:800;margin-bottom:12px}
+.hero-small .highlight{color:#2563eb}
+.hero-small p{font-size:1rem;color:#475569;max-width:700px;margin:0 auto}
+.back-links{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+.back-links a{background:white;padding:8px 20px;border-radius:40px;text-decoration:none;color:#2563eb;font-weight:600;border:1px solid #e2e8f0;display:inline-flex;align-items:center;gap:6px;transition:0.2s}
 .back-links a:hover{background:#2563eb;color:white}
-.content-block{background:white;border-radius:24px;padding:40px;margin:40px 0;border:1px solid #e2e8f0;text-align:center}
-.content-block i{font-size:2.5rem;color:#2563eb;margin-bottom:20px}
-.content-block h2{font-size:1.5rem;margin-bottom:16px;color:#1e293b}
-.content-block p{color:#64748b;max-width:500px;margin:0 auto}
+.pdf-section{padding:48px 0 80px}
+.pdf-list{display:flex;flex-direction:column;gap:24px;max-width:900px;margin:0 auto}
+.pdf-card{background:white;border-radius:20px;padding:24px;display:flex;gap:20px;align-items:flex-start;border:1px solid #e2e8f0;transition:all 0.3s;box-shadow:0 2px 5px rgba(0,0,0,0.02)}
+.pdf-card:hover{transform:translateY(-3px);box-shadow:0 12px 25px rgba(0,0,0,0.08);border-color:#cbd5e1}
+.pdf-icon{flex-shrink:0;background:#fee2e2;width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center}
+.pdf-icon i{font-size:1.8rem;color:#dc2626}
+.pdf-content{flex:1}
+.pdf-content h3{margin-bottom:8px;font-size:1.2rem}
+.pdf-content h3 a{text-decoration:none;color:#1e293b;transition:color 0.2s}
+.pdf-content h3 a:hover{color:#2563eb}
+.pdf-content p{color:#64748b;font-size:0.88rem;line-height:1.5;margin-bottom:12px}
+.pdf-meta{display:flex;gap:16px;font-size:0.75rem;color:#94a3b8}
+.pdf-meta i{margin-right:4px}
+.btn-pdf{display:inline-flex;align-items:center;gap:8px;background:#f1f5f9;padding:6px 14px;border-radius:30px;text-decoration:none;color:#2563eb;font-weight:500;font-size:0.8rem;transition:0.2s}
+.btn-pdf:hover{background:#2563eb;color:white}
 footer{background:#0f172a;color:#94a3b8;padding:36px 0;text-align:center}
+footer p{font-size:0.9rem}
 footer a{color:#94a3b8;text-decoration:none;margin:0 10px}
 footer a:hover{color:white}
 @media(max-width:768px){
   .hamburger{display:flex}
   .nav-menu{display:none}
-  .hero-text h1{font-size:1.5rem}
+  .hero-small h1{font-size:1.6rem}
+  .pdf-card{flex-direction:column;align-items:flex-start}
+  .pdf-icon{width:48px;height:48px}
   .back-links{flex-direction:column;align-items:center}
-  .pdf-list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  max-width: 800px;
-  margin: 40px auto;
-}
-.pdf-card {
-  background: white;
-  border-radius: 16px;
-  padding: 20px;
-  display: flex;
-  gap: 18px;
-  align-items: flex-start;
-  border: 1px solid #e2e8f0;
-  transition: 0.2s;
-}
-.pdf-card:hover {
-  transform: translateX(5px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-}
-.pdf-card i {
-  font-size: 2.5rem;
-  color: #dc2626;
-}
-.pdf-card h3 {
-  margin-bottom: 6px;
-  font-size: 1.1rem;
-}
-.pdf-card h3 a {
-  text-decoration: none;
-  color: #2563eb;
-}
-.pdf-card h3 a:hover {
-  text-decoration: underline;
-}
-.pdf-card p {
-  color: #64748b;
-  font-size: 0.85rem;
-}
 }
 </style>
 </head>
@@ -120,33 +94,53 @@ footer a:hover{color:white}
 </nav>
 
 <main>
-<section class="hero">
+<section class="hero-small">
 <div class="container">
-<div class="hero-content">
-<div class="hero-text">
 <h1>🔧 <span class="highlight">Supports & Fundamentals</span></h1>
-<p>We will cover all the details regarding vessel supports – from saddle design to anchor bolt calculations.</p>
+<p>Practical guides and calculation examples for vessel supports, saddles, lugs, and anchor bolts.</p>
 <div class="back-links">
 <a href="learning.html"><i class="fas fa-arrow-left"></i> Back to Learning Hub</a>
-<a href="index.html"><i class="fas fa-home"></i> Back to Portfolio</a>
-</div>
-</div>
+<a href="index.html"><i class="fas fa-home"></i> Portfolio Home</a>
 </div>
 </div>
 </section>
 
+<section class="pdf-section">
 <div class="container">
 <div class="pdf-list">
+
+  <!-- PDF CARD 1 (example) -->
   <div class="pdf-card">
-    <i class="fas fa-file-pdf"></i>
-    <div>
-      <h3><a href="pdfs/Static Equipment Support Systems_Design, Load Paths, and Code Requirments.pdf" target="_blank">Saddle Design Guide (ASME VIII)</a></h3>
-      <p>Step‑by‑step calculation of saddle supports, wear plates, base plates, and anchor bolts.</p>
+    <div class="pdf-icon"><i class="fas fa-file-pdf"></i></div>
+    <div class="pdf-content">
+      <h3><a href="pdfs/Static Equipment Support Systems_Design, Load Paths, and Code Requirments.pdf" target="_blank">Static Equipment Support Systems_Design, Load Paths, and Code Requirments</a></h3>
+      <div class="pdf-meta">
+        <span><i class="fas fa-file-alt"></i> 12 pages</span>
+        <span><i class="fas fa-calculator"></i> With worked example</span>
+      </div>
+      <a href="pdfs/saddle-design-guide.pdf" class="btn-pdf" target="_blank"><i class="fas fa-download"></i> Open PDF</a>
     </div>
   </div>
 
-  <!-- Add more PDF cards here in the future -->
-</div></div>
+  <!-- PDF CARD 2 – add your next PDF here -->
+  <!--
+  <div class="pdf-card">
+    <div class="pdf-icon"><i class="fas fa-file-pdf"></i></div>
+    <div class="pdf-content">
+      <h3><a href="pdfs/anchor-bolt-calculation.pdf" target="_blank">Anchor Bolt & Base Plate Design</a></h3>
+      <p>Methodology for sizing anchor bolts and base plates for vertical vessels, including load combinations.</p>
+      <div class="pdf-meta">
+        <span><i class="fas fa-file-alt"></i> 8 pages</span>
+      </div>
+      <a href="pdfs/anchor-bolt-calculation.pdf" class="btn-pdf" target="_blank"><i class="fas fa-download"></i> Open PDF</a>
+    </div>
+  </div>
+  -->
+
+  <!-- Add more PDF cards exactly like the one above -->
+</div>
+</div>
+</section>
 </main>
 
 <footer>
